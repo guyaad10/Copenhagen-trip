@@ -20,6 +20,13 @@
   "name": "Alle Tiders",
   "src": "nominatim"
  },
+ "https://www.google.com/maps/place/Ambra/data=!4m2!3m1!1s0x465253e4d480d49f:0x2646c9be32363c03": {
+  "lat": 0,
+  "lng": 0,
+  "match": "name search matched the wrong place",
+  "name": "Ambra",
+  "src": "none"
+ },
  "https://www.google.com/maps/place/Ancestrale/data=!4m2!3m1!1s0x4652539fdea24337:0x820cd4dd03be66dc": {
   "lat": 55.671211,
   "lng": 12.549671,
@@ -279,6 +286,13 @@
   "name": "La Cabra",
   "src": "nominatim"
  },
+ "https://www.google.com/maps/place/Lago/data=!4m2!3m1!1s0x4652534a6e40bafd:0x52237bb5304c30f5": {
+  "lat": 0,
+  "lng": 0,
+  "match": "name search matched the wrong place",
+  "name": "Lago",
+  "src": "none"
+ },
  "https://www.google.com/maps/place/Lidk%C3%B8b+%C3%98sterbro/data=!4m2!3m1!1s0x465252f44346bc1b:0x9abe61d7177fecb5": {
   "lat": 55.711774,
   "lng": 12.575449,
@@ -299,6 +313,13 @@
   "match": "Locale 21, Ny Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1111, Den",
   "name": "Locale 21",
   "src": "nominatim"
+ },
+ "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029": {
+  "lat": 0,
+  "lng": 0,
+  "match": "name search matched the wrong place",
+  "name": "Lokal ApS.",
+  "src": "none"
  },
  "https://www.google.com/maps/place/MUJI+K%C3%B8benhavn/data=!4m2!3m1!1s0x465253812944c873:0xb6d69f9a3972bd48": {
   "lat": 55.679286,

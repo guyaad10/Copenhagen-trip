@@ -6,7 +6,7 @@ looks each place up once and keeps the result in data/geocoded.json:
   2. OpenStreetMap Nominatim, by name, inside Copenhagen
 
 Run with --offline to rebuild js/saved.js from the cache without any lookups.
-Fix a wrong pin by editing its entry in data/geocoded.json and setting "src": "manual".
+Fix a wrong pin by editing its entry in data/geocoded.json and setting "src": "manual"; "src": "none" keeps a place off the map.
 """
 import csv
 import json
@@ -133,7 +133,7 @@ def main():
         url = r["URL"].strip()
         tags = [t.split(" ", 1)[-1].strip() for t in r["Tags"].split(";") if t.strip()]
         item = {"name": r["Title"].strip(), "note": r["Note"].strip(), "url": url, "tags": tags}
-        if url in cache:
+        if url in cache and cache[url]["src"] != "none":
             item.update(lat=cache[url]["lat"], lng=cache[url]["lng"])
             saved.append(item)
         else:
