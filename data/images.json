@@ -22,10 +22,8 @@
   "src": "website"
  },
  "Another Aspect": {
-  "file": "img/places/another-aspect-7c513e.jpg",
-  "from": "https://dictionary.cambridge.org/external/images/og-image.png",
-  "page": "https://dictionary.cambridge.org/dictionary/english/another",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Apollo Bar": {
   "file": "img/places/apollo-bar-5f1845.jpg",
@@ -94,10 +92,8 @@
   "src": "search"
  },
  "Frama": {
-  "file": "img/places/frama-ccdf99.jpg",
-  "from": "https://www.ibm.com/content/dam/worldwide-content/stock-assets/adb-stk/ul/g/4d/a3/adobestock_1489970856.jpeg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
-  "page": "https://www.ibm.com/think/topics/security-operations-center",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Frank": {
   "file": "img/places/frank-0df02d.jpg",
@@ -124,10 +120,8 @@
   "src": "search"
  },
  "Godt Fund Vintage": {
-  "file": "img/places/godt-fund-vintage-6e71fc.jpg",
-  "from": "https://assets.coingecko.com/posts/images/1236/large/How_to_use_Rabby_Wallet.png?1708664769",
-  "page": "https://www.coingecko.com/learn/how-to-use-rabby-wallet",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Goods": {
   "file": "img/places/goods-297d70.jpg",
@@ -152,10 +146,8 @@
   "src": "website"
  },
  "Hotel NH Collection Copenhagen": {
-  "file": "img/places/hotel-nh-collection-copenhagen-e7dd74.jpg",
-  "from": "https://q-xx.bstatic.com/xdata/images/city/1200x630/997860.jpg?k=2f9c8042f35f778fc4327c06c6fc289048fb855fe5737bf35ad54926cb3c3a81&o=",
-  "page": "https://www.booking.com/city/us/sierra-vista.html?msockid=35251aea09ab61ee333d0d17083d60c5",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Høst": {
   "file": "img/places/h-st-7ae2dd.jpg",
@@ -175,10 +167,8 @@
   "src": "website"
  },
  "Kaf' Bar": {
-  "file": "img/places/kaf-bar-4594d8.jpg",
-  "from": "http://static1.squarespace.com/static/646887ff1aed20518eac7382/t/64730a9b5b0e395bad25f83d/1685260955639/cut+outline.png?format=1500w",
-  "page": "https://cafekaf.com/",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Kødbyens Fiskebar": {
   "file": "img/places/k-dbyens-fiskebar-551cd8.jpg",
@@ -232,16 +222,12 @@
   "src": "wikipedia"
  },
  "Norse Projects": {
-  "file": "img/places/norse-projects-de8ed8.jpg",
-  "from": "http://norseprojects.com/cdn/shop/files/NP_Banner.png?v=1768898826&width=2048",
-  "page": "https://norseprojects.com/",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Norse Projects HQ": {
-  "file": "img/places/norse-projects-hq-76edbd.jpg",
-  "from": "http://norseprojects.com/cdn/shop/files/NP_Banner.png?v=1768898826&width=2048",
-  "page": "https://norseprojects.com/pages/stores",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Ny Carlsberg Glyptotek": {
   "file": "img/places/ny-carlsberg-glyptotek-f2839e.jpg",
@@ -288,10 +274,8 @@
   "src": "search"
  },
  "Riviera": {
-  "file": "img/places/riviera-414757.jpg",
-  "from": "https://dictionary.cambridge.org/external/images/og-image.png",
-  "page": "https://dictionary.cambridge.org/dictionary/english/pause",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "Rondo": {
   "file": "img/places/rondo-9d630b.jpg",
@@ -389,10 +373,8 @@
   "src": "wikidata"
  },
  "bertels": {
-  "file": "img/places/bertels-515d02.jpg",
-  "from": "https://images.cdn-files-a.com/ready_uploads/media/5927724/800_5f291dd0bb0c9.jpg",
-  "page": "https://www.liyadacakes.com/%D7%94%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95/%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94/%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%92%D7%91%D7%99%D7%A0%D7%94",
-  "src": "search"
+  "note": "search picked an unrelated image",
+  "src": "none"
  },
  "bird : downtown": {
   "file": "img/places/bird-downtown-a1b7c4.jpg",
