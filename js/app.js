@@ -12,7 +12,7 @@ SAVED.forEach((s, i) => {
   const same = PLACES.find(p => p.id === SAVED_SAME_AS[s.name]);
   if (same) { Object.assign(same, { url: s.url, note: s.note || same.note }); return; }
   PLACES.push({ id: "s" + i, he: savedName(s.name), en: "", type: SAVED_TYPES[s.name] || TAG_TYPES[s.tags[0]] || "other",
-    lat: s.lat, lng: s.lng, url: s.url, note: s.note, saved: true, wiki: WIKI[s.name] });
+    lat: s.lat, lng: s.lng, url: s.url, note: s.note, saved: true, wiki: WIKI[s.name], key: s.name });
 });
 PLACES.forEach(p => { if (!p.wiki && WIKI[p.id]) p.wiki = WIKI[p.id]; });
 const PLACE = Object.fromEntries(PLACES.map(p => [p.id, p]));
@@ -237,6 +237,8 @@ function missingList(){
 const isPhone = () => matchMedia("(max-width: 700px)").matches;
 const photoCache = {};
 async function photo(p){
+  const own = IMAGES[p.key || p.id];
+  if (own) return own;
   if (!p.wiki) return null;
   if (!(p.wiki in photoCache)) photoCache[p.wiki] = fetch("https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(p.wiki.replace(/ /g, "_")))
     .then(r => r.ok ? r.json() : null).then(j => j && (j.thumbnail || j.originalimage) ? (j.originalimage && j.originalimage.width <= 1200 ? j.originalimage.source : j.thumbnail.source) : null)

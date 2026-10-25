@@ -41,3 +41,9 @@ Every push to `main` deploys to GitHub Pages through `.github/workflows/pages.ym
 On push, `.github/workflows/geocode.yml` runs `scripts/geocode.py`, which looks up each place's coordinates
 (cached in `data/geocoded.json`), writes `js/saved.js`, and redeploys. To update the list, replace the CSV and push.
 A Google Maps tag sets the place's type (see `TAG_TYPES` in `js/data.js`); saved places show as white pins.
+
+## Place photos
+
+`.github/workflows/images.yml` runs `scripts/images.py`, which finds a photo for each place (Wikipedia, then
+OpenStreetMap tags, then the place's own website preview image), saves it to `img/places/` and writes `js/images.js`.
+To drop a wrong photo, set its `"src"` to `"none"` in `data/images.json`.
