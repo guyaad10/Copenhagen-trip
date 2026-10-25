@@ -6,7 +6,7 @@ looks each place up once and keeps the result in data/geocoded.json:
   2. OpenStreetMap Nominatim, by name, inside Copenhagen
 
 Run with --offline to rebuild js/saved.js from the cache without any lookups.
-Fix a wrong pin by editing its entry in data/geocoded.json.
+Fix a wrong pin by editing its entry in data/geocoded.json and setting "src": "manual".
 """
 import csv
 import json
@@ -23,6 +23,7 @@ CACHE_PATH = ROOT / "data" / "geocoded.json"
 OUT_PATH = ROOT / "js" / "saved.js"
 
 # Greater Copenhagen, generous enough for Ordrupgaard and Amager
+LOG = []
 BBOX = (55.55, 12.30, 55.82, 12.72)
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 NOMINATIM_UA = "Copenhagen-trip/1.0 (https://github.com/guyaad10/Copenhagen-trip)"
@@ -33,12 +34,15 @@ def in_bbox(lat, lng):
 
 
 def get(url, ua=UA):
-    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Language": "en"})
+    # the cookies skip Google's EU consent page
+    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept-Language": "en", "Cookie": "CONSENT=YES+cb; SOCS=CAI"})
     with urllib.request.urlopen(req, timeout=20) as r:
         return r.geturl(), r.read().decode("utf-8", "replace")
 
 
 PATTERNS = [
+    # [[[altitude, lng, lat]: the map center Google renders the place page with
+    re.compile(r"APP_INITIALIZATION_STATE=\[\[\[[\d.]+,(-?\d+\.\d+),(-?\d+\.\d+)\]"),
     re.compile(r"center=(-?\d+\.\d+)%2C(-?\d+\.\d+)"),
     re.compile(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)"),
     re.compile(r"@(-?\d+\.\d+),(-?\d+\.\d+),"),
@@ -51,9 +55,12 @@ def from_google(url):
     for text in (final, html):
         for pat in PATTERNS:
             for m in pat.finditer(text):
-                lat, lng = float(m.group(1)), float(m.group(2))
+                a, b = float(m.group(1)), float(m.group(2))
+                lat, lng = (b, a) if pat is PATTERNS[0] else (a, b)
                 if in_bbox(lat, lng):
                     return lat, lng
+    title = re.search(r"<title>(.*?)</title>", html, re.S)
+    LOG.append(f"google: no coordinates at {urllib.parse.urlsplit(final).netloc}, title {title.group(1)[:80] if title else '-'}")
     return None
 
 
@@ -79,14 +86,24 @@ def main():
 
     for r in rows:
         url = r["URL"].strip()
-        if url in cache or offline:
+        # retry places that didn't come from Google, since a name search can pick the wrong spot
+        if offline or (url in cache and cache[url]["src"] in ("google", "manual")):
+            continue
+        if url in cache:
+            try:
+                g = from_google(url)
+            except Exception as e:
+                g = None
+                LOG.append(f"google failed for {r['Title']}: {e}")
+            if g:
+                cache[url].update(lat=round(g[0], 6), lng=round(g[1], 6), src="google")
             continue
         found, source = None, None
         try:
             found = from_google(url)
             source = "google" if found else None
         except Exception as e:  # keep going; the next source may work
-            print(f"google failed for {r['Title']}: {e}")
+            LOG.append(f"google failed for {r['Title']}: {e}")
         if not found:
             try:
                 found = from_nominatim(r["Title"])
@@ -95,9 +112,9 @@ def main():
                 print(f"nominatim failed for {r['Title']}: {e}")
         if found:
             cache[url] = {"lat": round(found[0], 6), "lng": round(found[1], 6), "src": source, "name": r["Title"]}
-            print(f"{source:9} {r['Title']}")
+            LOG.append(f"{source:9} {r['Title']}")
         else:
-            print(f"MISSING   {r['Title']}")
+            LOG.append(f"MISSING   {r['Title']}")
         time.sleep(0.5)
 
     CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
@@ -119,7 +136,10 @@ def main():
         f"const SAVED_MISSING = {json.dumps(missing, ensure_ascii=False, indent=1)};\n",
         encoding="utf-8",
     )
-    print(f"{len(saved)} placed, {len(missing)} without coordinates")
+    LOG.append(f"{len(saved)} placed, {len(missing)} without coordinates")
+    print("\n".join(LOG))
+    if not offline:
+        (ROOT / "data" / "geocode-log.txt").write_text("\n".join(LOG) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
