@@ -10,6 +10,7 @@ Results are cached in data/images.json; js/images.js maps place keys to files.
 Set an entry's "src" to "none" in data/images.json to drop a bad picture, or put
 your own file in img/places/ and point the entry at it with "src": "manual".
 """
+import base64
 import hashlib
 import io
 import json
@@ -77,7 +78,7 @@ def osm_tags(name, lat, lng):
         "extratags": 1, "viewbox": f"{lng - d},{lat + d},{lng + d},{lat - d}",
     })
     hits = json.loads(get("https://nominatim.openstreetmap.org/search?" + q))
-    time.sleep(1.1)  # Nominatim allows one request per second
+    time.sleep(1.5)  # Nominatim allows one request per second
     return (hits[0].get("extratags") or {}) if hits else {}
 
 
@@ -109,15 +110,33 @@ def from_website(url):
 SKIP_HOSTS = ("duckduckgo.com", "maps.apple.com", "instagram.com", "facebook.com", "tiktok.com", "google.", "youtube.com", "linkedin.com", "wikipedia.org")
 
 
+def search_links(name):
+    """Result links from Bing, then DuckDuckGo."""
+    q = f"{name} Copenhagen"
+    links = []
+    try:
+        html = get("https://www.bing.com/search?" + urllib.parse.urlencode({"q": q, "setlang": "en", "cc": "DK"}), ua=BROWSER_UA)
+        links = re.findall(r'<li class="b_algo".*?<h2[^>]*><a[^>]+href="(https?://[^"]+)"', html, re.S)
+    except Exception as e:
+        LOG.append(f"bing failed for {name}: {e}")
+    if not links:
+        html = get("https://html.duckduckgo.com/html/?" + urllib.parse.urlencode({"q": q}), ua=BROWSER_UA)
+        links = re.findall(r'class="result__a" href="([^"]+)"', html)
+    time.sleep(3)
+    return [l.replace("&amp;", "&") for l in links]
+
+
 def from_search(name):
     """Preview pictures of the first few useful search results, as (image, page) pairs."""
-    html = get("https://html.duckduckgo.com/html/?" + urllib.parse.urlencode({"q": f"{name} Copenhagen"}), ua=BROWSER_UA)
-    time.sleep(4)
     found = []
-    for m in re.finditer(r'class="result__a" href="([^"]+)"', html):
+    for href in search_links(name):
         if len(found) >= 5:
             break
-        href = m.group(1)
+        if "bing.com/ck/a" in href:
+            u = re.search(r"[?&]u=a1([^&]+)", href)
+            if not u:
+                continue
+            href = base64.urlsafe_b64decode(u.group(1) + "=" * (-len(u.group(1)) % 4)).decode("utf-8", "replace")
         if "uddg=" in href:
             href = urllib.parse.unquote(re.search(r"uddg=([^&]+)", href).group(1))
         if not href.startswith("http") or any(h in href for h in SKIP_HOSTS):
