@@ -1,0 +1,142 @@
+NO PHOTO   hotel
+skip wikipedia for cph-h: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   cph-h
+skip wikipedia for noerreport: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+NO PHOTO   noerreport
+wikipedia  marmorkirken
+skip wikipedia for rundetaarn: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   rundetaarn
+skip wikipedia for zara: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+NO PHOTO   zara
+skip wikipedia for illums: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+NO PHOTO   illums
+NO PHOTO   hay
+wikipedia  louis
+skip wikipedia for designmuseum: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   designmuseum
+skip wikipedia for glyptotek: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   glyptotek
+NO PHOTO   bertels
+wikipedia failed for torvehallerne: HTTP Error 404: Not Found
+wikidata   torvehallerne
+wikipedia failed for tivolifood: HTTP Error 404: Not Found
+NO PHOTO   tivolifood
+skip wikipedia for kastellet: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   kastellet
+skip wikipedia for palmhouse: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+NO PHOTO   palmhouse
+skip wikipedia for frbhave: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   frbhave
+skip wikipedia for amalienborg: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   amalienborg
+skip wikipedia for rosenborg: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   rosenborg
+skip wikipedia for nyhavn: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+NO PHOTO   nyhavn
+skip wikipedia for tivoli: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   tivoli
+skip wikipedia for saviour: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   saviour
+skip wikipedia for christianshavn: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   christianshavn
+skip wikipedia for vaernedamsvej: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+NO PHOTO   vaernedamsvej
+skip wikipedia for bredgade: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   bredgade
+skip wikipedia for amagertorv: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+commons    amagertorv
+skip wikipedia for pilestraede: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   pilestraede
+skip wikipedia for kobmagergade: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   kobmagergade
+website    Audo Copenhagen
+NO PHOTO   Axel Copenhagen
+NO PHOTO   Lidkøb Østerbro
+wikipedia failed for Hotel NH Collection Copenhagen: HTTP Error 404: Not Found
+osm/website failed for Hotel NH Collection Copenhagen: HTTP Error 403: Forbidden
+NO PHOTO   Hotel NH Collection Copenhagen
+website    Hart Bakery
+NO PHOTO   Hart
+NO PHOTO   Palmehuset
+NO PHOTO   New Mags
+osm/website failed for Wild horses: HTTP Error 403: Forbidden
+NO PHOTO   Wild horses
+NO PHOTO   studio x kitchen
+NO PHOTO   Rondo
+website    BRUS
+wikipedia failed for Bæst: HTTP Error 404: Not Found
+website    Bæst
+NO PHOTO   SURT
+website    Restaurant JATAK
+NO PHOTO   Samsøe Samsøe
+skip website for GAO Dumpling Bar: too small (197x204), probably a logo
+NO PHOTO   GAO Dumpling Bar
+website    Gasoline Grill
+NO PHOTO   Gasoline Grill - Streetfood
+wikipedia  8 House
+skip wikipedia for Superkilen Park: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   Superkilen Park
+website    Hooked
+wikidata   Elmegade
+wikidata   Tivoli Gardens
+NO PHOTO   MUJI København
+website    Apotek 57
+NO PHOTO   Hart
+website    Juno the bakery
+osm/website failed for Pompette: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>
+NO PHOTO   Pompette
+NO PHOTO   Barr
+NO PHOTO   TorvehallerneKBH
+wikipedia failed for Reffen - Copenhagen Street Food: HTTP Error 404: Not Found
+website    Reffen - Copenhagen Street Food
+osm/website failed for Høst: HTTP Error 404: Not Found
+NO PHOTO   Høst
+NO PHOTO   Frank
+NO PHOTO   Ancestrale
+wikipedia failed for Kødbyens Fiskebar: HTTP Error 404: Not Found
+website    Kødbyens Fiskebar
+website    Sanchez
+NO PHOTO   Saturday Loppemarked
+NO PHOTO   BauBau
+website    Reseller
+NO PHOTO   Norse Projects
+NO PHOTO   Norse Projects HQ
+NO PHOTO   Goods
+NO PHOTO   COS
+NO PHOTO   Uniqlo Closes soon
+NO PHOTO   Aesop
+NO PHOTO   Locale 21
+website    Prolog Coffee Bar Papirøen
+NO PHOTO   Illums Bolighus
+wikipedia failed for Copenhagen Contemporary: HTTP Error 404: Not Found
+wikidata   Copenhagen Contemporary
+skip wikipedia for SMK – Statens Museum for Kunst: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
+wikidata   SMK – Statens Museum for Kunst
+wikidata   Ny Carlsberg Glyptotek
+wikidata   Rosenborg Castle
+website    Andersen & Maillard
+NO PHOTO   Alle Tiders
+NO PHOTO   Kaf' Bar
+NO PHOTO   Ferm Living
+wikipedia  Ordrupgaard
+NO PHOTO   Another Aspect
+NO PHOTO   Rosforth & Rosforth
+NO PHOTO   bird : downtown
+wikidata   Designmuseum Danmark
+NO PHOTO   Godt Fund Vintage
+osm/website failed for Noma: HTTP Error 403: Forbidden
+wikipedia  Noma
+website    Lille Bakery
+skip website for Atelier September: too small (596x142), probably a logo
+NO PHOTO   Atelier September
+website    Sing Tehus
+website    Sonny
+NO PHOTO   Apollo Bar
+website    La Cabra
+NO PHOTO   Riviera
+NO PHOTO   ORSA
+NO PHOTO   HAY House
+website    Frama
+NO PHOTO   Montana
+NO PHOTO   Vipp
+49 of 105 places have a photo
