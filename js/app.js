@@ -311,7 +311,10 @@ function renderSel(){
   photo(p).then(src => {
     if (!src) return;
     document.querySelectorAll(`[data-card="${p.id}"] .pphoto`).forEach(el => {
-      el.innerHTML = `<img src="${esc(src)}" alt="" loading="lazy">`; el.classList.add("has");
+      const img = new Image();
+      img.alt = "";
+      img.onload = () => { el.replaceChildren(img); el.classList.add("has"); if (popup) popup.update(); };
+      img.src = src;
     });
     if (popup) popup.update();
   });
