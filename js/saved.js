@@ -15,8 +15,8 @@ const SAVED = [
   "note": "",
   "url": "https://www.google.com/maps/place/Axel+Copenhagen/data=!4m2!3m1!1s0x465253175ef109e9:0x32cbfff91cf041db",
   "tags": [],
-  "lat": 55.680599,
-  "lng": 12.581669
+  "lat": 55.678489,
+  "lng": 12.573769
  },
  {
   "name": "Lidkøb Østerbro",
@@ -45,8 +45,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.681235,
-  "lng": 12.581596
+  "lat": 55.668328,
+  "lng": 12.557958
  },
  {
   "name": "Hart",
@@ -55,8 +55,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.681235,
-  "lng": 12.581596
+  "lat": 55.668328,
+  "lng": 12.557958
  },
  {
   "name": "Palmehuset",
@@ -163,8 +163,8 @@ const SAVED = [
   "note": "",
   "url": "https://www.google.com/maps/place/Sams%C3%B8e+Sams%C3%B8e/data=!4m2!3m1!1s0x465253109bdc8cf1:0xb828bb38b0659d9e",
   "tags": [],
-  "lat": 55.679822,
-  "lng": 12.581098
+  "lat": 55.673822,
+  "lng": 12.550038
  },
  {
   "name": "GAO Dumpling Bar",
@@ -181,8 +181,18 @@ const SAVED = [
   "note": "",
   "url": "https://www.google.com/maps/place/Gasoline+Grill/data=!4m2!3m1!1s0x46525319a9ee66e1:0xb6850b6a3fa2148a",
   "tags": [],
-  "lat": 55.737061,
-  "lng": 12.575182
+  "lat": 55.683239,
+  "lng": 12.585165
+ },
+ {
+  "name": "Gasoline Grill - Streetfood",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Gasoline+Grill+-+Streetfood/data=!4m2!3m1!1s0x46525397e3351c7d:0xc694f66e0df6014f",
+  "tags": [
+   "Restaurant"
+  ],
+  "lat": 55.683239,
+  "lng": 12.585165
  },
  {
   "name": "8 House",
@@ -259,8 +269,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.681235,
-  "lng": 12.581596
+  "lat": 55.668328,
+  "lng": 12.557958
  },
  {
   "name": "Juno the bakery",
@@ -360,8 +370,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.683984,
-  "lng": 12.569138
+  "lat": 55.707853,
+  "lng": 12.597015
  },
  {
   "name": "BauBau",
@@ -394,6 +404,16 @@ const SAVED = [
   "lng": 12.549749
  },
  {
+  "name": "Norse Projects HQ",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Norse+Projects+HQ/data=!4m2!3m1!1s0x4652530e209a791f:0x1b94ef4308062750",
+  "tags": [
+   "Fashion"
+  ],
+  "lat": 55.673778,
+  "lng": 12.549749
+ },
+ {
   "name": "Goods",
   "note": "",
   "url": "https://www.google.com/maps/place/Goods/data=!4m2!3m1!1s0x465252f058dcb75b:0x196b71ede6ede5f4",
@@ -412,6 +432,16 @@ const SAVED = [
   ],
   "lat": 55.679731,
   "lng": 12.579055
+ },
+ {
+  "name": "Uniqlo Closes soon",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Uniqlo+Closes+soon/data=!4m2!3m1!1s0x465253a5bb6b96e9:0x5993e0fc2aa5567a",
+  "tags": [
+   "Fashion"
+  ],
+  "lat": 55.678714,
+  "lng": 12.574779
  },
  {
   "name": "Aesop",
@@ -462,6 +492,16 @@ const SAVED = [
   ],
   "lat": 55.67889,
   "lng": 12.578573
+ },
+ {
+  "name": "Lokal ApS.",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029",
+  "tags": [
+   "Bakery & Coffee"
+  ],
+  "lat": 55.773917,
+  "lng": 12.505606
  },
  {
   "name": "Copenhagen Contemporary",
@@ -768,14 +808,6 @@ const SAVED_MISSING = [
   "tags": []
  },
  {
-  "name": "Gasoline Grill - Streetfood",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Gasoline+Grill+-+Streetfood/data=!4m2!3m1!1s0x46525397e3351c7d:0xc694f66e0df6014f",
-  "tags": [
-   "Restaurant"
-  ]
- },
- {
   "name": "Hotel NH Copenhagen Grand Joanne",
   "note": "",
   "url": "https://www.google.com/maps/place/Hotel+NH+Copenhagen+Grand+Joanne/data=!4m2!3m1!1s0x46525303e1a8c0e5:0x9f2e96ae392ef6cf",
@@ -824,22 +856,6 @@ const SAVED_MISSING = [
   ]
  },
  {
-  "name": "Norse Projects HQ",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Norse+Projects+HQ/data=!4m2!3m1!1s0x4652530e209a791f:0x1b94ef4308062750",
-  "tags": [
-   "Fashion"
-  ]
- },
- {
-  "name": "Uniqlo Closes soon",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Uniqlo+Closes+soon/data=!4m2!3m1!1s0x465253a5bb6b96e9:0x5993e0fc2aa5567a",
-  "tags": [
-   "Fashion"
-  ]
- },
- {
   "name": "Le Labo",
   "note": "",
   "url": "https://www.google.com/maps/place/Le+Labo/data=!4m2!3m1!1s0x46525322a68575db:0x60e00e0a0755d69",
@@ -867,14 +883,6 @@ const SAVED_MISSING = [
   "url": "https://www.google.com/maps/place/B%26W+Market/data=!4m2!3m1!1s0x465252d79695b455:0x2e75a330053d13e6",
   "tags": [
    "Vintage"
-  ]
- },
- {
-  "name": "Lokal ApS.",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029",
-  "tags": [
-   "Bakery & Coffee"
   ]
  },
  {
