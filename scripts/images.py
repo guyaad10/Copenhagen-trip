@@ -106,13 +106,17 @@ def from_website(url):
     return None
 
 
-SKIP_HOSTS = ("instagram.com", "facebook.com", "tiktok.com", "google.", "youtube.com", "linkedin.com", "wikipedia.org")
+SKIP_HOSTS = ("duckduckgo.com", "maps.apple.com", "instagram.com", "facebook.com", "tiktok.com", "google.", "youtube.com", "linkedin.com", "wikipedia.org")
 
 
 def from_search(name):
+    """Preview pictures of the first few useful search results, as (image, page) pairs."""
     html = get("https://html.duckduckgo.com/html/?" + urllib.parse.urlencode({"q": f"{name} Copenhagen"}), ua=BROWSER_UA)
-    time.sleep(2)
+    time.sleep(4)
+    found = []
     for m in re.finditer(r'class="result__a" href="([^"]+)"', html):
+        if len(found) >= 5:
+            break
         href = m.group(1)
         if "uddg=" in href:
             href = urllib.parse.unquote(re.search(r"uddg=([^&]+)", href).group(1))
@@ -123,8 +127,18 @@ def from_search(name):
         except Exception:
             continue
         if img:
-            return img, href
-    return None, None
+            found.append((img, href))
+    return found
+
+
+def is_logo(im):
+    """Wordmarks and banners are dominated by one flat color; photos are not."""
+    small = im.resize((64, 64))
+    counts = {}
+    for r, g, b in small.getdata():
+        q = (r // 24, g // 24, b // 24)
+        counts[q] = counts.get(q, 0) + 1
+    return max(counts.values()) / (64 * 64) > 0.42
 
 
 def save(key, url):
@@ -133,6 +147,8 @@ def save(key, url):
     if im.width < 300 or im.height < 200:
         raise ValueError(f"too small ({im.width}x{im.height}), probably a logo")
     im = im.convert("RGB")
+    if is_logo(im):
+        raise ValueError("mostly one flat color, probably a logo or a blank banner")
     im.thumbnail((900, 900))
     slug = re.sub(r"[^a-z0-9]+", "-", key.lower()).strip("-")[:40] or "place"
     name = f"{slug}-{hashlib.sha1(key.encode()).hexdigest()[:6]}.jpg"
@@ -141,12 +157,31 @@ def save(key, url):
     return "img/places/" + name
 
 
+def try_save(cache, key, candidates):
+    for url, src, page in candidates:
+        try:
+            cache[key] = {"file": save(key, url), "src": src, "from": url}
+            if page:
+                cache[key]["page"] = page
+            LOG.append(f"{src:10} {key}" + (f"  ({page})" if page else ""))
+            return True
+        except Exception as e:
+            LOG.append(f"skip {src} for {key}: {e}")
+    return False
+
+
 def main():
     cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
     items, wiki = places()
     for key, name, lat, lng in items:
-        if key in cache:
+        if key in cache and cache[key].get("src") == "none":
             continue
+        if key in cache:
+            f = ROOT / cache[key]["file"]
+            if cache[key]["src"] == "manual" or (f.exists() and not is_logo(Image.open(f).convert("RGB"))):
+                continue
+            LOG.append(f"recheck    {key}: saved photo looks like a logo")
+            del cache[key]
         candidates = []
         try:
             if key in wiki:
@@ -167,26 +202,14 @@ def main():
                     candidates.append((u, "website"))
         except Exception as e:
             LOG.append(f"osm/website failed for {key}: {e}")
-        page = None
-        for url, src in candidates + [("search", "search")]:
-            if url == "search":
-                try:
-                    url, page = from_search(name)
-                except Exception as e:
-                    LOG.append(f"search failed for {key}: {e}")
-                    url = None
-                if not url:
-                    continue
+        if not try_save(cache, key, [(u, src, None) for u, src in candidates]):
             try:
-                cache[key] = {"file": save(key, url), "src": src, "from": url}
-                if src == "search":
-                    cache[key]["page"] = page
-                LOG.append(f"{src:10} {key}" + (f"  ({page})" if src == "search" else ""))
-                break
+                results = from_search(name)
             except Exception as e:
-                LOG.append(f"skip {src} for {key}: {e}")
-        else:
-            LOG.append(f"NO PHOTO   {key}")
+                LOG.append(f"search failed for {key}: {e}")
+                results = []
+            if not try_save(cache, key, [(u, "search", page) for u, page in results]):
+                LOG.append(f"NO PHOTO   {key}")
 
     CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     images = {k: v["file"] for k, v in sorted(cache.items()) if v.get("src") != "none" and v.get("file")}

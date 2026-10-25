@@ -25,12 +25,6 @@
   "from": "http://audocph.com/cdn/shop/files/Audo_2023_CMA_4P0A3750_FINAL_cbd3b2b2-ca61-4391-95ca-363b4f2b2872.jpg?v=1780926415",
   "src": "website"
  },
- "Axel Copenhagen": {
-  "file": "img/places/axel-copenhagen-3dad0d.jpg",
-  "from": "https://cdn.snaptravel.com/super_meta_tag_image.jpeg",
-  "page": "https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=X4gXByRyOl6GsUfoc7uHtfcrSS7ICuoU4zRAXjXo63yZSi4SRoGvN3oGyh_eJeeVYKLgDqWkIlgiQfyTWwOaeq_C3E39ja780xh5W7zf_N_jMZQ3C5z9DGxGB_BELz4Z12g0s3Uad3FEK7hr5V7XpCTG7mCdDQl4tgr2iWFAJdw.d7SIDCeetUCo1K1liD7KVg&rut=385ecc317d2e4661fb77058f7ed96f94d1924477e2ca6ebd66bdd305af00a11e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8tDXWiILINZf6kVWofKa3_zVUCUyw%2DoXDMikzvj2w_vhAi19RuI9IatYB3Y7BOahPRpqkmRSj6KGenMmEIPg3f87L_6NJLMRgCw39sgUf0lCZ0sY_4PQWufcix0fhJLloB0ra7YHxea0uta93KHNhBMgxFT9XSduBl3HKvHxyLtRUGi%2DuuQdNTivHRggY1Oh7yCAzyWompoXMHH3PZBrwltJXRmE%26u%3DaHR0cHMlM2ElMmYlMmZheGVsZ3VsZHNtZWRlbi5yZXNlcnZhdGlvbnN0YXlzLmNvbSUyZmhvdGVscyUyZjZqeGc4dmx3JTNmdXRtX3NvdXJjZSUzZGJpbmdfc2Vtcm8lMjZ1dG1fY2FtcGFpZ24lM2RCJTNhUlMlM2FVUy1ST1clM2FQUEMlM2FOQiUzYVByb3AlM2FST1clM2FFTiUzYUV1cm9wZSUyNm1zY2xraWQlM2Q1ODMzNGQ1MDkxOGIxMjg4ZWNlMjI3OGQ2NDNjMmQxZCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fdGVybSUzZEF4ZWwlMjUyMEd1bGRzbWVkZW4lMjUyMENvcGVuaGFnZW4lMjZ1dG1fY29udGVudCUzZGF4ZWxndWxkc21lZGVuLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRjZqeGc4dmx3%26rlid%3D58334d50918b1288ece2278d643c2d1d&vqd=4-117025664622856314109702091774223004169&iurl=%7B1%7DIG%3DE2BCE1594DCA44D9838C0A7E7E0031E5%26CID%3D02036981E7946E362D1D7E7CE6706F63%26ID%3DDevEx%2C5037.1",
-  "src": "search"
- },
  "BRUS": {
   "file": "img/places/brus-4d4085.jpg",
   "from": "https://tapperietbrus.dk/wp-content/uploads/2024/07/Eatery-scaled.jpg",
@@ -133,17 +127,6 @@
   "page": "https://genbrugguide.dk/lidkob-osterbro-kobenhavn/",
   "src": "search"
  },
- "Lille Bakery": {
-  "file": "img/places/lille-bakery-5b5877.jpg",
-  "from": "http://static1.squarespace.com/static/5e6f7788fdb07a59fb7cd29d/t/5e6f7a29d1964a08652d8471/1584364076588/lille_logotype_final_sun.png?format=1500w",
-  "src": "website"
- },
- "MUJI København": {
-  "file": "img/places/muji-k-benhavn-811222.jpg",
-  "from": "https://snapshot.apple-mapkit.com/api/v1/snapshot?center=55.679268,12.58069&spn=0.008993300000000204,0.015950300000000084&annotations=%5B%7B%22point%22%3A%2255.679268%2C12.58069%22%2C%22markerStyle%22%3A%22large%22%2C%22attrs%22%3A%221c6447%3B4%3A112%2C6%3A171%2C10%3A0%2C34%3A1%2C82%3A1%2C85%3A16%2C89%3A4%2C164%3A1%22%7D%5D&size=450x300&scale=2&teamId=C5U892736Y&keyId=GJ5GZDFL89&signature=vPW9AQrkrn8L6rwVHmVLfqC32sRSWNpMvAdwrqcJyVwczIs9GlqVnaNNrZdRDBcNlaNzY5drpPBh2mQIX-wfpw",
-  "page": "https://maps.apple.com/place?place-id=I706E8737AB52C7E4",
-  "src": "search"
- },
  "New Mags": {
   "file": "img/places/new-mags-deedfa.jpg",
   "from": "http://new-mags.com/cdn/shop/files/image-28.png?v=1687504631&width=2048",
@@ -177,18 +160,6 @@
   "from": "https://upload.wikimedia.org/wikipedia/commons/1/19/Ordupgaard_Copenhagen_Zaha_Hadid_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "src": "wikipedia"
  },
- "Palmehuset": {
-  "file": "img/places/palmehuset-1789f0.jpg",
-  "from": "https://snm.dk/themes/b14theme/images/fallback/snm_fallback.png",
-  "page": "https://snm.dk/en/udstilling/palm-house",
-  "src": "search"
- },
- "Pompette": {
-  "file": "img/places/pompette-141ccd.jpg",
-  "from": "https://c-p.rmcdn.net/66681773f56f6e001ac3d482/4864910/Screenshot-df375976-23d7-4afb-a435-86c5bea13e3d_readyscr_1024.jpg",
-  "page": "https://etteetteette.dk/pompette/",
-  "src": "search"
- },
  "Prolog Coffee Bar Papirøen": {
   "file": "img/places/prolog-coffee-bar-papir-en-b03fc4.jpg",
   "from": "https://www.prologcoffee.com/cdn/shop/files/2024_09_03_PROLOG_Risteri__17_1200x1779.jpg?v=1792402587",
@@ -202,11 +173,6 @@
  "Reseller": {
   "file": "img/places/reseller-a259ac.jpg",
   "from": "http://resellercph.com/cdn/shop/files/Storefront_bb15668b-4eff-4c53-a397-d5439831ed6f.jpg?v=1789071301",
-  "src": "website"
- },
- "Restaurant JATAK": {
-  "file": "img/places/restaurant-jatak-3cfe7d.jpg",
-  "from": "http://static1.squarespace.com/static/609d0ad29ab93267737ca8b7/t/6435d2d421ac233559346493/1681248980930/JATAK_logo_white_80plus3.png?format=1500w",
   "src": "website"
  },
  "Rondo": {
@@ -235,7 +201,7 @@
   "file": "img/places/sams-e-sams-e-38f606.jpg",
   "from": "https://a.storyblok.com/f/274250/2250x2813/af53b0af1b/ps26_campaign_perception_94x5_.jpg",
   "page": "https://www.samsoe.com/",
-  "src": "search"
+  "src": "manual"
  },
  "Sanchez": {
   "file": "img/places/sanchez-a68922.jpg",
@@ -290,12 +256,6 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Amalienborg%20panorama%20juli%202013.jpg?width=900",
   "src": "wikidata"
  },
- "bertels": {
-  "file": "img/places/bertels-515d02.jpg",
-  "from": "http://living-denmark.com/cdn/shop/files/Living_Denmark__1200_628_Logo_red_trans.png?v=1737570323",
-  "page": "https://living-denmark.com/pages/cakery-copenhagen-%D7%94%D7%96%D7%9E%D7%A0%D7%AA-%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%95%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
-  "src": "search"
- },
  "bredgade": {
   "file": "img/places/bredgade-21717d.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Bredgade%20-%20Copenhagen.jpg?width=900",
@@ -332,12 +292,6 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/hay-house-gdk437360",
   "src": "search"
  },
- "hotel": {
-  "file": "img/places/hotel-14e833.jpg",
-  "from": "https://cdn.snaptravel.com/super_meta_tag_image.jpeg",
-  "page": "https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=zWogiyMYUD4TcReNE93olre18b9qcXYGLDfc%2Dnu%2Dnapeoo_MWsgQ_o1XMb1w8gmDrbw%2D46GfLVCCbb5jG%2D5VLyRlgUQNDHBcasCvDT4coZ8L01gFQ9667Wtzo159sY707L1j0VRTtiFU7ameVe57rIENyJsA2EY4q1616Nu8ado.lWMPAYgvFhq7rrCmXcmAlg&rut=1228c916aa8215fff38478f8a9f239e71ef99746caf98d84eb7e49121d53104e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De88dqIMt3El3rX0HAOHD9U7zVUCUyawvzDU6Qvj_P_e2F%2DO5ZdHdkKHvb5Ggji1hzGDUuGdnqPLwfIVhc4T6202CEI1u2j%2DSYT3xxiDac4iGL98P%2DpcPhLqPGBoHcAfY49vpjD_1qV772iS_4ArYADOMNCd513_j2cCguwjno660kLsi8XuYjCjaL_7DJCkGyaZ8zeUkZuf0nr_y6Pc_Pxc%2DOSw0E%26u%3DaHR0cHMlM2ElMmYlMmZzY2FuZGljc3BlY3RydW0ucmVzZXJ2YXRpb25zdGF5cy5jb20lMmZob3RlbHMlMmZXekJhNTZuVyUzZnV0bV9zb3VyY2UlM2RiaW5nX3NlbXJvJTI2dXRtX2NhbXBhaWduJTNkQiUzYVJTJTNhVVMtUk9XJTNhUFBDJTNhTkIlM2FQcm9wJTNhUk9XJTNhRU4lM2FFdXJvcGUlMjZtc2Nsa2lkJTNkMzU5NzVlYjhkM2M4MTU0NzlkNDczNDY1MjY1ZTQ1MzQlMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX3Rlcm0lM2RTY2FuZGljJTI1MjBTcGVjdHJ1bSUyNTIwQ29wZW5oYWdlbiUyNnV0bV9jb250ZW50JTNkc2NhbmRpY3NwZWN0cnVtLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRld6QmE1Nm5X%26rlid%3D35975eb8d3c815479d473465265e4534&vqd=4-32986008322376611988105463762769112440&iurl=%7B1%7DIG%3DFDB1D0B292DD46C59730D9A84EBD4D54%26CID%3D13D833E6D3C6641D3B81241BD2226584%26ID%3DDevEx%2C5037.1",
-  "src": "search"
- },
  "illums": {
   "file": "img/places/illums-50a25b.jpg",
   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/K%C3%B8benhavn_-_Illums_Bolighus_%2830911098141%29.jpg/960px-K%C3%B8benhavn_-_Illums_Bolighus_%2830911098141%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
@@ -366,7 +320,7 @@
  "noerreport": {
   "file": "img/places/noerreport-291ac2.jpg",
   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/N%C3%B8rreport_Station_at_night_03.jpg/960px-N%C3%B8rreport_Station_at_night_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-  "src": "wikipedia"
+  "src": "manual"
  },
  "nyhavn": {
   "file": "img/places/nyhavn-6cd2e1.jpg",
@@ -408,12 +362,6 @@
   "file": "img/places/tivoli-0e4bd3.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/CopenhagenTivoliEntrance.jpg?width=900",
   "src": "wikidata"
- },
- "tivolifood": {
-  "file": "img/places/tivolifood-f977f9.jpg",
-  "from": "https://shop.tivoli.dk/gfx/tivoli/logo/logo.jpg",
-  "page": "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre",
-  "src": "search"
  },
  "torvehallerne": {
   "file": "img/places/torvehallerne-1462a3.jpg",
