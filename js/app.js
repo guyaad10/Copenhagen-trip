@@ -6,8 +6,16 @@ const btn = ([t,u]) => `<a class="btn" href="${esc(u)}" target="_blank" rel="noo
 const icon = type => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${TYPES[type].icon}"/></svg>`;
 const app = document.getElementById("app");
 
+// Merge Google Maps saved places into PLACES
+const savedName = n => n.replace(/\s*(\|\s*)?(Store & Showroom )?(Closes soon|Closed)$/i, "").trim();
+SAVED.forEach((s, i) => {
+  const same = PLACES.find(p => p.id === SAVED_SAME_AS[s.name]);
+  if (same) { Object.assign(same, { url: s.url, note: s.note || same.note }); return; }
+  PLACES.push({ id: "s" + i, he: savedName(s.name), en: "", type: SAVED_TYPES[s.name] || TAG_TYPES[s.tags[0]] || "other",
+    lat: s.lat, lng: s.lng, url: s.url, note: s.note, saved: true });
+});
 const PLACE = Object.fromEntries(PLACES.map(p => [p.id, p]));
-const placeUrl = p => MAP(p.q || p.en || p.he);
+const placeUrl = p => p.url || MAP(p.q || p.en || p.he);
 const stopPlaces = s => s.ps || (s.p ? [s.p] : []);
 // place id -> days it appears on
 const PLACE_DAYS = {};
@@ -205,10 +213,16 @@ function renderList(list){
   const byType = {};
   list.forEach(p => (byType[p.type] = byType[p.type] || []).push(p));
   document.getElementById("plist").innerHTML = list.length ? Object.keys(TYPES).filter(t => byType[t]).map(t => `
-    <div class="pgroup"><h3>${icon(t)}${TYPES[t].he}</h3>
+    <details class="pgroup" ${list.length <= 40 ? "open" : ""}><summary>${icon(t)}${TYPES[t].he}<span class="count">${byType[t].length}</span></summary>
       ${byType[t].map(p => `<button class="prow${mapState.sel===p.id?" on":""}" data-place="${p.id}">
         <span>${esc(p.he)}</span>${(PLACE_DAYS[p.id]||[]).map(d=>`<i class="dot" style="--c:var(${d.c})" title="יום ${d.name}"></i>`).join("")}</button>`).join("")}
-    </div>`).join("") : '<p class="muted">אין מקומות שמתאימים לסינון.</p>';
+    </details>`).join("") + missingList() : '<p class="muted">אין מקומות שמתאימים לסינון.</p>';
+}
+
+function missingList(){
+  if (!SAVED_MISSING.length || (mapState.days.size && !mapState.days.has("rec"))) return "";
+  return `<details class="pgroup"><summary>${icon("other")}בלי מיקום על המפה<span class="count">${SAVED_MISSING.length}</span></summary>
+    ${SAVED_MISSING.map(s => `<a class="prow" href="${esc(s.url)}" target="_blank" rel="noopener"><span>${esc(savedName(s.name))}</span>↗</a>`).join("")}</details>`;
 }
 
 function renderSel(){
@@ -217,7 +231,8 @@ function renderSel(){
   if (!p) { box.innerHTML = '<p class="muted maphint">לוחצים על סמל במפה כדי לראות פרטים.</p>'; return; }
   const days = PLACE_DAYS[p.id] || [];
   box.innerHTML = `<div class="card selcard">
-    <div class="cardhead"><span class="ticon">${icon(p.type)}</span><div><h3>${esc(p.he)}</h3><div class="en">${esc(TYPES[p.type].he)} · ${esc(p.en)}</div></div></div>
+    <div class="cardhead"><span class="ticon">${icon(p.type)}</span><div><h3>${esc(p.he)}</h3><div class="en">${esc(TYPES[p.type].he)}${p.en ? " · " + esc(p.en) : ""}</div></div></div>
+    ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
     <div class="links">${days.map(d => `<button class="btn daybtn" style="--c:var(${d.c})" data-go="${d.id}">יום ${d.name}</button>`).join("")}${btn(["פתיחה ב‑Google Maps", placeUrl(p)])}</div>
   </div>`;
 }

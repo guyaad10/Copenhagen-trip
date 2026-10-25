@@ -13,7 +13,7 @@ const LINKS = {
 
 // Place types: Hebrew label + icon (24x24 stroke path).
 const TYPES = {
-  food:    { he: "אוכל וקפה",     icon: "M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 1-3 4-3 7h3v11" },
+  food:    { he: "מסעדות ואוכל",     icon: "M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 1-3 4-3 7h3v11" },
   museum:  { he: "מוזיאון",        icon: "M3 9l9-5 9 5M5 9v9M9 9v9M15 9v9M19 9v9M3 20h18" },
   castle:  { he: "ארמון וטירה",    icon: "M3 19h18M4 17L3 8l5 4 4-7 4 7 5-4-1 9z" },
   shop:    { he: "חנות",           icon: "M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2" },
@@ -23,6 +23,12 @@ const TYPES = {
   fun:     { he: "אטרקציה",        icon: "M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0-14 0M12 5v14M5 12h14M9 21l3-9 3 9" },
   boat:    { he: "שייט",           icon: "M3 15h18l-3 5H6zM6 15v-5h9l3 5M9 10V6h4v4" },
   hotel:   { he: "מלון",           icon: "M3 19v-9M3 15h18v4M21 15v-2a3 3 0 0 0-3-3h-7v5M7 13.5a1.5 1.5 0 1 0 0-.01" },
+  cafe:    { he: "מאפים וקפה",     icon: "M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 9h2a2 2 0 0 1 0 4h-2M8 3v2M12 3v2" },
+  bar:     { he: "בר",             icon: "M5 4h14l-7 8zM12 12v8M8 20h8" },
+  fashion: { he: "אופנה",          icon: "M12 7a2 2 0 1 1 2-2M12 7v1l-9 7a1 1 0 0 0 .6 2h16.8a1 1 0 0 0 .6-2l-9-7" },
+  design:  { he: "עיצוב ואדריכלות", icon: "M8 3h8l3 7H5zM12 10v9M8 21h8" },
+  vintage: { he: "וינטג׳",          icon: "M6 10a6 7 0 1 0 12 0a6 7 0 1 0-12 0M12 17v4M9 21h6" },
+  other:   { he: "שמור",           icon: "M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" },
   transit: { he: "תחבורה",         icon: "M7 3h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM5 10h14M8 21l2-5M16 21l-2-5" }
 };
 
@@ -33,13 +39,13 @@ const PLACES = [
   { id: "noerreport",   he: "תחנת נורפורט",         en: "Nørreport Station",       type: "transit", lat: 55.6833, lng: 12.5717 },
   { id: "marmorkirken", he: "תחנת מרמורקירקן",     en: "Marmorkirken Station",    type: "transit", lat: 55.6850, lng: 12.5891 },
   { id: "rundetaarn",   he: "המגדל העגול",         en: "Rundetårn",               type: "view",    lat: 55.6813, lng: 12.5757 },
-  { id: "zara",         he: "ZARA ו‑Uniqlo",        en: "Strøget",                 type: "shop",    lat: 55.6780, lng: 12.5745, q: "Uniqlo Strøget" },
-  { id: "illums",       he: "Illums Bolighus",      en: "Amagertorv 10",           type: "shop",    lat: 55.6787, lng: 12.5794 },
-  { id: "hay",          he: "HAY House",            en: "Østergade 61",            type: "shop",    lat: 55.6795, lng: 12.5806, q: "HAY House Østergade" },
-  { id: "louis",        he: "Louis Poulsen",        en: "אולם תצוגה, סגור בראשון", type: "shop",    lat: 55.6825, lng: 12.6015, q: "Louis Poulsen showroom" },
+  { id: "zara",         he: "ZARA ו‑Uniqlo",        en: "Strøget",                 type: "fashion", lat: 55.6780, lng: 12.5745, q: "Uniqlo Strøget" },
+  { id: "illums",       he: "Illums Bolighus",      en: "Amagertorv 10",           type: "design",  lat: 55.6787, lng: 12.5794 },
+  { id: "hay",          he: "HAY House",            en: "Østergade 61",            type: "design",  lat: 55.6795, lng: 12.5806, q: "HAY House Østergade" },
+  { id: "louis",        he: "Louis Poulsen",        en: "אולם תצוגה, סגור בראשון", type: "design",  lat: 55.6825, lng: 12.6015, q: "Louis Poulsen showroom" },
   { id: "designmuseum", he: "המוזיאון הדני לאמנות ועיצוב", en: "Designmuseum Danmark", type: "museum", lat: 55.6862, lng: 12.5935 },
   { id: "glyptotek",    he: "ני קרלסברג גליפטוטק",  en: "Ny Carlsberg Glyptotek",  type: "museum",  lat: 55.6727, lng: 12.5725 },
-  { id: "bertels",      he: "Bertels Salon",        en: "עוגות גבינה",             type: "food",    lat: 55.6794, lng: 12.5762 },
+  { id: "bertels",      he: "Bertels Salon",        en: "עוגות גבינה",             type: "cafe",    lat: 55.6794, lng: 12.5762 },
   { id: "torvehallerne",he: "טורבהאלרנה",           en: "Torvehallerne",           type: "food",    lat: 55.6838, lng: 12.5697 },
   { id: "tivolifood",   he: "Tivoli Food Hall",     en: "ליד הכניסה לטיבולי",     type: "food",    lat: 55.6743, lng: 12.5658 },
   { id: "kastellet",    he: "קאסטלט",               en: "Kastellet",               type: "park",    lat: 55.6913, lng: 12.5951 },
@@ -57,6 +63,23 @@ const PLACES = [
   { id: "pilestraede",  he: "פילסטראדה",            en: "Pilestræde",              type: "street",  lat: 55.6810, lng: 12.5797 },
   { id: "kobmagergade", he: "קובמאגרגאדה",          en: "Købmagergade",            type: "street",  lat: 55.6808, lng: 12.5768 }
 ];
+
+// Google Maps saved places (js/saved.js, built from data/saved-places.csv) use their list tags for a type.
+const TAG_TYPES = {
+  "Bakery & Coffee": "cafe", "Restaurant": "food", "Design store and architecture": "design", "Fashion": "fashion",
+  "Vintage": "vintage", "Attractions and museums": "museum", "Bar": "bar", "Hotel": "hotel", "Park": "park"
+};
+// Saved places that had no tag in Google Maps
+const SAVED_TYPES = {
+  "Elmegade": "street", "Gasoline Grill": "food", "Samsøe Samsøe": "fashion", "Le Labo": "fashion",
+  "Bottega Barlie": "food", "Ancher Studio ApS": "design", "Axel Copenhagen": "other"
+};
+// Saved places that are already on the itinerary: they reuse the itinerary pin.
+const SAVED_SAME_AS = {
+  "Illums Bolighus": "illums", "HAY House": "hay", "Louis Poulsen": "louis", "Designmuseum Danmark": "designmuseum",
+  "Ny Carlsberg Glyptotek": "glyptotek", "Rosenborg Castle": "rosenborg", "Tivoli Gardens": "tivoli",
+  "TorvehallerneKBH": "torvehallerne", "Palmehuset": "palmhouse", "Uniqlo Closes soon": "zara"
+};
 
 const DAYS = [
  {id:"wed", name:"רביעי", date:"28.10", iso:"2026-10-28", c:"--h1", title:"נחיתה והתמקמות",

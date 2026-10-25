@@ -126,7 +126,12 @@ button.btn{background:none;cursor:pointer;font-family:inherit}
 .daybtn{border-color:var(--c);color:var(--ink)}
 .plist{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:6px}
 .pgroup{display:flex;flex-direction:column;gap:4px;min-width:0}
-.pgroup h3{font-family:var(--body);font-weight:700;font-size:15px;color:var(--muted);display:flex;gap:6px;align-items:center;margin-bottom:2px}
+.pgroup{background:none;box-shadow:none;border-radius:0}
+.pgroup summary{font-size:15px;color:var(--muted);padding:4px 0;justify-content:flex-start;align-items:center;gap:6px}
+.pgroup summary::after{margin-inline-start:auto}
+.pgroup .count{font-weight:400;font-size:13px;background:var(--chip);border-radius:999px;padding:0 8px}
+.pgroup[open]{display:flex;flex-direction:column;gap:4px}
+a.prow{color:var(--ink);text-decoration:none}
 .prow{all:unset;cursor:pointer;display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:8px;background:var(--surface);border:1px solid var(--line);font-size:15px}
 .prow span{flex:1;min-width:0}
 .prow.on{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -171,3 +176,4 @@ button.btn{background:none;cursor:pointer;font-family:inherit}
 
 /* saved places on the map: no day color */
 .pin.saved{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.pgroup .prow{width:100%;box-sizing:border-box;margin-top:4px}

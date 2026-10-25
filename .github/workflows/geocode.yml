@@ -1,0 +1,37 @@
+name: Geocode saved places
+
+on:
+  push:
+    branches: [main]
+    paths: [data/saved-places.csv, scripts/geocode.py]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: geocode
+  cancel-in-progress: false
+
+jobs:
+  geocode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/geocode.py
+      - name: Commit results and redeploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add data/geocoded.json js/saved.js
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update saved place coordinates"
+          git push
+          # pushes made with the workflow token don't start other workflows, so start the deploy here
+          gh workflow run pages.yml --ref main

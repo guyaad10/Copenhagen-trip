@@ -34,3 +34,10 @@ Then open http://localhost:8000.
 ## Deploying
 
 Every push to `main` deploys to GitHub Pages through `.github/workflows/pages.yml`.
+
+## Saved places from Google Maps
+
+`data/saved-places.csv` is the Copenhagen list from a Google Takeout export (Saved → `Copenhagen.csv`).
+On push, `.github/workflows/geocode.yml` runs `scripts/geocode.py`, which looks up each place's coordinates
+(cached in `data/geocoded.json`), writes `js/saved.js`, and redeploys. To update the list, replace the CSV and push.
+A Google Maps tag sets the place's type (see `TAG_TYPES` in `js/data.js`); saved places show as white pins.
