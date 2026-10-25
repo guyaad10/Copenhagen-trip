@@ -144,8 +144,12 @@ let lmap = null, markers = {}, routeLines = [];
 
 const cssVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
+const HOME = "hotel";
+const HOME_ICON = "M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10";
+
 function visiblePlaces(){
   return PLACES.filter(p => {
+    if (p.id === HOME) return true;  // the hotel stays on the map under every filter
     const days = PLACE_DAYS[p.id] || [];
     if (mapState.days.size && !(days.some(d => mapState.days.has(d.id)) || (!days.length && mapState.days.has("rec")))) return false;
     if (mapState.types.size && !mapState.types.has(p.type)) return false;
@@ -166,6 +170,7 @@ function mapView(){
         <div class="mapwrap">
           <div id="map" dir="ltr" role="region" aria-label="מפת קופנהגן"></div>
           <button class="fullbtn" id="fullbtn" aria-pressed="false" aria-label="מסך מלא">${svgPath(FULL_ICON.open)}</button>
+          <button class="fullbtn homebtn" id="homebtn" aria-label="הצג את המלון">${svgPath(HOME_ICON)}</button>
         </div>
       </div>
       <div id="plist" class="plist"></div>
@@ -193,12 +198,16 @@ function drawMarkers(fit){
   const list = visiblePlaces();
   list.forEach(p => {
     const days = PLACE_DAYS[p.id] || [];
-    const html = days[0]
+    const home = p.id === HOME;
+    const html = home
+      ? `<div class="homepin${mapState.sel===p.id?" sel":""}"><span class="pin">${svgPath(HOME_ICON)}</span><span class="homelabel">המלון שלנו</span></div>`
+      : days[0]
       ? `<div class="pin${mapState.sel===p.id?" sel":""}" style="--c:var(${days[0].c})">${icon(p.type)}</div>`
       : `<div class="pin saved${mapState.sel===p.id?" sel":""}">${icon(p.type)}</div>`;
     const m = L.marker([p.lat, p.lng], {
-      icon: L.divIcon({ html, className: "pinwrap", iconSize: [34,34], iconAnchor: [17,17] }),
-      title: p.he, keyboard: true
+      icon: home ? L.divIcon({ html, className: "pinwrap", iconSize: [46,46], iconAnchor: [23,23] })
+                 : L.divIcon({ html, className: "pinwrap", iconSize: [34,34], iconAnchor: [17,17] }),
+      title: p.he, keyboard: true, zIndexOffset: home ? 1000 : 0
     }).addTo(lmap);
     m.on("click", () => select(p.id, false));
     markers[p.id] = m;
@@ -310,7 +319,7 @@ function renderSel(){
 
 function markSel(){
   const id = mapState.sel;
-  Object.entries(markers).forEach(([pid, m]) => m.getElement()?.querySelector(".pin")?.classList.toggle("sel", pid === id));
+  Object.entries(markers).forEach(([pid, m]) => m.getElement()?.querySelector(".pin, .homepin")?.classList.toggle("sel", pid === id));
   document.querySelectorAll(".prow").forEach(b => b.classList.toggle("on", b.dataset.place === id));
 }
 
@@ -352,6 +361,7 @@ function go(id){
 }
 
 app.addEventListener("click", e => {
+  if (e.target.closest("#homebtn")) { select(HOME, true); return; }
   if (e.target.closest("#fullbtn")) { setFull(!document.getElementById("mapbox").classList.contains("full")); return; }
   const g = e.target.closest("[data-go]");
   if (g) { go(g.dataset.go); return; }

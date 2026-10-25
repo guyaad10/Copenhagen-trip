@@ -2,16 +2,16 @@
 :root{
   --bg:#EDF1F3; --surface:#FFFFFF; --ink:#1A2836; --muted:#5B6A78; --line:#D4DCE2; --accent:#1F5E8C; --accent-soft:#DCE8F1;
   --h1:#D99A35; --h2:#B4472F; --h3:#2E7C77; --h4:#E3BC4E; --h5:#3D6DA0; --house-ink:#1A2836; --window:#F7F3E8;
-  --rec:#4B5B6B; --shadow:0 1px 2px rgba(26,40,54,.06),0 8px 24px rgba(26,40,54,.08); --chip:#F1F5F8; --tile-filter:none;
+  --rec:#4B5B6B; --home:#E0457B; --shadow:0 1px 2px rgba(26,40,54,.06),0 8px 24px rgba(26,40,54,.08); --chip:#F1F5F8; --tile-filter:none;
   --display:"Suez One","Assistant",system-ui,sans-serif;
   --body:"Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346;
-  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25); --chip:#1F2C39; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}}
+  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --home:#F06292; --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25); --chip:#1F2C39; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346;
-  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25); --chip:#1F2C39; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}
+  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --home:#F06292; --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25); --chip:#1F2C39; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -218,3 +218,14 @@ html.noscroll,html.noscroll body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.drawer{transition:none}}
 .placepop a.gbtn,.drawer a.gbtn{color:var(--surface)}
 .pbody p{margin:0}
+
+/* our hotel */
+.homepin{position:relative;width:46px;height:46px}
+.homepin .pin{width:46px;height:46px;background:var(--home);border-width:3px;box-shadow:0 0 0 6px color-mix(in srgb,var(--home) 30%,transparent),0 3px 10px rgba(0,0,0,.4)}
+.homepin .pin svg{width:24px;height:24px}
+.homepin::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--home);animation:homepulse 2.4s ease-out infinite;z-index:-1}
+@keyframes homepulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(2.4);opacity:0}}
+.homelabel{position:absolute;top:50px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--home);color:#fff;font-family:var(--body);font-weight:700;font-size:13px;padding:2px 10px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.homepin.sel .pin{border-color:var(--ink)}
+.homebtn{top:52px;color:var(--home)}
+@media (prefers-reduced-motion:reduce){.homepin::before{animation:none}}
