@@ -64,7 +64,20 @@ def from_google(url):
     return None
 
 
+def clean(name):
+    name = re.sub(r"\s*(\|.*|Closes soon|Closed|ApS\.?|HQ)$", "", name, flags=re.I)
+    return re.sub(r"\s+-\s+.*$", "", name).strip()
+
+
 def from_nominatim(name):
+    for q in dict.fromkeys([name, clean(name), clean(name) + " København"]):
+        hit = nominatim_query(q)
+        if hit:
+            return hit
+    return None
+
+
+def nominatim_query(name):
     q = urllib.parse.urlencode({
         "q": name, "format": "json", "limit": 1, "bounded": 1,
         "viewbox": f"{BBOX[1]},{BBOX[2]},{BBOX[3]},{BBOX[0]}",
@@ -75,7 +88,7 @@ def from_nominatim(name):
     if hits:
         lat, lng = float(hits[0]["lat"]), float(hits[0]["lon"])
         if in_bbox(lat, lng):
-            return lat, lng
+            return lat, lng, hits[0].get("display_name", "")[:120]
     return None
 
 
@@ -86,17 +99,9 @@ def main():
 
     for r in rows:
         url = r["URL"].strip()
-        # retry places that didn't come from Google, since a name search can pick the wrong spot
-        if offline or (url in cache and cache[url]["src"] in ("google", "manual")):
-            continue
-        if url in cache:
-            try:
-                g = from_google(url)
-            except Exception as e:
-                g = None
-                LOG.append(f"google failed for {r['Title']}: {e}")
-            if g:
-                cache[url].update(lat=round(g[0], 6), lng=round(g[1], 6), src="google")
+        if url in cache and cache[url]["src"] == "nominatim" and "match" not in cache[url]:
+            del cache[url]  # look it up again so the matched address gets recorded
+        if offline or url in cache:
             continue
         found, source = None, None
         try:
@@ -108,10 +113,14 @@ def main():
             try:
                 found = from_nominatim(r["Title"])
                 source = "nominatim" if found else None
+                if found:
+                    LOG.append(f"   matched {found[2]}")
             except Exception as e:
                 print(f"nominatim failed for {r['Title']}: {e}")
         if found:
             cache[url] = {"lat": round(found[0], 6), "lng": round(found[1], 6), "src": source, "name": r["Title"]}
+            if len(found) > 2:
+                cache[url]["match"] = found[2]
             LOG.append(f"{source:9} {r['Title']}")
         else:
             LOG.append(f"MISSING   {r['Title']}")
