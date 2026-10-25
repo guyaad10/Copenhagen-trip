@@ -1,47 +1,38 @@
-search     hotel  (https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=zWogiyMYUD4TcReNE93olre18b9qcXYGLDfc%2Dnu%2Dnapeoo_MWsgQ_o1XMb1w8gmDrbw%2D46GfLVCCbb5jG%2D5VLyRlgUQNDHBcasCvDT4coZ8L01gFQ9667Wtzo159sY707L1j0VRTtiFU7ameVe57rIENyJsA2EY4q1616Nu8ado.lWMPAYgvFhq7rrCmXcmAlg&rut=1228c916aa8215fff38478f8a9f239e71ef99746caf98d84eb7e49121d53104e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De88dqIMt3El3rX0HAOHD9U7zVUCUyawvzDU6Qvj_P_e2F%2DO5ZdHdkKHvb5Ggji1hzGDUuGdnqPLwfIVhc4T6202CEI1u2j%2DSYT3xxiDac4iGL98P%2DpcPhLqPGBoHcAfY49vpjD_1qV772iS_4ArYADOMNCd513_j2cCguwjno660kLsi8XuYjCjaL_7DJCkGyaZ8zeUkZuf0nr_y6Pc_Pxc%2DOSw0E%26u%3DaHR0cHMlM2ElMmYlMmZzY2FuZGljc3BlY3RydW0ucmVzZXJ2YXRpb25zdGF5cy5jb20lMmZob3RlbHMlMmZXekJhNTZuVyUzZnV0bV9zb3VyY2UlM2RiaW5nX3NlbXJvJTI2dXRtX2NhbXBhaWduJTNkQiUzYVJTJTNhVVMtUk9XJTNhUFBDJTNhTkIlM2FQcm9wJTNhUk9XJTNhRU4lM2FFdXJvcGUlMjZtc2Nsa2lkJTNkMzU5NzVlYjhkM2M4MTU0NzlkNDczNDY1MjY1ZTQ1MzQlMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX3Rlcm0lM2RTY2FuZGljJTI1MjBTcGVjdHJ1bSUyNTIwQ29wZW5oYWdlbiUyNnV0bV9jb250ZW50JTNkc2NhbmRpY3NwZWN0cnVtLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRld6QmE1Nm5X%26rlid%3D35975eb8d3c815479d473465265e4534&vqd=4-32986008322376611988105463762769112440&iurl=%7B1%7DIG%3DFDB1D0B292DD46C59730D9A84EBD4D54%26CID%3D13D833E6D3C6641D3B81241BD2226584%26ID%3DDevEx%2C5037.1)
-wikipedia  noerreport
-wikipedia  zara
-wikipedia  illums
-search     hay  (https://www.visitcopenhagen.com/copenhagen/planning/hay-house-gdk437360)
-search     bertels  (https://living-denmark.com/pages/cakery-copenhagen-%D7%94%D7%96%D7%9E%D7%A0%D7%AA-%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%95%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D)
+NO PHOTO   hotel
+recheck    louis: saved photo looks like a logo
+skip wikipedia for louis: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   louis
+NO PHOTO   bertels
 wikipedia failed for tivolifood: HTTP Error 404: Not Found
-search     tivolifood  (https://shop.tivoli.dk/en/billetter-og-tivolikort/entre)
-wikipedia  palmhouse
-wikipedia  nyhavn
-wikipedia  vaernedamsvej
-search     Axel Copenhagen  (https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=X4gXByRyOl6GsUfoc7uHtfcrSS7ICuoU4zRAXjXo63yZSi4SRoGvN3oGyh_eJeeVYKLgDqWkIlgiQfyTWwOaeq_C3E39ja780xh5W7zf_N_jMZQ3C5z9DGxGB_BELz4Z12g0s3Uad3FEK7hr5V7XpCTG7mCdDQl4tgr2iWFAJdw.d7SIDCeetUCo1K1liD7KVg&rut=385ecc317d2e4661fb77058f7ed96f94d1924477e2ca6ebd66bdd305af00a11e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8tDXWiILINZf6kVWofKa3_zVUCUyw%2DoXDMikzvj2w_vhAi19RuI9IatYB3Y7BOahPRpqkmRSj6KGenMmEIPg3f87L_6NJLMRgCw39sgUf0lCZ0sY_4PQWufcix0fhJLloB0ra7YHxea0uta93KHNhBMgxFT9XSduBl3HKvHxyLtRUGi%2DuuQdNTivHRggY1Oh7yCAzyWompoXMHH3PZBrwltJXRmE%26u%3DaHR0cHMlM2ElMmYlMmZheGVsZ3VsZHNtZWRlbi5yZXNlcnZhdGlvbnN0YXlzLmNvbSUyZmhvdGVscyUyZjZqeGc4dmx3JTNmdXRtX3NvdXJjZSUzZGJpbmdfc2Vtcm8lMjZ1dG1fY2FtcGFpZ24lM2RCJTNhUlMlM2FVUy1ST1clM2FQUEMlM2FOQiUzYVByb3AlM2FST1clM2FFTiUzYUV1cm9wZSUyNm1zY2xraWQlM2Q1ODMzNGQ1MDkxOGIxMjg4ZWNlMjI3OGQ2NDNjMmQxZCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fdGVybSUzZEF4ZWwlMjUyMEd1bGRzbWVkZW4lMjUyMENvcGVuaGFnZW4lMjZ1dG1fY29udGVudCUzZGF4ZWxndWxkc21lZGVuLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRjZqeGc4dmx3%26rlid%3D58334d50918b1288ece2278d643c2d1d&vqd=4-117025664622856314109702091774223004169&iurl=%7B1%7DIG%3DE2BCE1594DCA44D9838C0A7E7E0031E5%26CID%3D02036981E7946E362D1D7E7CE6706F63%26ID%3DDevEx%2C5037.1)
-search     Lidkøb Østerbro  (https://genbrugguide.dk/lidkob-osterbro-kobenhavn/)
+NO PHOTO   tivolifood
+NO PHOTO   Axel Copenhagen
 wikipedia failed for Hotel NH Collection Copenhagen: HTTP Error 404: Not Found
 osm/website failed for Hotel NH Collection Copenhagen: HTTP Error 403: Forbidden
 NO PHOTO   Hotel NH Collection Copenhagen
-search     Hart  (https://hartbageri.com/)
-search     Palmehuset  (https://snm.dk/en/udstilling/palm-house)
-search     New Mags  (https://new-mags.com/)
-osm/website failed for Wild horses: HTTP Error 403: Forbidden
-search     Wild horses  (https://worldcoffeemap.com/reviews/copenhagen/wild-horses)
-search     studio x kitchen  (https://wanderlog.com/place/details/2294252/studio-x-kitchen)
-search     Rondo  (https://rondo.dk/en/)
-search     SURT  (https://www.visitcopenhagen.com/copenhagen/planning/surt-gdk1123455)
-search     Samsøe Samsøe  (https://www.samsoe.com/)
+NO PHOTO   Palmehuset
+recheck    Bæst: saved photo looks like a logo
+wikipedia failed for Bæst: HTTP Error 404: Not Found
+skip website for Bæst: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Bæst
+skip website for Restaurant JATAK: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Restaurant JATAK
 skip website for GAO Dumpling Bar: too small (197x204), probably a logo
-skip search for GAO Dumpling Bar: too small (197x204), probably a logo
 NO PHOTO   GAO Dumpling Bar
-search     Gasoline Grill - Streetfood  (https://www.gasolinegrill.com/)
-search     MUJI København  (https://maps.apple.com/place?place-id=I706E8737AB52C7E4)
+recheck    Gasoline Grill: saved photo looks like a logo
+skip website for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Gasoline Grill
+recheck    Gasoline Grill - Streetfood: saved photo looks like a logo
+NO PHOTO   Gasoline Grill - Streetfood
+NO PHOTO   MUJI København
 osm/website failed for Pompette: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>
-search     Pompette  (https://etteetteette.dk/pompette/)
-skip search for Barr: HTTP Error 404: Not Found
+NO PHOTO   Pompette
 NO PHOTO   Barr
-search     TorvehallerneKBH  (https://www.visitcopenhagen.com/copenhagen/planning/torvehallerne-gdk545401)
-osm/website failed for Høst: HTTP Error 404: Not Found
-search     Høst  (https://cofoco.dk/en/restaurant/hoest)
-search     Frank  (https://www.visitcopenhagen.com/copenhagen/planning/restaurant-frank-gdk1158749)
-search     Ancestrale  (https://www.visitcopenhagen.com/copenhagen/planning/ancestrale-gdk1093700)
-search     Saturday Loppemarked  (https://www.copenhagentourism.org/copenhagen-flea-markets/)
-search     BauBau  (https://www.visitcopenhagen.com/copenhagen/planning/baubau-gdk1011119)
-search     Norse Projects  (https://norseprojects.com/)
-search     Norse Projects HQ  (https://norseprojects.com/pages/stores)
-search     Goods  (https://goodscph.com/)
+recheck    Reffen - Copenhagen Street Food: saved photo looks like a logo
+wikipedia failed for Reffen - Copenhagen Street Food: HTTP Error 404: Not Found
+skip website for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Reffen - Copenhagen Street Food
+recheck    Goods: saved photo looks like a logo
+NO PHOTO   Goods
 NO PHOTO   COS
 NO PHOTO   Uniqlo Closes soon
 NO PHOTO   Aesop
@@ -54,12 +45,27 @@ NO PHOTO   Another Aspect
 NO PHOTO   Rosforth & Rosforth
 NO PHOTO   bird : downtown
 NO PHOTO   Godt Fund Vintage
+website    Lille Bakery
 skip website for Atelier September: too small (596x142), probably a logo
 NO PHOTO   Atelier September
+recheck    Sing Tehus: saved photo looks like a logo
+skip website for Sing Tehus: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Sing Tehus
+recheck    Sonny: saved photo looks like a logo
+skip website for Sonny: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Sonny
 NO PHOTO   Apollo Bar
+recheck    La Cabra: saved photo looks like a logo
+skip website for La Cabra: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   La Cabra
+osm/website failed for Riviera: HTTP Error 429: Too Many Requests
 NO PHOTO   Riviera
+osm/website failed for ORSA: HTTP Error 429: Too Many Requests
 NO PHOTO   ORSA
 NO PHOTO   HAY House
+recheck    Frama: saved photo looks like a logo
+skip website for Frama: mostly one flat color, probably a logo or a blank banner
+NO PHOTO   Frama
 NO PHOTO   Montana
 NO PHOTO   Vipp
-81 of 105 places have a photo
+63 of 105 places have a photo

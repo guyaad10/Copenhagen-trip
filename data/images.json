@@ -36,11 +36,6 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/baubau-gdk1011119",
   "src": "search"
  },
- "Bæst": {
-  "file": "img/places/b-st-b92cce.jpg",
-  "from": "http://static1.squarespace.com/static/665594056e366f3079752cfe/t/6724dd4aa45cff7c60372bbe/1730469194789/baestlogo_red+%282%29+%282%29.png?format=1500w",
-  "src": "website"
- },
  "Copenhagen Contemporary": {
   "file": "img/places/copenhagen-contemporary-efeb89.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen%20Contemporary%20Refshale%C3%B8en.jpg?width=900",
@@ -56,32 +51,10 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Elmegade%2002.jpg?width=900",
   "src": "wikidata"
  },
- "Frama": {
-  "file": "img/places/frama-ccdf99.jpg",
-  "from": "http://framacph.com/cdn/shop/files/FRAMA-LOGO_d3c77abd-2f51-448c-a262-f0d4de4348c7.png?v=1697119064",
-  "src": "website"
- },
  "Frank": {
   "file": "img/places/frank-0df02d.jpg",
   "from": "https://files.guidedanmark.org/files/382/362059_Restaurant_Frank.jpg",
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/restaurant-frank-gdk1158749",
-  "src": "search"
- },
- "Gasoline Grill": {
-  "file": "img/places/gasoline-grill-b38336.jpg",
-  "from": "https://cdn.prod.website-files.com/64ae9cb9635878e1f27729db/64e372efc8c0877e419a00cc_OG_1200x630_circle.png",
-  "src": "website"
- },
- "Gasoline Grill - Streetfood": {
-  "file": "img/places/gasoline-grill-streetfood-8c6171.jpg",
-  "from": "https://cdn.prod.website-files.com/64ae9cb9635878e1f27729db/64e372efc8c0877e419a00cc_OG_1200x630_circle.png",
-  "page": "https://www.gasolinegrill.com/",
-  "src": "search"
- },
- "Goods": {
-  "file": "img/places/goods-297d70.jpg",
-  "from": "http://goodscph.com/cdn/shop/files/GOODS_LOGO_c8500b85-f741-4b3e-95e2-254ff1053297.png?v=1680209172",
-  "page": "https://goodscph.com/",
   "src": "search"
  },
  "Hart": {
@@ -116,16 +89,16 @@
   "from": "https://fiskebaren.dk/wp-content/uploads/2018/09/web-fiskebar008.jpg",
   "src": "website"
  },
- "La Cabra": {
-  "file": "img/places/la-cabra-c406bb.jpg",
-  "from": "http://lacabra.com/cdn/shop/files/La_Cabra_Logo.png?v=1696581955",
-  "src": "website"
- },
  "Lidkøb Østerbro": {
   "file": "img/places/lidk-b-sterbro-1deae3.jpg",
   "from": "https://genbrugguide.dk/wp-content/uploads/2025/01/AF1QipNDfPf1mBtLZwpcJsLvOsh9ouCdloTzc_ZAlGmZw520-h240-k-no.jpeg",
   "page": "https://genbrugguide.dk/lidkob-osterbro-kobenhavn/",
   "src": "search"
+ },
+ "Lille Bakery": {
+  "file": "img/places/lille-bakery-5b5877.jpg",
+  "from": "http://static1.squarespace.com/static/5e6f7788fdb07a59fb7cd29d/t/5e6f7a29d1964a08652d8471/1584364076588/lille_logotype_final_sun.png?format=1500w",
+  "src": "website"
  },
  "New Mags": {
   "file": "img/places/new-mags-deedfa.jpg",
@@ -163,11 +136,6 @@
  "Prolog Coffee Bar Papirøen": {
   "file": "img/places/prolog-coffee-bar-papir-en-b03fc4.jpg",
   "from": "https://www.prologcoffee.com/cdn/shop/files/2024_09_03_PROLOG_Risteri__17_1200x1779.jpg?v=1792402587",
-  "src": "website"
- },
- "Reffen - Copenhagen Street Food": {
-  "file": "img/places/reffen-copenhagen-street-food-40f721.jpg",
-  "from": "https://www-static.reffen.dk/wp-content/uploads/2026/03/reffen-web-phone-marts.png",
   "src": "website"
  },
  "Reseller": {
@@ -213,16 +181,6 @@
   "from": "https://www.copenhagentourism.org/wp-content/uploads/2026/05/copenhagen-flea-market.jpg",
   "page": "https://www.copenhagentourism.org/copenhagen-flea-markets/",
   "src": "search"
- },
- "Sing Tehus": {
-  "file": "img/places/sing-tehus-20681e.jpg",
-  "from": "http://singtehus.com/cdn/shop/files/Sing-Tehus-Logo-Y_1200x628_984d208c-bf55-47ef-92c0-12abf3e401e3.jpg?v=1728850473",
-  "src": "website"
- },
- "Sonny": {
-  "file": "img/places/sonny-17deb5.jpg",
-  "from": "http://static1.squarespace.com/static/60acc097790554532f2693a2/t/60af91bbe458aa4a79704533/1622118846395/SonnyLogo_white.png?format=1500w",
-  "src": "website"
  },
  "Superkilen Park": {
   "file": "img/places/superkilen-park-7e519d.jpg",
@@ -306,11 +264,6 @@
   "file": "img/places/kobmagergade-a98739.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B8bmagergade%2C%20Copenhagen.jpg?width=900",
   "src": "wikidata"
- },
- "louis": {
-  "file": "img/places/louis-d82ece.jpg",
-  "from": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Louispoulsenlogo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-  "src": "wikipedia"
  },
  "marmorkirken": {
   "file": "img/places/marmorkirken-af9f59.jpg",
