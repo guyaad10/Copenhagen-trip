@@ -1,71 +1,102 @@
-NO PHOTO   hotel
-recheck    louis: saved photo looks like a logo
+search     hotel  (https://www.scandichotels.com/en/hotels/scandic-spectrum)
 skip wikipedia for louis: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   louis
-NO PHOTO   bertels
+search     louis  (https://spotlight.dk/shop/louis-poulsen-showroom-18641p.html)
+skip search for bertels: mostly one flat color, probably a logo or a blank banner
+skip search for bertels: mostly one flat color, probably a logo or a blank banner
+search     bertels  (https://www.liyadacakes.com/%D7%94%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95/%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94/%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%92%D7%91%D7%99%D7%A0%D7%94)
 wikipedia failed for tivolifood: HTTP Error 404: Not Found
-NO PHOTO   tivolifood
-NO PHOTO   Axel Copenhagen
+search     tivolifood  (https://www.copenhagentourism.org/tivoli-gardens-copenhagen/)
+skip search for Axel Copenhagen: URL can't contain control characters. '/media/eb/c8/c3/1748941464/Axel logo pos.svg?ts=1748941464' (found at least ' ')
+skip search for Axel Copenhagen: URL can't contain control characters. '/media/eb/c8/c3/1748941464/Axel logo pos.svg?ts=1748941464' (found at least ' ')
+search     Axel Copenhagen  (https://guldsmedenhotels.com/axel-guldsmeden-spa-hotel/)
 wikipedia failed for Hotel NH Collection Copenhagen: HTTP Error 404: Not Found
 osm/website failed for Hotel NH Collection Copenhagen: HTTP Error 403: Forbidden
-NO PHOTO   Hotel NH Collection Copenhagen
-NO PHOTO   Palmehuset
-recheck    Bæst: saved photo looks like a logo
+search     Hotel NH Collection Copenhagen  (https://www.booking.com/city/us/sierra-vista.html?msockid=35251aea09ab61ee333d0d17083d60c5)
+skip search for Palmehuset: mostly one flat color, probably a logo or a blank banner
+skip search for Palmehuset: mostly one flat color, probably a logo or a blank banner
+search     Palmehuset  (https://www.visitcopenhagen.com/copenhagen/planning/the-botanical-garden-gdk422317)
 wikipedia failed for Bæst: HTTP Error 404: Not Found
 skip website for Bæst: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Bæst
+skip search for Bæst: mostly one flat color, probably a logo or a blank banner
+search     Bæst  (https://www.visitcopenhagen.com/copenhagen/planning/baest-gdk944378)
 skip website for Restaurant JATAK: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Restaurant JATAK
+skip search for Restaurant JATAK: mostly one flat color, probably a logo or a blank banner
+search     Restaurant JATAK  (https://www.jatakcph.com/solar-menu)
 skip website for GAO Dumpling Bar: too small (197x204), probably a logo
-NO PHOTO   GAO Dumpling Bar
-recheck    Gasoline Grill: saved photo looks like a logo
+skip search for GAO Dumpling Bar: too small (197x204), probably a logo
+skip search for GAO Dumpling Bar: too small (197x204), probably a logo
+search     GAO Dumpling Bar  (https://www.visitcopenhagen.com/copenhagen/planning/gao-gdk1089554)
 skip website for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Gasoline Grill
-recheck    Gasoline Grill - Streetfood: saved photo looks like a logo
-NO PHOTO   Gasoline Grill - Streetfood
-NO PHOTO   MUJI København
+skip search for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
+skip search for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
+search     Gasoline Grill  (https://www.tivoli.dk/en/food-and-drinks/gasoline-grill)
+skip search for Gasoline Grill - Streetfood: mostly one flat color, probably a logo or a blank banner
+skip search for Gasoline Grill - Streetfood: mostly one flat color, probably a logo or a blank banner
+skip search for Gasoline Grill - Streetfood: mostly one flat color, probably a logo or a blank banner
+search     Gasoline Grill - Streetfood  (https://burgerbreton.com/en/restaurants/gasoline-grill-copenhagen/)
+skip search for MUJI København: mostly one flat color, probably a logo or a blank banner
+search     MUJI København  (https://illum.dk/stories/muji-ultimativ-universalitet/)
 osm/website failed for Pompette: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>
-NO PHOTO   Pompette
-NO PHOTO   Barr
-recheck    Reffen - Copenhagen Street Food: saved photo looks like a logo
+skip search for Pompette: mostly one flat color, probably a logo or a blank banner
+search     Pompette  (https://www.visitcopenhagen.com/copenhagen/planning/pompette-gdk1111500)
+skip search for Barr: HTTP Error 404: Not Found
+search     Barr  (https://www.cntraveler.com/restaurants/copenhagen/barr)
 wikipedia failed for Reffen - Copenhagen Street Food: HTTP Error 404: Not Found
 skip website for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Reffen - Copenhagen Street Food
-recheck    Goods: saved photo looks like a logo
-NO PHOTO   Goods
+skip search for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
+skip search for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
+search     Reffen - Copenhagen Street Food  (https://www.copenhagentourism.org/copenhagen-street-food-guide/)
+skip search for Goods: mostly one flat color, probably a logo or a blank banner
+skip search for Goods: mostly one flat color, probably a logo or a blank banner
+search     Goods  (https://www.visitcopenhagen.com/copenhagen/planning/goods-gdk1106253)
 NO PHOTO   COS
 NO PHOTO   Uniqlo Closes soon
 NO PHOTO   Aesop
-NO PHOTO   Locale 21
-NO PHOTO   Illums Bolighus
-NO PHOTO   Alle Tiders
-NO PHOTO   Kaf' Bar
-NO PHOTO   Ferm Living
-NO PHOTO   Another Aspect
-NO PHOTO   Rosforth & Rosforth
-NO PHOTO   bird : downtown
-NO PHOTO   Godt Fund Vintage
-website    Lille Bakery
+search     Locale 21  (https://intravel.net/copenhagen/restaurants-cafes/locale-21)
+search     Illums Bolighus  (https://www.visitcopenhagen.com/copenhagen/planning/illums-bolighus-gdk412280)
+skip search for Alle Tiders: HTTP Error 404: Not Found
+search     Alle Tiders  (https://joinpearl.co/restaurants/copenhagen/alle-tiders)
+search     Kaf' Bar  (https://cafekaf.com/)
+skip search for Ferm Living: HTTP Error 404: Not Found
+skip search for Ferm Living: HTTP Error 404: Not Found
+skip search for Ferm Living: HTTP Error 404: Not Found
+skip search for Ferm Living: HTTP Error 404: Not Found
+search     Ferm Living  (https://www.visitcopenhagen.com/copenhagen/planning/ferm-living-gdk1123474)
+search     Another Aspect  (https://dictionary.cambridge.org/dictionary/english/another)
+search     Rosforth & Rosforth  (https://jungle.am/@rosforth-rosforth)
+skip search for bird : downtown: mostly one flat color, probably a logo or a blank banner
+search     bird : downtown  (https://wanderlog.com/place/details/14377058/bird--downtown)
+skip search for Godt Fund Vintage: mostly one flat color, probably a logo or a blank banner
+search     Godt Fund Vintage  (https://www.coingecko.com/learn/how-to-use-rabby-wallet)
 skip website for Atelier September: too small (596x142), probably a logo
 NO PHOTO   Atelier September
-recheck    Sing Tehus: saved photo looks like a logo
 skip website for Sing Tehus: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Sing Tehus
-recheck    Sonny: saved photo looks like a logo
+skip search for Sing Tehus: mostly one flat color, probably a logo or a blank banner
+skip search for Sing Tehus: mostly one flat color, probably a logo or a blank banner
+search     Sing Tehus  (https://flavorsontheroad.com/sing-tehus/)
 skip website for Sonny: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Sonny
-NO PHOTO   Apollo Bar
-recheck    La Cabra: saved photo looks like a logo
+skip search for Sonny: mostly one flat color, probably a logo or a blank banner
+search     Sonny  (https://www.visitcopenhagen.com/copenhagen/planning/sonny-gdk1092007)
+search     Apollo Bar  (https://www.bonappetit.com/city-guides/copenhagen/venue/apollo-bar)
 skip website for La Cabra: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   La Cabra
+skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
+skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
+skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
+skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
+search     La Cabra  (https://www.visitcopenhagen.com/copenhagen/planning/la-cabra-gdk1153820)
 osm/website failed for Riviera: HTTP Error 429: Too Many Requests
-NO PHOTO   Riviera
+search     Riviera  (https://dictionary.cambridge.org/dictionary/english/pause)
 osm/website failed for ORSA: HTTP Error 429: Too Many Requests
 NO PHOTO   ORSA
+skip search for HAY House: mostly one flat color, probably a logo or a blank banner
+skip search for HAY House: cannot identify image file <_io.BytesIO object at 0x7f22792fe700>
+skip search for HAY House: mostly one flat color, probably a logo or a blank banner
+skip search for HAY House: too small (114x114), probably a logo
+skip search for HAY House: cannot identify image file <_io.BytesIO object at 0x7f22792fe700>
 NO PHOTO   HAY House
-recheck    Frama: saved photo looks like a logo
 skip website for Frama: mostly one flat color, probably a logo or a blank banner
-NO PHOTO   Frama
-NO PHOTO   Montana
-NO PHOTO   Vipp
-63 of 105 places have a photo
+skip search for Frama: too small (200x200), probably a logo
+search     Frama  (https://www.ibm.com/think/topics/security-operations-center)
+search     Montana  (https://www.visitcopenhagen.com/copenhagen/planning/montana-store-gdk639746)
+search     Vipp  (https://vipp.com/en/world-of-vipp/inspiration/spaces/vipp-home)
+97 of 105 places have a photo
