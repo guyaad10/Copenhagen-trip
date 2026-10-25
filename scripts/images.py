@@ -4,6 +4,7 @@ Sources, in order:
   1. the place's Wikipedia article (WIKI in js/data.js)
   2. OpenStreetMap tags for the place (image, wikimedia_commons, wikidata)
   3. the place's own website (its og:image / twitter:image preview picture)
+  4. a web search for the place, using the preview picture of the first useful result
 
 Results are cached in data/images.json; js/images.js maps place keys to files.
 Set an entry's "src" to "none" in data/images.json to drop a bad picture, or put
@@ -65,7 +66,7 @@ def from_wikipedia(title):
     if not img:
         return None
     if j.get("thumbnail") and img["width"] > 1200:
-        return re.sub(r"/\d+px-", "/900px-", j["thumbnail"]["source"])
+        return re.sub(r"/\d+px-", "/960px-", j["thumbnail"]["source"])  # Wikimedia only serves standard widths
     return img["source"]
 
 
@@ -103,6 +104,27 @@ def from_website(url):
         if m:
             return urllib.parse.urljoin(url, m.group(1).replace("&amp;", "&"))
     return None
+
+
+SKIP_HOSTS = ("instagram.com", "facebook.com", "tiktok.com", "google.", "youtube.com", "linkedin.com", "wikipedia.org")
+
+
+def from_search(name):
+    html = get("https://html.duckduckgo.com/html/?" + urllib.parse.urlencode({"q": f"{name} Copenhagen"}), ua=BROWSER_UA)
+    time.sleep(2)
+    for m in re.finditer(r'class="result__a" href="([^"]+)"', html):
+        href = m.group(1)
+        if "uddg=" in href:
+            href = urllib.parse.unquote(re.search(r"uddg=([^&]+)", href).group(1))
+        if not href.startswith("http") or any(h in href for h in SKIP_HOSTS):
+            continue
+        try:
+            img = from_website(href)
+        except Exception:
+            continue
+        if img:
+            return img, href
+    return None, None
 
 
 def save(key, url):
@@ -145,10 +167,21 @@ def main():
                     candidates.append((u, "website"))
         except Exception as e:
             LOG.append(f"osm/website failed for {key}: {e}")
-        for url, src in candidates:
+        page = None
+        for url, src in candidates + [("search", "search")]:
+            if url == "search":
+                try:
+                    url, page = from_search(name)
+                except Exception as e:
+                    LOG.append(f"search failed for {key}: {e}")
+                    url = None
+                if not url:
+                    continue
             try:
                 cache[key] = {"file": save(key, url), "src": src, "from": url}
-                LOG.append(f"{src:10} {key}")
+                if src == "search":
+                    cache[key]["page"] = page
+                LOG.append(f"{src:10} {key}" + (f"  ({page})" if src == "search" else ""))
                 break
             except Exception as e:
                 LOG.append(f"skip {src} for {key}: {e}")
