@@ -20,13 +20,6 @@
   "name": "Alle Tiders",
   "src": "nominatim"
  },
- "https://www.google.com/maps/place/Ambra/data=!4m2!3m1!1s0x465253e4d480d49f:0x2646c9be32363c03": {
-  "lat": 55.638072,
-  "lng": 12.6231,
-  "match": "Ambra Alle, Kastrup, Tårnby Municipality, Capital Region of Denmark, 2770, Denmark",
-  "name": "Ambra",
-  "src": "nominatim"
- },
  "https://www.google.com/maps/place/Ancestrale/data=!4m2!3m1!1s0x4652539fdea24337:0x820cd4dd03be66dc": {
   "lat": 55.671211,
   "lng": 12.549671,
@@ -217,11 +210,11 @@
   "src": "nominatim"
  },
  "https://www.google.com/maps/place/Hart+Bakery/data=!4m2!3m1!1s0x465253004df7d361:0x8860c7fbd2fbe957": {
-  "lat": 55.668328,
-  "lng": 12.557958,
-  "match": "Hart - Kødbyen, Høkerboderne, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of D",
+  "lat": 55.677,
+  "lng": 12.542,
+  "match": "Gammel Kongevej 109, Frederiksberg",
   "name": "Hart Bakery",
-  "src": "nominatim"
+  "src": "manual"
  },
  "https://www.google.com/maps/place/Hart/data=!4m2!3m1!1s0x46525359dd35f91b:0xbcdb8a2acd2c254b": {
   "lat": 55.668328,
@@ -286,13 +279,6 @@
   "name": "La Cabra",
   "src": "nominatim"
  },
- "https://www.google.com/maps/place/Lago/data=!4m2!3m1!1s0x4652534a6e40bafd:0x52237bb5304c30f5": {
-  "lat": 55.749308,
-  "lng": 12.433056,
-  "match": "Træbanksøen, Lille Birkholm 2, Hjortespring, Herlev, Herlev Municipality, Capital Region of Denmark, Denmark",
-  "name": "Lago",
-  "src": "nominatim"
- },
  "https://www.google.com/maps/place/Lidk%C3%B8b+%C3%98sterbro/data=!4m2!3m1!1s0x465252f44346bc1b:0x9abe61d7177fecb5": {
   "lat": 55.711774,
   "lng": 12.575449,
@@ -312,13 +298,6 @@
   "lng": 12.581843,
   "match": "Locale 21, Ny Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1111, Den",
   "name": "Locale 21",
-  "src": "nominatim"
- },
- "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029": {
-  "lat": 55.773917,
-  "lng": 12.505606,
-  "match": "Lyngby Lokal, Toftebæksvej, Lundtofte, Kongens Lyngby, Lyngby-Taarbæk Municipality, Capital Region of Denmark, 2800, Den",
-  "name": "Lokal ApS.",
   "src": "nominatim"
  },
  "https://www.google.com/maps/place/MUJI+K%C3%B8benhavn/data=!4m2!3m1!1s0x465253812944c873:0xb6d69f9a3972bd48": {
@@ -476,11 +455,18 @@
   "src": "nominatim"
  },
  "https://www.google.com/maps/place/Sanchez/data=!4m2!3m1!1s0x46525374f6e5264b:0x99bfa014662f350d": {
-  "lat": 55.707853,
-  "lng": 12.597015,
-  "match": "Hija de Sanchez Cantina, Helsinkigade, Sundmolen, Nordhavn, Copenhagen, Copenhagen Municipality, Capital Region of Denma",
+  "lat": 55.6703,
+  "lng": 12.556,
+  "match": "Istedgade 60, Vesterbro",
   "name": "Sanchez",
-  "src": "nominatim"
+  "src": "manual"
+ },
+ "https://www.google.com/maps/place/Saturday+Loppemarked/data=!4m2!3m1!1s0x465253bc250c5d37:0xd3203c593541cb39": {
+  "lat": 55.6835,
+  "lng": 12.568,
+  "match": "Israels Plads (Saturdays)",
+  "name": "Saturday Loppemarked",
+  "src": "manual"
  },
  "https://www.google.com/maps/place/Sing+Tehus/data=!4m2!3m1!1s0x4652533bf2dd2c37:0xe36c23156e92eb0e": {
   "lat": 55.698824,

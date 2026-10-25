@@ -45,8 +45,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.668328,
-  "lng": 12.557958
+  "lat": 55.677,
+  "lng": 12.542
  },
  {
   "name": "Hart",
@@ -87,16 +87,6 @@ const SAVED = [
   ],
   "lat": 55.652463,
   "lng": 12.538756
- },
- {
-  "name": "Ambra",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Ambra/data=!4m2!3m1!1s0x465253e4d480d49f:0x2646c9be32363c03",
-  "tags": [
-   "Restaurant"
-  ],
-  "lat": 55.638072,
-  "lng": 12.6231
  },
  {
   "name": "studio x kitchen",
@@ -370,8 +360,18 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.707853,
-  "lng": 12.597015
+  "lat": 55.6703,
+  "lng": 12.556
+ },
+ {
+  "name": "Saturday Loppemarked",
+  "note": "Flea market - only suterdays",
+  "url": "https://www.google.com/maps/place/Saturday+Loppemarked/data=!4m2!3m1!1s0x465253bc250c5d37:0xd3203c593541cb39",
+  "tags": [
+   "Vintage"
+  ],
+  "lat": 55.6835,
+  "lng": 12.568
  },
  {
   "name": "BauBau",
@@ -474,16 +474,6 @@ const SAVED = [
   "lng": 12.598727
  },
  {
-  "name": "Lago",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Lago/data=!4m2!3m1!1s0x4652534a6e40bafd:0x52237bb5304c30f5",
-  "tags": [
-   "Restaurant"
-  ],
-  "lat": 55.749308,
-  "lng": 12.433056
- },
- {
   "name": "Illums Bolighus",
   "note": "",
   "url": "https://www.google.com/maps/place/Illums+Bolighus/data=!4m2!3m1!1s0x46525310d3c9c853:0x644577c0d2bfb997",
@@ -492,16 +482,6 @@ const SAVED = [
   ],
   "lat": 55.67889,
   "lng": 12.578573
- },
- {
-  "name": "Lokal ApS.",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029",
-  "tags": [
-   "Bakery & Coffee"
-  ],
-  "lat": 55.773917,
-  "lng": 12.505606
  },
  {
   "name": "Copenhagen Contemporary",
@@ -802,6 +782,14 @@ const SAVED_MISSING = [
   ]
  },
  {
+  "name": "Ambra",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Ambra/data=!4m2!3m1!1s0x465253e4d480d49f:0x2646c9be32363c03",
+  "tags": [
+   "Restaurant"
+  ]
+ },
+ {
   "name": "Bottega Barlie",
   "note": "",
   "url": "https://www.google.com/maps/place/Bottega+Barlie/data=!4m2!3m1!1s0x465253abcba36d93:0xedc6bea2da937cc2",
@@ -827,14 +815,6 @@ const SAVED_MISSING = [
   "name": "Copenhagen Fleamarket",
   "note": "",
   "url": "https://www.google.com/maps/place/Copenhagen+Fleamarket/data=!4m2!3m1!1s0x4652539709531313:0x9031c6514e0176d",
-  "tags": [
-   "Vintage"
-  ]
- },
- {
-  "name": "Saturday Loppemarked",
-  "note": "Flea market - only suterdays",
-  "url": "https://www.google.com/maps/place/Saturday+Loppemarked/data=!4m2!3m1!1s0x465253bc250c5d37:0xd3203c593541cb39",
   "tags": [
    "Vintage"
   ]
@@ -878,11 +858,27 @@ const SAVED_MISSING = [
   ]
  },
  {
+  "name": "Lago",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Lago/data=!4m2!3m1!1s0x4652534a6e40bafd:0x52237bb5304c30f5",
+  "tags": [
+   "Restaurant"
+  ]
+ },
+ {
   "name": "B&W Market",
   "note": "",
   "url": "https://www.google.com/maps/place/B%26W+Market/data=!4m2!3m1!1s0x465252d79695b455:0x2e75a330053d13e6",
   "tags": [
    "Vintage"
+  ]
+ },
+ {
+  "name": "Lokal ApS.",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029",
+  "tags": [
+   "Bakery & Coffee"
   ]
  },
  {
