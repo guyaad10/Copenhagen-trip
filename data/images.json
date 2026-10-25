@@ -4,6 +4,12 @@
   "from": "https://upload.wikimedia.org/wikipedia/commons/9/96/BIG_-_8_House.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "src": "wikipedia"
  },
+ "Ancestrale": {
+  "file": "img/places/ancestrale-566208.jpg",
+  "from": "https://files.guidedanmark.org/files/382/174739_Ancestrale_PR-foto-4.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/ancestrale-gdk1093700",
+  "src": "search"
+ },
  "Andersen & Maillard": {
   "file": "img/places/andersen-maillard-a88e86.jpg",
   "from": "http://www.andersenmaillard.dk/cdn/shop/files/image001_1200x1200.jpg?v=1707126535",
@@ -19,10 +25,22 @@
   "from": "http://audocph.com/cdn/shop/files/Audo_2023_CMA_4P0A3750_FINAL_cbd3b2b2-ca61-4391-95ca-363b4f2b2872.jpg?v=1780926415",
   "src": "website"
  },
+ "Axel Copenhagen": {
+  "file": "img/places/axel-copenhagen-3dad0d.jpg",
+  "from": "https://cdn.snaptravel.com/super_meta_tag_image.jpeg",
+  "page": "https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=X4gXByRyOl6GsUfoc7uHtfcrSS7ICuoU4zRAXjXo63yZSi4SRoGvN3oGyh_eJeeVYKLgDqWkIlgiQfyTWwOaeq_C3E39ja780xh5W7zf_N_jMZQ3C5z9DGxGB_BELz4Z12g0s3Uad3FEK7hr5V7XpCTG7mCdDQl4tgr2iWFAJdw.d7SIDCeetUCo1K1liD7KVg&rut=385ecc317d2e4661fb77058f7ed96f94d1924477e2ca6ebd66bdd305af00a11e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8tDXWiILINZf6kVWofKa3_zVUCUyw%2DoXDMikzvj2w_vhAi19RuI9IatYB3Y7BOahPRpqkmRSj6KGenMmEIPg3f87L_6NJLMRgCw39sgUf0lCZ0sY_4PQWufcix0fhJLloB0ra7YHxea0uta93KHNhBMgxFT9XSduBl3HKvHxyLtRUGi%2DuuQdNTivHRggY1Oh7yCAzyWompoXMHH3PZBrwltJXRmE%26u%3DaHR0cHMlM2ElMmYlMmZheGVsZ3VsZHNtZWRlbi5yZXNlcnZhdGlvbnN0YXlzLmNvbSUyZmhvdGVscyUyZjZqeGc4dmx3JTNmdXRtX3NvdXJjZSUzZGJpbmdfc2Vtcm8lMjZ1dG1fY2FtcGFpZ24lM2RCJTNhUlMlM2FVUy1ST1clM2FQUEMlM2FOQiUzYVByb3AlM2FST1clM2FFTiUzYUV1cm9wZSUyNm1zY2xraWQlM2Q1ODMzNGQ1MDkxOGIxMjg4ZWNlMjI3OGQ2NDNjMmQxZCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fdGVybSUzZEF4ZWwlMjUyMEd1bGRzbWVkZW4lMjUyMENvcGVuaGFnZW4lMjZ1dG1fY29udGVudCUzZGF4ZWxndWxkc21lZGVuLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRjZqeGc4dmx3%26rlid%3D58334d50918b1288ece2278d643c2d1d&vqd=4-117025664622856314109702091774223004169&iurl=%7B1%7DIG%3DE2BCE1594DCA44D9838C0A7E7E0031E5%26CID%3D02036981E7946E362D1D7E7CE6706F63%26ID%3DDevEx%2C5037.1",
+  "src": "search"
+ },
  "BRUS": {
   "file": "img/places/brus-4d4085.jpg",
   "from": "https://tapperietbrus.dk/wp-content/uploads/2024/07/Eatery-scaled.jpg",
   "src": "website"
+ },
+ "BauBau": {
+  "file": "img/places/baubau-c6a353.jpg",
+  "from": "https://files.guidedanmark.org/files/382/124131_BauBau.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/baubau-gdk1011119",
+  "src": "search"
  },
  "Bæst": {
   "file": "img/places/b-st-b92cce.jpg",
@@ -49,10 +67,34 @@
   "from": "http://framacph.com/cdn/shop/files/FRAMA-LOGO_d3c77abd-2f51-448c-a262-f0d4de4348c7.png?v=1697119064",
   "src": "website"
  },
+ "Frank": {
+  "file": "img/places/frank-0df02d.jpg",
+  "from": "https://files.guidedanmark.org/files/382/362059_Restaurant_Frank.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/restaurant-frank-gdk1158749",
+  "src": "search"
+ },
  "Gasoline Grill": {
   "file": "img/places/gasoline-grill-b38336.jpg",
   "from": "https://cdn.prod.website-files.com/64ae9cb9635878e1f27729db/64e372efc8c0877e419a00cc_OG_1200x630_circle.png",
   "src": "website"
+ },
+ "Gasoline Grill - Streetfood": {
+  "file": "img/places/gasoline-grill-streetfood-8c6171.jpg",
+  "from": "https://cdn.prod.website-files.com/64ae9cb9635878e1f27729db/64e372efc8c0877e419a00cc_OG_1200x630_circle.png",
+  "page": "https://www.gasolinegrill.com/",
+  "src": "search"
+ },
+ "Goods": {
+  "file": "img/places/goods-297d70.jpg",
+  "from": "http://goodscph.com/cdn/shop/files/GOODS_LOGO_c8500b85-f741-4b3e-95e2-254ff1053297.png?v=1680209172",
+  "page": "https://goodscph.com/",
+  "src": "search"
+ },
+ "Hart": {
+  "file": "img/places/hart-d6a00a.jpg",
+  "from": "https://hartbageri.com/wp-content/themes/hartbageri-2.0/assets/og-default.jpg",
+  "page": "https://hartbageri.com/",
+  "src": "search"
  },
  "Hart Bakery": {
   "file": "img/places/hart-bakery-0d7747.jpg",
@@ -63,6 +105,12 @@
   "file": "img/places/hooked-9e26eb.jpg",
   "from": "https://gethooked.dk/wp-content/uploads/2025/09/DSC05364-1-min.jpg",
   "src": "website"
+ },
+ "Høst": {
+  "file": "img/places/h-st-7ae2dd.jpg",
+  "from": "https://cofocowebsitestorage.blob.core.windows.net/website-prod/website-prod/assets/medium_73_A9980_f5925635b2.webp",
+  "page": "https://cofoco.dk/en/restaurant/hoest",
+  "src": "search"
  },
  "Juno the bakery": {
   "file": "img/places/juno-the-bakery-e30a2c.jpg",
@@ -79,15 +127,45 @@
   "from": "http://lacabra.com/cdn/shop/files/La_Cabra_Logo.png?v=1696581955",
   "src": "website"
  },
+ "Lidkøb Østerbro": {
+  "file": "img/places/lidk-b-sterbro-1deae3.jpg",
+  "from": "https://genbrugguide.dk/wp-content/uploads/2025/01/AF1QipNDfPf1mBtLZwpcJsLvOsh9ouCdloTzc_ZAlGmZw520-h240-k-no.jpeg",
+  "page": "https://genbrugguide.dk/lidkob-osterbro-kobenhavn/",
+  "src": "search"
+ },
  "Lille Bakery": {
   "file": "img/places/lille-bakery-5b5877.jpg",
   "from": "http://static1.squarespace.com/static/5e6f7788fdb07a59fb7cd29d/t/5e6f7a29d1964a08652d8471/1584364076588/lille_logotype_final_sun.png?format=1500w",
   "src": "website"
  },
+ "MUJI København": {
+  "file": "img/places/muji-k-benhavn-811222.jpg",
+  "from": "https://snapshot.apple-mapkit.com/api/v1/snapshot?center=55.679268,12.58069&spn=0.008993300000000204,0.015950300000000084&annotations=%5B%7B%22point%22%3A%2255.679268%2C12.58069%22%2C%22markerStyle%22%3A%22large%22%2C%22attrs%22%3A%221c6447%3B4%3A112%2C6%3A171%2C10%3A0%2C34%3A1%2C82%3A1%2C85%3A16%2C89%3A4%2C164%3A1%22%7D%5D&size=450x300&scale=2&teamId=C5U892736Y&keyId=GJ5GZDFL89&signature=vPW9AQrkrn8L6rwVHmVLfqC32sRSWNpMvAdwrqcJyVwczIs9GlqVnaNNrZdRDBcNlaNzY5drpPBh2mQIX-wfpw",
+  "page": "https://maps.apple.com/place?place-id=I706E8737AB52C7E4",
+  "src": "search"
+ },
+ "New Mags": {
+  "file": "img/places/new-mags-deedfa.jpg",
+  "from": "http://new-mags.com/cdn/shop/files/image-28.png?v=1687504631&width=2048",
+  "page": "https://new-mags.com/",
+  "src": "search"
+ },
  "Noma": {
   "file": "img/places/noma-8d31c8.jpg",
   "from": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Noma_entrance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "src": "wikipedia"
+ },
+ "Norse Projects": {
+  "file": "img/places/norse-projects-de8ed8.jpg",
+  "from": "http://norseprojects.com/cdn/shop/files/NP_Banner.png?v=1768898826&width=2048",
+  "page": "https://norseprojects.com/",
+  "src": "search"
+ },
+ "Norse Projects HQ": {
+  "file": "img/places/norse-projects-hq-76edbd.jpg",
+  "from": "http://norseprojects.com/cdn/shop/files/NP_Banner.png?v=1768898826&width=2048",
+  "page": "https://norseprojects.com/pages/stores",
+  "src": "search"
  },
  "Ny Carlsberg Glyptotek": {
   "file": "img/places/ny-carlsberg-glyptotek-f2839e.jpg",
@@ -98,6 +176,18 @@
   "file": "img/places/ordrupgaard-04a12e.jpg",
   "from": "https://upload.wikimedia.org/wikipedia/commons/1/19/Ordupgaard_Copenhagen_Zaha_Hadid_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "src": "wikipedia"
+ },
+ "Palmehuset": {
+  "file": "img/places/palmehuset-1789f0.jpg",
+  "from": "https://snm.dk/themes/b14theme/images/fallback/snm_fallback.png",
+  "page": "https://snm.dk/en/udstilling/palm-house",
+  "src": "search"
+ },
+ "Pompette": {
+  "file": "img/places/pompette-141ccd.jpg",
+  "from": "https://c-p.rmcdn.net/66681773f56f6e001ac3d482/4864910/Screenshot-df375976-23d7-4afb-a435-86c5bea13e3d_readyscr_1024.jpg",
+  "page": "https://etteetteette.dk/pompette/",
+  "src": "search"
  },
  "Prolog Coffee Bar Papirøen": {
   "file": "img/places/prolog-coffee-bar-papir-en-b03fc4.jpg",
@@ -119,6 +209,12 @@
   "from": "http://static1.squarespace.com/static/609d0ad29ab93267737ca8b7/t/6435d2d421ac233559346493/1681248980930/JATAK_logo_white_80plus3.png?format=1500w",
   "src": "website"
  },
+ "Rondo": {
+  "file": "img/places/rondo-9d630b.jpg",
+  "from": "https://rondo.dk/wp-content/themes/rondo/assets/img/og.jpg",
+  "page": "https://rondo.dk/en/",
+  "src": "search"
+ },
  "Rosenborg Castle": {
   "file": "img/places/rosenborg-castle-4f49a5.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosenborg%20Castle%20Copenhagen%201.jpg?width=900",
@@ -129,10 +225,28 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Statens%20Museum%20for%20Kunst%2C%20K%C3%B8benhavn.jpg?width=900",
   "src": "wikidata"
  },
+ "SURT": {
+  "file": "img/places/surt-a14e39.jpg",
+  "from": "https://files.guidedanmark.org/files/382/259743_Daniel_Rasmussen_SURT.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/surt-gdk1123455",
+  "src": "search"
+ },
+ "Samsøe Samsøe": {
+  "file": "img/places/sams-e-sams-e-38f606.jpg",
+  "from": "https://a.storyblok.com/f/274250/2250x2813/af53b0af1b/ps26_campaign_perception_94x5_.jpg",
+  "page": "https://www.samsoe.com/",
+  "src": "search"
+ },
  "Sanchez": {
   "file": "img/places/sanchez-a68922.jpg",
   "from": "https://xldjymcxwutoeamvjbrl.supabase.co/storage/v1/object/public/strapi-uploads/_DSC6487.jpg-3af65ac1af8289306e911034c3a77a48.jpg",
   "src": "website"
+ },
+ "Saturday Loppemarked": {
+  "file": "img/places/saturday-loppemarked-17d3b4.jpg",
+  "from": "https://www.copenhagentourism.org/wp-content/uploads/2026/05/copenhagen-flea-market.jpg",
+  "page": "https://www.copenhagentourism.org/copenhagen-flea-markets/",
+  "src": "search"
  },
  "Sing Tehus": {
   "file": "img/places/sing-tehus-20681e.jpg",
@@ -154,6 +268,18 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/CopenhagenTivoliEntrance.jpg?width=900",
   "src": "wikidata"
  },
+ "TorvehallerneKBH": {
+  "file": "img/places/torvehallernekbh-098a0c.jpg",
+  "from": "https://files.guidedanmark.org/files/382/307966_Torvehallen.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/torvehallerne-gdk545401",
+  "src": "search"
+ },
+ "Wild horses": {
+  "file": "img/places/wild-horses-45140e.jpg",
+  "from": "https://media.worldcoffeemap.com/media/w/1600/2f2de0ec317c4280a467349312f4b0120df73b014180ef02d480130c16e288c7.webp",
+  "page": "https://worldcoffeemap.com/reviews/copenhagen/wild-horses",
+  "src": "search"
+ },
  "amagertorv": {
   "file": "img/places/amagertorv-59e699.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Amagertorv.jpg?width=900",
@@ -163,6 +289,12 @@
   "file": "img/places/amalienborg-fe6523.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Amalienborg%20panorama%20juli%202013.jpg?width=900",
   "src": "wikidata"
+ },
+ "bertels": {
+  "file": "img/places/bertels-515d02.jpg",
+  "from": "http://living-denmark.com/cdn/shop/files/Living_Denmark__1200_628_Logo_red_trans.png?v=1737570323",
+  "page": "https://living-denmark.com/pages/cakery-copenhagen-%D7%94%D7%96%D7%9E%D7%A0%D7%AA-%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%95%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D",
+  "src": "search"
  },
  "bredgade": {
   "file": "img/places/bredgade-21717d.jpg",
@@ -194,6 +326,23 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Main%20entrance%2C%20Ny%20Carlsberg%20Glyptotek.jpg?width=900",
   "src": "wikidata"
  },
+ "hay": {
+  "file": "img/places/hay-ebddd6.jpg",
+  "from": "https://files.guidedanmark.org/files/382/173035_HAY_HOUSE__PR_Photo_4.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/hay-house-gdk437360",
+  "src": "search"
+ },
+ "hotel": {
+  "file": "img/places/hotel-14e833.jpg",
+  "from": "https://cdn.snaptravel.com/super_meta_tag_image.jpeg",
+  "page": "https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=zWogiyMYUD4TcReNE93olre18b9qcXYGLDfc%2Dnu%2Dnapeoo_MWsgQ_o1XMb1w8gmDrbw%2D46GfLVCCbb5jG%2D5VLyRlgUQNDHBcasCvDT4coZ8L01gFQ9667Wtzo159sY707L1j0VRTtiFU7ameVe57rIENyJsA2EY4q1616Nu8ado.lWMPAYgvFhq7rrCmXcmAlg&rut=1228c916aa8215fff38478f8a9f239e71ef99746caf98d84eb7e49121d53104e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De88dqIMt3El3rX0HAOHD9U7zVUCUyawvzDU6Qvj_P_e2F%2DO5ZdHdkKHvb5Ggji1hzGDUuGdnqPLwfIVhc4T6202CEI1u2j%2DSYT3xxiDac4iGL98P%2DpcPhLqPGBoHcAfY49vpjD_1qV772iS_4ArYADOMNCd513_j2cCguwjno660kLsi8XuYjCjaL_7DJCkGyaZ8zeUkZuf0nr_y6Pc_Pxc%2DOSw0E%26u%3DaHR0cHMlM2ElMmYlMmZzY2FuZGljc3BlY3RydW0ucmVzZXJ2YXRpb25zdGF5cy5jb20lMmZob3RlbHMlMmZXekJhNTZuVyUzZnV0bV9zb3VyY2UlM2RiaW5nX3NlbXJvJTI2dXRtX2NhbXBhaWduJTNkQiUzYVJTJTNhVVMtUk9XJTNhUFBDJTNhTkIlM2FQcm9wJTNhUk9XJTNhRU4lM2FFdXJvcGUlMjZtc2Nsa2lkJTNkMzU5NzVlYjhkM2M4MTU0NzlkNDczNDY1MjY1ZTQ1MzQlMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX3Rlcm0lM2RTY2FuZGljJTI1MjBTcGVjdHJ1bSUyNTIwQ29wZW5oYWdlbiUyNnV0bV9jb250ZW50JTNkc2NhbmRpY3NwZWN0cnVtLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRld6QmE1Nm5X%26rlid%3D35975eb8d3c815479d473465265e4534&vqd=4-32986008322376611988105463762769112440&iurl=%7B1%7DIG%3DFDB1D0B292DD46C59730D9A84EBD4D54%26CID%3D13D833E6D3C6641D3B81241BD2226584%26ID%3DDevEx%2C5037.1",
+  "src": "search"
+ },
+ "illums": {
+  "file": "img/places/illums-50a25b.jpg",
+  "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/K%C3%B8benhavn_-_Illums_Bolighus_%2830911098141%29.jpg/960px-K%C3%B8benhavn_-_Illums_Bolighus_%2830911098141%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "src": "wikipedia"
+ },
  "kastellet": {
   "file": "img/places/kastellet-290dcb.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Kastellet%20Norgesporten%20Copenhagen.jpg?width=900",
@@ -212,6 +361,21 @@
  "marmorkirken": {
   "file": "img/places/marmorkirken-af9f59.jpg",
   "from": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Marmor_kirken%2C_K%C3%B6penhamn_juli_2003.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+  "src": "wikipedia"
+ },
+ "noerreport": {
+  "file": "img/places/noerreport-291ac2.jpg",
+  "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/N%C3%B8rreport_Station_at_night_03.jpg/960px-N%C3%B8rreport_Station_at_night_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "src": "wikipedia"
+ },
+ "nyhavn": {
+  "file": "img/places/nyhavn-6cd2e1.jpg",
+  "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/The_Nyhavn_Canal_3.jpg/960px-The_Nyhavn_Canal_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "src": "wikipedia"
+ },
+ "palmhouse": {
+  "file": "img/places/palmhouse-88f142.jpg",
+  "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Palm_House%2C_Copenhagen_Botanical_Garden.jpg/960px-Palm_House%2C_Copenhagen_Botanical_Garden.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "src": "wikipedia"
  },
  "pilestraede": {
@@ -234,14 +398,36 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen%20-%20Church%20of%20Our%20Saviour%20-%202013.jpg?width=900",
   "src": "wikidata"
  },
+ "studio x kitchen": {
+  "file": "img/places/studio-x-kitchen-d2e9f8.jpg",
+  "from": "https://itin-dev.wanderlogstatic.com/freeImageSmall/1zIdrhwJL5IilJfeW0BPDlKxGVXghjx2",
+  "page": "https://wanderlog.com/place/details/2294252/studio-x-kitchen",
+  "src": "search"
+ },
  "tivoli": {
   "file": "img/places/tivoli-0e4bd3.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/CopenhagenTivoliEntrance.jpg?width=900",
   "src": "wikidata"
  },
+ "tivolifood": {
+  "file": "img/places/tivolifood-f977f9.jpg",
+  "from": "https://shop.tivoli.dk/gfx/tivoli/logo/logo.jpg",
+  "page": "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre",
+  "src": "search"
+ },
  "torvehallerne": {
   "file": "img/places/torvehallerne-1462a3.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Torvehallerne%202011-09-09.jpg?width=900",
   "src": "wikidata"
+ },
+ "vaernedamsvej": {
+  "file": "img/places/vaernedamsvej-a64096.jpg",
+  "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/V%C3%A6rnedamsvej_%28Copenhagen%29.jpg/960px-V%C3%A6rnedamsvej_%28Copenhagen%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "src": "wikipedia"
+ },
+ "zara": {
+  "file": "img/places/zara-d66fcc.jpg",
+  "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Str%C3%B8get%2C_Copenhagen.jpg/960px-Str%C3%B8get%2C_Copenhagen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "src": "wikipedia"
  }
 }

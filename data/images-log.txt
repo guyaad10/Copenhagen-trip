@@ -1,142 +1,65 @@
-NO PHOTO   hotel
-skip wikipedia for cph-h: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   cph-h
-skip wikipedia for noerreport: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-NO PHOTO   noerreport
-wikipedia  marmorkirken
-skip wikipedia for rundetaarn: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   rundetaarn
-skip wikipedia for zara: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-NO PHOTO   zara
-skip wikipedia for illums: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-NO PHOTO   illums
-NO PHOTO   hay
-wikipedia  louis
-skip wikipedia for designmuseum: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   designmuseum
-skip wikipedia for glyptotek: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   glyptotek
-NO PHOTO   bertels
-wikipedia failed for torvehallerne: HTTP Error 404: Not Found
-wikidata   torvehallerne
+search     hotel  (https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=zWogiyMYUD4TcReNE93olre18b9qcXYGLDfc%2Dnu%2Dnapeoo_MWsgQ_o1XMb1w8gmDrbw%2D46GfLVCCbb5jG%2D5VLyRlgUQNDHBcasCvDT4coZ8L01gFQ9667Wtzo159sY707L1j0VRTtiFU7ameVe57rIENyJsA2EY4q1616Nu8ado.lWMPAYgvFhq7rrCmXcmAlg&rut=1228c916aa8215fff38478f8a9f239e71ef99746caf98d84eb7e49121d53104e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De88dqIMt3El3rX0HAOHD9U7zVUCUyawvzDU6Qvj_P_e2F%2DO5ZdHdkKHvb5Ggji1hzGDUuGdnqPLwfIVhc4T6202CEI1u2j%2DSYT3xxiDac4iGL98P%2DpcPhLqPGBoHcAfY49vpjD_1qV772iS_4ArYADOMNCd513_j2cCguwjno660kLsi8XuYjCjaL_7DJCkGyaZ8zeUkZuf0nr_y6Pc_Pxc%2DOSw0E%26u%3DaHR0cHMlM2ElMmYlMmZzY2FuZGljc3BlY3RydW0ucmVzZXJ2YXRpb25zdGF5cy5jb20lMmZob3RlbHMlMmZXekJhNTZuVyUzZnV0bV9zb3VyY2UlM2RiaW5nX3NlbXJvJTI2dXRtX2NhbXBhaWduJTNkQiUzYVJTJTNhVVMtUk9XJTNhUFBDJTNhTkIlM2FQcm9wJTNhUk9XJTNhRU4lM2FFdXJvcGUlMjZtc2Nsa2lkJTNkMzU5NzVlYjhkM2M4MTU0NzlkNDczNDY1MjY1ZTQ1MzQlMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX3Rlcm0lM2RTY2FuZGljJTI1MjBTcGVjdHJ1bSUyNTIwQ29wZW5oYWdlbiUyNnV0bV9jb250ZW50JTNkc2NhbmRpY3NwZWN0cnVtLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRld6QmE1Nm5X%26rlid%3D35975eb8d3c815479d473465265e4534&vqd=4-32986008322376611988105463762769112440&iurl=%7B1%7DIG%3DFDB1D0B292DD46C59730D9A84EBD4D54%26CID%3D13D833E6D3C6641D3B81241BD2226584%26ID%3DDevEx%2C5037.1)
+wikipedia  noerreport
+wikipedia  zara
+wikipedia  illums
+search     hay  (https://www.visitcopenhagen.com/copenhagen/planning/hay-house-gdk437360)
+search     bertels  (https://living-denmark.com/pages/cakery-copenhagen-%D7%94%D7%96%D7%9E%D7%A0%D7%AA-%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%95%D7%A7%D7%99%D7%A0%D7%95%D7%97%D7%99%D7%9D-%D7%9C%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D)
 wikipedia failed for tivolifood: HTTP Error 404: Not Found
-NO PHOTO   tivolifood
-skip wikipedia for kastellet: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   kastellet
-skip wikipedia for palmhouse: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-NO PHOTO   palmhouse
-skip wikipedia for frbhave: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   frbhave
-skip wikipedia for amalienborg: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   amalienborg
-skip wikipedia for rosenborg: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   rosenborg
-skip wikipedia for nyhavn: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-NO PHOTO   nyhavn
-skip wikipedia for tivoli: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   tivoli
-skip wikipedia for saviour: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   saviour
-skip wikipedia for christianshavn: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   christianshavn
-skip wikipedia for vaernedamsvej: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-NO PHOTO   vaernedamsvej
-skip wikipedia for bredgade: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   bredgade
-skip wikipedia for amagertorv: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-commons    amagertorv
-skip wikipedia for pilestraede: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   pilestraede
-skip wikipedia for kobmagergade: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   kobmagergade
-website    Audo Copenhagen
-NO PHOTO   Axel Copenhagen
-NO PHOTO   Lidkøb Østerbro
+search     tivolifood  (https://shop.tivoli.dk/en/billetter-og-tivolikort/entre)
+wikipedia  palmhouse
+wikipedia  nyhavn
+wikipedia  vaernedamsvej
+search     Axel Copenhagen  (https://duckduckgo.com/y.js?ad_domain=reservationstays.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=X4gXByRyOl6GsUfoc7uHtfcrSS7ICuoU4zRAXjXo63yZSi4SRoGvN3oGyh_eJeeVYKLgDqWkIlgiQfyTWwOaeq_C3E39ja780xh5W7zf_N_jMZQ3C5z9DGxGB_BELz4Z12g0s3Uad3FEK7hr5V7XpCTG7mCdDQl4tgr2iWFAJdw.d7SIDCeetUCo1K1liD7KVg&rut=385ecc317d2e4661fb77058f7ed96f94d1924477e2ca6ebd66bdd305af00a11e&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8tDXWiILINZf6kVWofKa3_zVUCUyw%2DoXDMikzvj2w_vhAi19RuI9IatYB3Y7BOahPRpqkmRSj6KGenMmEIPg3f87L_6NJLMRgCw39sgUf0lCZ0sY_4PQWufcix0fhJLloB0ra7YHxea0uta93KHNhBMgxFT9XSduBl3HKvHxyLtRUGi%2DuuQdNTivHRggY1Oh7yCAzyWompoXMHH3PZBrwltJXRmE%26u%3DaHR0cHMlM2ElMmYlMmZheGVsZ3VsZHNtZWRlbi5yZXNlcnZhdGlvbnN0YXlzLmNvbSUyZmhvdGVscyUyZjZqeGc4dmx3JTNmdXRtX3NvdXJjZSUzZGJpbmdfc2Vtcm8lMjZ1dG1fY2FtcGFpZ24lM2RCJTNhUlMlM2FVUy1ST1clM2FQUEMlM2FOQiUzYVByb3AlM2FST1clM2FFTiUzYUV1cm9wZSUyNm1zY2xraWQlM2Q1ODMzNGQ1MDkxOGIxMjg4ZWNlMjI3OGQ2NDNjMmQxZCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fdGVybSUzZEF4ZWwlMjUyMEd1bGRzbWVkZW4lMjUyMENvcGVuaGFnZW4lMjZ1dG1fY29udGVudCUzZGF4ZWxndWxkc21lZGVuLnJlc2VydmF0aW9uc3RheXMuY29tJTI1MkZob3RlbHMlMjUyRjZqeGc4dmx3%26rlid%3D58334d50918b1288ece2278d643c2d1d&vqd=4-117025664622856314109702091774223004169&iurl=%7B1%7DIG%3DE2BCE1594DCA44D9838C0A7E7E0031E5%26CID%3D02036981E7946E362D1D7E7CE6706F63%26ID%3DDevEx%2C5037.1)
+search     Lidkøb Østerbro  (https://genbrugguide.dk/lidkob-osterbro-kobenhavn/)
 wikipedia failed for Hotel NH Collection Copenhagen: HTTP Error 404: Not Found
 osm/website failed for Hotel NH Collection Copenhagen: HTTP Error 403: Forbidden
 NO PHOTO   Hotel NH Collection Copenhagen
-website    Hart Bakery
-NO PHOTO   Hart
-NO PHOTO   Palmehuset
-NO PHOTO   New Mags
+search     Hart  (https://hartbageri.com/)
+search     Palmehuset  (https://snm.dk/en/udstilling/palm-house)
+search     New Mags  (https://new-mags.com/)
 osm/website failed for Wild horses: HTTP Error 403: Forbidden
-NO PHOTO   Wild horses
-NO PHOTO   studio x kitchen
-NO PHOTO   Rondo
-website    BRUS
-wikipedia failed for Bæst: HTTP Error 404: Not Found
-website    Bæst
-NO PHOTO   SURT
-website    Restaurant JATAK
-NO PHOTO   Samsøe Samsøe
+search     Wild horses  (https://worldcoffeemap.com/reviews/copenhagen/wild-horses)
+search     studio x kitchen  (https://wanderlog.com/place/details/2294252/studio-x-kitchen)
+search     Rondo  (https://rondo.dk/en/)
+search     SURT  (https://www.visitcopenhagen.com/copenhagen/planning/surt-gdk1123455)
+search     Samsøe Samsøe  (https://www.samsoe.com/)
 skip website for GAO Dumpling Bar: too small (197x204), probably a logo
+skip search for GAO Dumpling Bar: too small (197x204), probably a logo
 NO PHOTO   GAO Dumpling Bar
-website    Gasoline Grill
-NO PHOTO   Gasoline Grill - Streetfood
-wikipedia  8 House
-skip wikipedia for Superkilen Park: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   Superkilen Park
-website    Hooked
-wikidata   Elmegade
-wikidata   Tivoli Gardens
-NO PHOTO   MUJI København
-website    Apotek 57
-NO PHOTO   Hart
-website    Juno the bakery
+search     Gasoline Grill - Streetfood  (https://www.gasolinegrill.com/)
+search     MUJI København  (https://maps.apple.com/place?place-id=I706E8737AB52C7E4)
 osm/website failed for Pompette: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>
-NO PHOTO   Pompette
+search     Pompette  (https://etteetteette.dk/pompette/)
+skip search for Barr: HTTP Error 404: Not Found
 NO PHOTO   Barr
-NO PHOTO   TorvehallerneKBH
-wikipedia failed for Reffen - Copenhagen Street Food: HTTP Error 404: Not Found
-website    Reffen - Copenhagen Street Food
+search     TorvehallerneKBH  (https://www.visitcopenhagen.com/copenhagen/planning/torvehallerne-gdk545401)
 osm/website failed for Høst: HTTP Error 404: Not Found
-NO PHOTO   Høst
-NO PHOTO   Frank
-NO PHOTO   Ancestrale
-wikipedia failed for Kødbyens Fiskebar: HTTP Error 404: Not Found
-website    Kødbyens Fiskebar
-website    Sanchez
-NO PHOTO   Saturday Loppemarked
-NO PHOTO   BauBau
-website    Reseller
-NO PHOTO   Norse Projects
-NO PHOTO   Norse Projects HQ
-NO PHOTO   Goods
+search     Høst  (https://cofoco.dk/en/restaurant/hoest)
+search     Frank  (https://www.visitcopenhagen.com/copenhagen/planning/restaurant-frank-gdk1158749)
+search     Ancestrale  (https://www.visitcopenhagen.com/copenhagen/planning/ancestrale-gdk1093700)
+search     Saturday Loppemarked  (https://www.copenhagentourism.org/copenhagen-flea-markets/)
+search     BauBau  (https://www.visitcopenhagen.com/copenhagen/planning/baubau-gdk1011119)
+search     Norse Projects  (https://norseprojects.com/)
+search     Norse Projects HQ  (https://norseprojects.com/pages/stores)
+search     Goods  (https://goodscph.com/)
 NO PHOTO   COS
 NO PHOTO   Uniqlo Closes soon
 NO PHOTO   Aesop
 NO PHOTO   Locale 21
-website    Prolog Coffee Bar Papirøen
 NO PHOTO   Illums Bolighus
-wikipedia failed for Copenhagen Contemporary: HTTP Error 404: Not Found
-wikidata   Copenhagen Contemporary
-skip wikipedia for SMK – Statens Museum for Kunst: HTTP Error 400: Use thumbnail sizes listed on https://w.wiki/GHai
-wikidata   SMK – Statens Museum for Kunst
-wikidata   Ny Carlsberg Glyptotek
-wikidata   Rosenborg Castle
-website    Andersen & Maillard
 NO PHOTO   Alle Tiders
 NO PHOTO   Kaf' Bar
 NO PHOTO   Ferm Living
-wikipedia  Ordrupgaard
 NO PHOTO   Another Aspect
 NO PHOTO   Rosforth & Rosforth
 NO PHOTO   bird : downtown
-wikidata   Designmuseum Danmark
 NO PHOTO   Godt Fund Vintage
-osm/website failed for Noma: HTTP Error 403: Forbidden
-wikipedia  Noma
-website    Lille Bakery
 skip website for Atelier September: too small (596x142), probably a logo
 NO PHOTO   Atelier September
-website    Sing Tehus
-website    Sonny
 NO PHOTO   Apollo Bar
-website    La Cabra
 NO PHOTO   Riviera
 NO PHOTO   ORSA
 NO PHOTO   HAY House
-website    Frama
 NO PHOTO   Montana
 NO PHOTO   Vipp
-49 of 105 places have a photo
+81 of 105 places have a photo
