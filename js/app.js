@@ -50,11 +50,13 @@ const MONTHS = { "10": "אוק׳", "11": "נוב׳" };
 const STOP_ICON = { flight: "M10 21h4l1-3-1.5-1.5L17 13l4 1v-3l-7-3V4a2 2 0 0 0-4 0v4L3 11v3l4-1 3.5 3.5L9 18z" };
 const stopIcon = s => s.flight ? STOP_ICON.flight : (stopPlaces(s)[0] ? TYPES[PLACE[stopPlaces(s)[0]].type].icon : null);
 const svgPath = d => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
-let homeDay = "all";
+const homeDays = new Set(); // empty = all days
+const toggle = (set, v) => set.has(v) ? set.delete(v) : set.add(v);
+const homeCards = () => DAYS.filter(d => !homeDays.size || homeDays.has(d.id)).map(dayRow).join("");
 
 function dayRow(d){
   const [, m, dd] = d.iso.split("-");
-  const expanded = homeDay === d.id;
+  const expanded = homeDays.has(d.id);
   const stops = expanded
     ? `<ol class="mini-stops">${d.stops.map(s => { const ic = stopIcon(s); return `<li>${ic?svgPath(ic):'<i class="sdot"></i>'}<span>${esc(s.h)}</span></li>`; }).join("")}</ol>`
     : `<span class="stops">${d.stops.map(s => { const ic = stopIcon(s); return `<span>${ic?svgPath(ic):""}${esc(s.h)}</span>`; }).join("")}</span>`;
@@ -74,11 +76,11 @@ function dayRow(d){
 
 function dayFilter(){
   return `<div class="filters" aria-label="סינון לפי יום">${[["all","כל הימים",""], ...DAYS.map(d => [d.id, `${d.name} ${d.date}`, d.c])]
-    .map(([id,label,c]) => `<button class="fchip" aria-pressed="${homeDay===id}" data-homeday="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("")}</div>`;
+    .map(([id,label,c]) => `<button class="fchip" aria-pressed="${id==="all" ? !homeDays.size : homeDays.has(id)}" data-homeday="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("")}</div>`;
 }
 
 function home(){
-  const cards = DAYS.filter(d => homeDay === "all" || d.id === homeDay).map(dayRow).join("");
+  const cards = homeCards();
   const tips = TIPS.map((t,i) => `
     <details ${i===0?"open":""}><summary>${esc(t.h)}</summary><div class="dbody">
       ${t.body.map(([b,p,u]) => `<div class="item">${b?`<b>${esc(b)}</b>`:""}<p>${fmt(p)}${u?` <a href="${esc(u)}" target="_blank" rel="noopener">להזמנה ↗</a>`:""}</p></div>`).join("")}
@@ -128,16 +130,15 @@ function day(id){
 }
 
 /* ---------- map ---------- */
-const mapState = { day: "all", types: new Set(), sel: null };
-let lmap = null, markers = {}, routeLine = null;
+const mapState = { days: new Set(), types: new Set(), sel: null }; // empty set = no filter
+let lmap = null, markers = {}, routeLines = [];
 
 const cssVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
 function visiblePlaces(){
   return PLACES.filter(p => {
     const days = PLACE_DAYS[p.id] || [];
-    if (mapState.day === "rec" && days.length) return false;
-    if (mapState.day !== "all" && mapState.day !== "rec" && !days.some(d => d.id === mapState.day)) return false;
+    if (mapState.days.size && !(days.some(d => mapState.days.has(d.id)) || (!days.length && mapState.days.has("rec")))) return false;
     if (mapState.types.size && !mapState.types.has(p.type)) return false;
     return true;
   });
@@ -146,7 +147,7 @@ function visiblePlaces(){
 function mapView(){
   const usedTypes = Object.keys(TYPES).filter(t => PLACES.some(p => p.type === t));
   const dayChips = [["all","הכל",""], ...DAYS.map(d => [d.id, d.name, d.c]), ["rec","מקומות שמורים",""]]
-    .map(([id,label,c]) => `<button class="fchip" aria-pressed="${mapState.day===id}" data-day="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("");
+    .map(([id,label,c]) => `<button class="fchip" aria-pressed="${id==="all" ? !mapState.days.size : mapState.days.has(id)}" data-day="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("");
   const typeChips = usedTypes.map(t => `<button class="fchip" aria-pressed="${mapState.types.has(t)}" data-type="${t}">${icon(t)}${TYPES[t].he}</button>`).join("");
   app.innerHTML = header("map") + `
     <section class="mapsec">
@@ -174,7 +175,7 @@ function buildMap(){
 function drawMarkers(fit){
   if (!lmap) return;
   Object.values(markers).forEach(m => m.remove()); markers = {};
-  if (routeLine) { routeLine.remove(); routeLine = null; }
+  routeLines.forEach(l => l.remove()); routeLines = [];
   const list = visiblePlaces();
   list.forEach(p => {
     const days = PLACE_DAYS[p.id] || [];
@@ -188,11 +189,10 @@ function drawMarkers(fit){
     m.on("click", () => select(p.id, false));
     markers[p.id] = m;
   });
-  const d = DAYS.find(d => d.id === mapState.day);
-  if (d) {
+  DAYS.filter(d => mapState.days.has(d.id)).forEach(d => {
     const pts = d.stops.flatMap(stopPlaces).map(id => PLACE[id]).filter(p => list.includes(p)).map(p => [p.lat, p.lng]);
-    if (pts.length > 1) routeLine = L.polyline(pts, { color: cssVar(d.c), weight: 4, dashArray: "6 8", opacity: .9 }).addTo(lmap);
-  }
+    if (pts.length > 1) routeLines.push(L.polyline(pts, { color: cssVar(d.c), weight: 4, dashArray: "6 8", opacity: .9 }).addTo(lmap));
+  });
   if (fit && list.length) {
     if (list.length === 1) lmap.setView([list[0].lat, list[0].lng], 16);
     else lmap.fitBounds(L.latLngBounds(list.map(p => [p.lat, p.lng])), { padding: [36,36], maxZoom: 16 });
@@ -250,22 +250,22 @@ app.addEventListener("click", e => {
   const g = e.target.closest("[data-go]");
   if (g) { go(g.dataset.go); return; }
   const hd = e.target.closest("[data-homeday]");
-  if (hd) { homeDay = hd.dataset.homeday;
-    document.querySelector(".daysec .tl").innerHTML = DAYS.filter(d => homeDay === "all" || d.id === homeDay).map(dayRow).join("");
-    document.querySelectorAll("[data-homeday]").forEach(b => b.setAttribute("aria-pressed", b === hd)); return; }
+  if (hd) { const v = hd.dataset.homeday; v === "all" ? homeDays.clear() : toggle(homeDays, v);
+    document.querySelector(".daysec .tl").innerHTML = homeCards();
+    document.querySelectorAll("[data-homeday]").forEach(b => b.setAttribute("aria-pressed", b.dataset.homeday === "all" ? !homeDays.size : homeDays.has(b.dataset.homeday))); return; }
   const pl = e.target.closest("[data-place]");
   if (pl) {
     const dayId = pl.dataset.day;
     if (location.hash !== "#map") {
-      mapState.day = dayId || "all"; mapState.types.clear(); mapState.sel = pl.dataset.place;
+      mapState.days = new Set(dayId ? [dayId] : []); mapState.types.clear(); mapState.sel = pl.dataset.place;
       go("map");
       setTimeout(() => select(pl.dataset.place, true), 0);
     } else select(pl.dataset.place, true);
     return;
   }
   const dc = e.target.closest("[data-day]");
-  if (dc) { mapState.day = dc.dataset.day; mapState.sel = null;
-    document.querySelectorAll("[data-day].fchip").forEach(b => b.setAttribute("aria-pressed", b === dc));
+  if (dc) { const v = dc.dataset.day; v === "all" ? mapState.days.clear() : toggle(mapState.days, v); mapState.sel = null;
+    document.querySelectorAll("[data-day].fchip").forEach(b => b.setAttribute("aria-pressed", b.dataset.day === "all" ? !mapState.days.size : mapState.days.has(b.dataset.day)));
     drawMarkers(true); return; }
   const tc = e.target.closest("[data-type]");
   if (tc) { const t = tc.dataset.type; mapState.types.has(t) ? mapState.types.delete(t) : mapState.types.add(t);
