@@ -81,6 +81,21 @@ const SAVED_SAME_AS = {
   "TorvehallerneKBH": "torvehallerne", "Palmehuset": "palmhouse", "Uniqlo Closes soon": "zara"
 };
 
+// English Wikipedia articles used for place photos (itinerary ids, then saved-place names)
+const WIKI = {
+  rundetaarn: "Rundetårn", illums: "Illums Bolighus", designmuseum: "Designmuseum Danmark", glyptotek: "Ny Carlsberg Glyptotek",
+  torvehallerne: "Torvehallerne", kastellet: "Kastellet, Copenhagen", palmhouse: "University of Copenhagen Botanical Garden",
+  frbhave: "Frederiksberg Gardens", amalienborg: "Amalienborg", rosenborg: "Rosenborg Castle", nyhavn: "Nyhavn",
+  tivoli: "Tivoli Gardens", saviour: "Church of Our Saviour, Copenhagen", christianshavn: "Christianshavn",
+  bredgade: "Bredgade", amagertorv: "Amagertorv", kobmagergade: "Købmagergade", pilestraede: "Pilestræde",
+  vaernedamsvej: "Værnedamsvej", zara: "Strøget", "cph-h": "Copenhagen Central Station", noerreport: "Nørreport station",
+  marmorkirken: "Frederik's Church", louis: "Louis Poulsen", tivolifood: "Tivoli Food Hall",
+  "SMK – Statens Museum for Kunst": "National Gallery of Denmark", "Copenhagen Contemporary": "Copenhagen Contemporary",
+  "Ordrupgaard": "Ordrupgaard", "8 House": "8 House", "Superkilen Park": "Superkilen", "Noma": "Noma (restaurant)",
+  "Reffen - Copenhagen Street Food": "Reffen", "Hotel NH Collection Copenhagen": "NH Collection Copenhagen",
+  "Bæst": "Bæst", "Kødbyens Fiskebar": "Kødbyens Fiskebar"
+};
+
 const DAYS = [
  {id:"wed", name:"רביעי", date:"28.10", iso:"2026-10-28", c:"--h1", title:"נחיתה והתמקמות",
   intro:"יום טיסות. נוחתים אחר הצהריים, שאטל למלון ומתמקמים.",

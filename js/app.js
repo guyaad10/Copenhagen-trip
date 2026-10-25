@@ -12,8 +12,9 @@ SAVED.forEach((s, i) => {
   const same = PLACES.find(p => p.id === SAVED_SAME_AS[s.name]);
   if (same) { Object.assign(same, { url: s.url, note: s.note || same.note }); return; }
   PLACES.push({ id: "s" + i, he: savedName(s.name), en: "", type: SAVED_TYPES[s.name] || TAG_TYPES[s.tags[0]] || "other",
-    lat: s.lat, lng: s.lng, url: s.url, note: s.note, saved: true });
+    lat: s.lat, lng: s.lng, url: s.url, note: s.note, saved: true, wiki: WIKI[s.name] });
 });
+PLACES.forEach(p => { if (!p.wiki && WIKI[p.id]) p.wiki = WIKI[p.id]; });
 const PLACE = Object.fromEntries(PLACES.map(p => [p.id, p]));
 const placeUrl = p => p.url || MAP(p.q || p.en || p.he);
 const stopPlaces = s => s.ps || (s.p ? [s.p] : []);
@@ -166,7 +167,6 @@ function mapView(){
           <div id="map" dir="ltr" role="region" aria-label="מפת קופנהגן"></div>
           <button class="fullbtn" id="fullbtn" aria-pressed="false" aria-label="מסך מלא">${svgPath(FULL_ICON.open)}</button>
         </div>
-        <div id="sel"></div>
       </div>
       <div id="plist" class="plist"></div>
     </section>`;
@@ -233,25 +233,91 @@ function missingList(){
     ${SAVED_MISSING.map(s => `<a class="prow" href="${esc(s.url)}" target="_blank" rel="noopener"><span>${esc(savedName(s.name))}</span>↗</a>`).join("")}</details>`;
 }
 
-function renderSel(){
-  const box = document.getElementById("sel");
-  const p = PLACE[mapState.sel];
-  if (!p) { box.innerHTML = '<p class="muted maphint">לוחצים על סמל במפה כדי לראות פרטים.</p>'; return; }
+/* place card: a popover on the map on wide screens, a bottom drawer on phones */
+const isPhone = () => matchMedia("(max-width: 700px)").matches;
+const photoCache = {};
+async function photo(p){
+  if (!p.wiki) return null;
+  if (!(p.wiki in photoCache)) photoCache[p.wiki] = fetch("https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(p.wiki.replace(/ /g, "_")))
+    .then(r => r.ok ? r.json() : null).then(j => j && (j.thumbnail || j.originalimage) ? (j.originalimage && j.originalimage.width <= 1200 ? j.originalimage.source : j.thumbnail.source) : null)
+    .catch(() => null);
+  return photoCache[p.wiki];
+}
+
+function placeCard(p){
   const days = PLACE_DAYS[p.id] || [];
-  box.innerHTML = `<div class="card selcard">
-    <div class="cardhead"><span class="ticon">${icon(p.type)}</span><div><h3>${esc(p.he)}</h3><div class="en">${esc(TYPES[p.type].he)}${p.en ? " · " + esc(p.en) : ""}</div></div></div>
-    ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
-    <div class="links">${days.map(d => `<button class="btn daybtn" style="--c:var(${d.c})" data-go="${d.id}">יום ${d.name}</button>`).join("")}${btn(["פתיחה ב‑Google Maps", placeUrl(p)])}</div>
+  const c = days[0] ? `var(${days[0].c})` : "var(--rec)";
+  return `<div class="pcard" dir="rtl" data-card="${p.id}">
+    <div class="pphoto" style="--c:${c}">${icon(p.type)}</div>
+    <div class="pbody">
+      <div><h3>${esc(p.he)}</h3><div class="en">${esc(TYPES[p.type].he)}${p.en ? " · " + esc(p.en) : ""}</div></div>
+      ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
+      <a class="gbtn" href="${esc(placeUrl(p))}" target="_blank" rel="noopener">${svgPath("M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5")}פתיחה ב‑Google Maps</a>
+      ${days.length ? `<div class="links">${days.map(d => `<button class="btn daybtn" style="--c:var(${d.c})" data-go="${d.id}">יום ${d.name}</button>`).join("")}</div>` : ""}
+    </div>
   </div>`;
+}
+
+let popup = null;
+function drawer(){
+  let d = document.getElementById("drawer");
+  if (d) return d;
+  d = document.createElement("div");
+  d.id = "drawer"; d.className = "drawer"; d.setAttribute("role", "dialog"); d.setAttribute("aria-label", "פרטי מקום");
+  d.innerHTML = '<div class="grab" aria-hidden="true"></div><button class="dclose" aria-label="סגירה">' + svgPath("M6 6l12 12M18 6L6 18") + '</button><div class="dcontent"></div>';
+  document.body.appendChild(d);
+  d.querySelector(".dclose").addEventListener("click", () => select(null));
+  // swipe down to close
+  let y0 = null;
+  d.addEventListener("touchstart", e => { y0 = e.touches[0].clientY; }, { passive: true });
+  d.addEventListener("touchmove", e => { if (y0 === null) return; const dy = Math.max(0, e.touches[0].clientY - y0); d.style.transform = `translateY(${dy}px)`; }, { passive: true });
+  d.addEventListener("touchend", e => { const dy = y0 === null ? 0 : e.changedTouches[0].clientY - y0; y0 = null; d.style.transform = ""; if (dy > 70) select(null); });
+  d.addEventListener("click", e => { if (e.target.closest("[data-go]")) { hideCard(); } });
+  return d;
+}
+
+function hideCard(){
+  if (popup && lmap) lmap.closePopup(popup);
+  popup = null;
+  document.getElementById("drawer")?.classList.remove("open");
+}
+
+function renderSel(){
+  const p = PLACE[mapState.sel];
+  if (!p || !lmap) { hideCard(); return; }
+  const html = placeCard(p);
+  if (isPhone()) {
+    if (popup) { lmap.closePopup(popup); popup = null; }
+    const d = drawer();
+    d.querySelector(".dcontent").innerHTML = html;
+    d.classList.add("open");
+  } else {
+    document.getElementById("drawer")?.classList.remove("open");
+    popup = L.popup({ className: "placepop", maxWidth: 300, minWidth: 260, offset: [0, -14], autoPanPaddingTopLeft: [20, 80], autoPanPaddingBottomRight: [20, 20] })
+      .setLatLng([p.lat, p.lng]).setContent(html).openOn(lmap);
+    popup.on("remove", () => { if (mapState.sel === p.id) { mapState.sel = null; markSel(); } });
+  }
+  photo(p).then(src => {
+    if (!src) return;
+    document.querySelectorAll(`[data-card="${p.id}"] .pphoto`).forEach(el => {
+      el.innerHTML = `<img src="${esc(src)}" alt="" loading="lazy">`; el.classList.add("has");
+    });
+    if (popup) popup.update();
+  });
+}
+
+function markSel(){
+  const id = mapState.sel;
+  Object.entries(markers).forEach(([pid, m]) => m.getElement()?.querySelector(".pin")?.classList.toggle("sel", pid === id));
+  document.querySelectorAll(".prow").forEach(b => b.classList.toggle("on", b.dataset.place === id));
 }
 
 function select(id, pan){
   mapState.sel = id;
-  Object.entries(markers).forEach(([pid, m]) => m.getElement()?.querySelector(".pin")?.classList.toggle("sel", pid === id));
-  document.querySelectorAll(".prow").forEach(b => b.classList.toggle("on", b.dataset.place === id));
-  renderSel();
+  markSel();
   const p = PLACE[id];
-  if (pan && lmap && p) lmap.setView([p.lat, p.lng], Math.max(lmap.getZoom(), 16));
+  if (pan && lmap && p) lmap.setView([p.lat, p.lng], Math.max(lmap.getZoom(), 16), { animate: false });
+  renderSel();
 }
 
 const FULL_ICON = { open: "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5", close: "M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" };
@@ -265,12 +331,12 @@ function setFull(on){
   b.innerHTML = svgPath(on ? FULL_ICON.close : FULL_ICON.open);
   if (lmap) setTimeout(() => lmap.invalidateSize(), 50);
 }
-document.addEventListener("keydown", e => { if (e.key === "Escape") setFull(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") { if (mapState.sel) select(null); else setFull(false); } });
 
 /* ---------- routing ---------- */
 function render(){
   const id = (location.hash||"").slice(1);
-  if (id !== "map" && lmap) { lmap.remove(); lmap = null; }
+  if (id !== "map" && lmap) { hideCard(); lmap.remove(); lmap = null; }
   document.documentElement.classList.remove("noscroll");
   if (id === "map") mapView();
   else if (DAYS.some(d => d.id === id)) day(id);
