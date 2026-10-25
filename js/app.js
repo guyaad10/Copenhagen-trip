@@ -46,17 +46,39 @@ function header(view){
     </div>`;
 }
 
+const MONTHS = { "10": "אוק׳", "11": "נוב׳" };
+const STOP_ICON = { flight: "M10 21h4l1-3-1.5-1.5L17 13l4 1v-3l-7-3V4a2 2 0 0 0-4 0v4L3 11v3l4-1 3.5 3.5L9 18z" };
+const stopIcon = s => s.flight ? STOP_ICON.flight : (stopPlaces(s)[0] ? TYPES[PLACE[stopPlaces(s)[0]].type].icon : null);
+const svgPath = d => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
+let homeDay = "all";
+
+function dayRow(d){
+  const [, m, dd] = d.iso.split("-");
+  const expanded = homeDay === d.id;
+  const stops = expanded
+    ? `<ol class="mini-stops">${d.stops.map(s => { const ic = stopIcon(s); return `<li>${ic?svgPath(ic):'<i class="sdot"></i>'}<span>${esc(s.h)}</span></li>`; }).join("")}</ol>`
+    : `<span class="stops">${d.stops.map(s => { const ic = stopIcon(s); return `<span>${ic?svgPath(ic):""}${esc(s.h)}</span>`; }).join("")}</span>`;
+  return `
+    <div class="tlrow" style="--c:var(${d.c})">
+      <div class="tile${d.iso===TODAY?" today":""}"><small>${d.name}</small><b>${+dd}</b><small>${MONTHS[m]}</small></div>
+      <button class="dcard" data-go="${d.id}">
+        <span class="body">
+          ${d.iso===TODAY?'<span class="todaychip">היום</span>':""}
+          <h3>${esc(d.title)}</h3>
+          ${stops}
+        </span>
+        <span class="go" aria-hidden="true">${svgPath("M15 6l-6 6 6 6")}</span>
+      </button>
+    </div>`;
+}
+
+function dayFilter(){
+  return `<div class="filters" aria-label="סינון לפי יום">${[["all","כל הימים",""], ...DAYS.map(d => [d.id, `${d.name} ${d.date}`, d.c])]
+    .map(([id,label,c]) => `<button class="fchip" aria-pressed="${homeDay===id}" data-homeday="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("")}</div>`;
+}
+
 function home(){
-  const cards = DAYS.map(d => `
-    <button class="dcard" style="--c:var(${d.c})" data-go="${d.id}">
-      <span class="stripe"></span>
-      <span class="body">
-        <span class="when">יום ${d.name} · ${d.date}${d.iso===TODAY?" · היום":""}</span>
-        <h3>${esc(d.title)}</h3>
-        <span class="stops">${d.stops.map(s=>`<span>${esc(s.h)}</span>`).join("")}</span>
-      </span>
-      <span class="go" aria-hidden="true">‹</span>
-    </button>`).join("");
+  const cards = DAYS.filter(d => homeDay === "all" || d.id === homeDay).map(dayRow).join("");
   const tips = TIPS.map((t,i) => `
     <details ${i===0?"open":""}><summary>${esc(t.h)}</summary><div class="dbody">
       ${t.body.map(([b,p,u]) => `<div class="item">${b?`<b>${esc(b)}</b>`:""}<p>${fmt(p)}${u?` <a href="${esc(u)}" target="_blank" rel="noopener">להזמנה ↗</a>`:""}</p></div>`).join("")}
@@ -67,7 +89,7 @@ function home(){
     </div></details>`).join("");
 
   app.innerHTML = header("days") + `
-    <section><h2>מה עושים בכל יום</h2><div class="days">${cards}</div></section>
+    <section class="daysec"><h2>מה עושים בכל יום</h2>${dayFilter()}<div class="tl">${cards}</div></section>
     <section><h2>לפני שיוצאים</h2>${tips}</section>
     <section><h2>המלצות</h2>${recs}
       <a class="btn" style="align-self:flex-start" href="${LINKS.guide}" target="_blank" rel="noopener">מדריך המלצות למטייל ↗</a></section>
@@ -82,8 +104,8 @@ function day(id){
     const links = [...(s.links||[]), ...ps.map(p => [ps.length > 1 ? p.he + " במפה" : "ב‑Google Maps", placeUrl(p)])];
     const t = ps[0] ? ps[0].type : null;
     return `
-    <li class="stop${s.flight?" flight":""}" style="--c:var(${d.c})"><div class="card">
-      <div class="cardhead">${t?`<span class="ticon" title="${TYPES[t].he}">${icon(t)}</span>`:""}<div><h3>${esc(s.h)}</h3><div class="en">${esc(s.en)}</div></div></div>
+    <li class="stop" style="--c:var(${d.c})"><span class="smark">${stopIcon(s)?svgPath(stopIcon(s)):""}</span><div class="card">
+      <div class="cardhead"><div><h3>${esc(s.h)}</h3><div class="en">${esc(s.en)}</div></div></div>
       ${s.flights?s.flights.map(([n,a,b])=>`<div class="flightrow"><b class="latin">${n}</b><span>${esc(a)} ← ${esc(b)}</span></div>`).join(""):""}
       ${s.facts?`<dl class="facts">${s.facts.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join("")}</dl>`:""}
       ${s.note?`<p class="note">${fmt(s.note)}</p>`:""}
@@ -123,7 +145,7 @@ function visiblePlaces(){
 
 function mapView(){
   const usedTypes = Object.keys(TYPES).filter(t => PLACES.some(p => p.type === t));
-  const dayChips = [["all","הכל",""], ...DAYS.map(d => [d.id, d.name, d.c]), ["rec","המלצות נוספות",""]]
+  const dayChips = [["all","הכל",""], ...DAYS.map(d => [d.id, d.name, d.c]), ["rec","מקומות שמורים",""]]
     .map(([id,label,c]) => `<button class="fchip" aria-pressed="${mapState.day===id}" data-day="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("");
   const typeChips = usedTypes.map(t => `<button class="fchip" aria-pressed="${mapState.types.has(t)}" data-type="${t}">${icon(t)}${TYPES[t].he}</button>`).join("");
   app.innerHTML = header("map") + `
@@ -156,8 +178,9 @@ function drawMarkers(fit){
   const list = visiblePlaces();
   list.forEach(p => {
     const days = PLACE_DAYS[p.id] || [];
-    const c = days[0] ? `var(${days[0].c})` : "var(--rec)";
-    const html = `<div class="pin${mapState.sel===p.id?" sel":""}" style="--c:${c}">${icon(p.type)}</div>`;
+    const html = days[0]
+      ? `<div class="pin${mapState.sel===p.id?" sel":""}" style="--c:var(${days[0].c})">${icon(p.type)}</div>`
+      : `<div class="pin saved${mapState.sel===p.id?" sel":""}">${icon(p.type)}</div>`;
     const m = L.marker([p.lat, p.lng], {
       icon: L.divIcon({ html, className: "pinwrap", iconSize: [34,34], iconAnchor: [17,17] }),
       title: p.he, keyboard: true
@@ -226,6 +249,10 @@ function go(id){
 app.addEventListener("click", e => {
   const g = e.target.closest("[data-go]");
   if (g) { go(g.dataset.go); return; }
+  const hd = e.target.closest("[data-homeday]");
+  if (hd) { homeDay = hd.dataset.homeday;
+    document.querySelector(".daysec .tl").innerHTML = DAYS.filter(d => homeDay === "all" || d.id === homeDay).map(dayRow).join("");
+    document.querySelectorAll("[data-homeday]").forEach(b => b.setAttribute("aria-pressed", b === hd)); return; }
   const pl = e.target.closest("[data-place]");
   if (pl) {
     const dayId = pl.dataset.day;
