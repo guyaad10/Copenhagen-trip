@@ -177,3 +177,16 @@ a.prow{color:var(--ink);text-decoration:none}
 /* saved places on the map: no day color */
 .pin.saved{background:var(--surface);color:var(--ink);border-color:var(--line)}
 .pgroup .prow{width:100%;box-sizing:border-box;margin-top:4px}
+
+/* map full screen */
+.mapbox{display:flex;flex-direction:column;gap:10px}
+.mapwrap{position:relative}
+.fullbtn{all:unset;cursor:pointer;position:absolute;top:10px;right:10px;z-index:500;width:34px;height:34px;display:grid;place-items:center;background:var(--surface);color:var(--ink);border-radius:10px;box-shadow:var(--shadow)}
+.fullbtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.mapbox.full{position:fixed;inset:0;z-index:2000;background:var(--bg);
+  padding:calc(env(safe-area-inset-top,0px) + 10px) max(10px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 10px) max(10px,env(safe-area-inset-left,0px))}
+.mapbox.full .mapwrap{flex:1;min-height:0}
+.mapbox.full #map{height:100%;min-height:0}
+.mapbox.full #sel{position:absolute;left:max(18px,env(safe-area-inset-left,0px));right:max(18px,env(safe-area-inset-right,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:600}
+.mapbox.full .maphint{display:none}
+html.noscroll,html.noscroll body{overflow:hidden}

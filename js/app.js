@@ -159,10 +159,15 @@ function mapView(){
   const typeChips = usedTypes.map(t => `<button class="fchip" aria-pressed="${mapState.types.has(t)}" data-type="${t}">${icon(t)}${TYPES[t].he}</button>`).join("");
   app.innerHTML = header("map") + `
     <section class="mapsec">
-      <div class="filters" aria-label="סינון לפי יום">${dayChips}</div>
-      <div class="filters" aria-label="סינון לפי סוג">${typeChips}</div>
-      <div id="map" dir="ltr" role="region" aria-label="מפת קופנהגן"></div>
-      <div id="sel"></div>
+      <div class="mapbox" id="mapbox">
+        <div class="filters" aria-label="סינון לפי יום">${dayChips}</div>
+        <div class="filters" aria-label="סינון לפי סוג">${typeChips}</div>
+        <div class="mapwrap">
+          <div id="map" dir="ltr" role="region" aria-label="מפת קופנהגן"></div>
+          <button class="fullbtn" id="fullbtn" aria-pressed="false" aria-label="מסך מלא">${svgPath(FULL_ICON.open)}</button>
+        </div>
+        <div id="sel"></div>
+      </div>
       <div id="plist" class="plist"></div>
     </section>`;
   buildMap();
@@ -177,6 +182,7 @@ function buildMap(){
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(lmap);
+  lmap.on("click", () => select(null, false));
   drawMarkers(true);
 }
 
@@ -201,7 +207,9 @@ function drawMarkers(fit){
     const pts = d.stops.flatMap(stopPlaces).map(id => PLACE[id]).filter(p => list.includes(p)).map(p => [p.lat, p.lng]);
     if (pts.length > 1) routeLines.push(L.polyline(pts, { color: cssVar(d.c), weight: 4, dashArray: "6 8", opacity: .9 }).addTo(lmap));
   });
-  if (fit && list.length) {
+  if (fit && !mapState.days.size && !mapState.types.size) {
+    lmap.setView([55.6815, 12.577], 14);  // city center; the full list reaches far suburbs
+  } else if (fit && list.length) {
     if (list.length === 1) lmap.setView([list[0].lat, list[0].lng], 16);
     else lmap.fitBounds(L.latLngBounds(list.map(p => [p.lat, p.lng])), { padding: [36,36], maxZoom: 16 });
   }
@@ -246,10 +254,24 @@ function select(id, pan){
   if (pan && lmap && p) lmap.setView([p.lat, p.lng], Math.max(lmap.getZoom(), 16));
 }
 
+const FULL_ICON = { open: "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5", close: "M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" };
+function setFull(on){
+  const box = document.getElementById("mapbox"), b = document.getElementById("fullbtn");
+  if (!box) return;
+  box.classList.toggle("full", on);
+  document.documentElement.classList.toggle("noscroll", on);
+  b.setAttribute("aria-pressed", on);
+  b.setAttribute("aria-label", on ? "יציאה ממסך מלא" : "מסך מלא");
+  b.innerHTML = svgPath(on ? FULL_ICON.close : FULL_ICON.open);
+  if (lmap) setTimeout(() => lmap.invalidateSize(), 50);
+}
+document.addEventListener("keydown", e => { if (e.key === "Escape") setFull(false); });
+
 /* ---------- routing ---------- */
 function render(){
   const id = (location.hash||"").slice(1);
   if (id !== "map" && lmap) { lmap.remove(); lmap = null; }
+  document.documentElement.classList.remove("noscroll");
   if (id === "map") mapView();
   else if (DAYS.some(d => d.id === id)) day(id);
   else home();
@@ -262,6 +284,7 @@ function go(id){
 }
 
 app.addEventListener("click", e => {
+  if (e.target.closest("#fullbtn")) { setFull(!document.getElementById("mapbox").classList.contains("full")); return; }
   const g = e.target.closest("[data-go]");
   if (g) { go(g.dataset.go); return; }
   const hd = e.target.closest("[data-homeday]");
