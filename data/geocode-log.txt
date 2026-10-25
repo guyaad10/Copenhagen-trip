@@ -1,202 +1,29 @@
 google: no coordinates at www.google.com, title   Google Maps  
-   matched The Audo, Århusgade, Sundmolen, Nordhavn, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2150, Denmark
-nominatim Audo Copenhagen
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Massimo Dutti
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Axel, Nygade, Nørrevold, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1164, Denmark
-nominatim Axel Copenhagen
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Lidkøb, Strynøgade, Østerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2100, Denmark
-nominatim Lidkøb Østerbro
-google: no coordinates at www.google.com, title   Google Maps  
-   matched NH Collection Copenhagen, Strandgade, Gammelholm, Christianshavn, Copenhagen, Copenhagen Municipality, Capital Region of
-nominatim Hotel NH Collection Copenhagen
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Helle Mardahl Studio
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Hart - Kødbyen, Høkerboderne, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of D
-nominatim Hart Bakery
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Hart - Kødbyen, Høkerboderne, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of D
-nominatim Hart
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Palmehuset, Grønttorvsparken, Grønttorvet, Valby, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2500, 
-nominatim Palmehuset
-google: no coordinates at www.google.com, title   Google Maps  
-   matched NEW MAGS, Ny Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1111, Denm
-nominatim New Mags
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Wild Horses Copenhagen, Borgbjergsvej, Frederiksholm, Carlsberg Byen, Copenhagen, Copenhagen Municipality, Capital Regio
-nominatim Wild horses
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Ambra Alle, Kastrup, Tårnby Municipality, Capital Region of Denmark, 2770, Denmark
-nominatim Ambra
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Studio X, Dronningens Tværgade, Nyboder, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1304,
-nominatim studio x kitchen
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Bottega Barlie
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Rondo, Prinsesse Charlottes Gade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark
-nominatim Rondo
-google: no coordinates at www.google.com, title   Google Maps  
-   matched BRUS, Guldbergsgade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2200, Denma
-nominatim BRUS
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Bæst, Guldbergsgade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2200, Denma
-nominatim Bæst
-google: no coordinates at www.google.com, title   Google Maps  
-   matched SURT, Ny Carlsberg Vej, Humleby, Den Gule By, Carlsberg Byen, Copenhagen, Copenhagen Municipality, Capital Region of Den
-nominatim SURT
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Jatak, Rantzausgade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1960, Denma
-nominatim Restaurant JATAK
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Samsøe Samsøe, Værnedamsvej, Vestervold, Vesterbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1619
-nominatim Samsøe Samsøe
-google: no coordinates at www.google.com, title   Google Maps  
-   matched GAO Dumpling Bar, Blågårdsgade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 
-nominatim GAO Dumpling Bar
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Gasoline Grill, Landgreven, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1301, 
-nominatim Gasoline Grill
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Gasoline Grill, Landgreven, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1301, 
-nominatim Gasoline Grill - Streetfood
-google: no coordinates at www.google.com, title   Google Maps  
-   matched 8 House, Richard Mortensens Vej, Hesteskoen, Ørestad, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 27
-nominatim 8 House
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Superkilen, Lyngbyvejskvarteret, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, Denmark
-nominatim Superkilen Park
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Hooked Halmtorvet, Halmtorvet, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of 
-nominatim Hooked
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Elmegade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1635, Denmark
-nominatim Elmegade
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Tivoli Gardens, Bernstorffsgade, Postbyen, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capita
-nominatim Tivoli Gardens
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Hotel NH Copenhagen Grand Joanne
 google: no coordinates at www.google.com, title   Google Maps  
-   matched MUJI / ILLUM, Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1067, Den
-nominatim MUJI København
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Apotek 57, Fredericiagade, Nyboder, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1312, Denm
-nominatim Apotek 57
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Hart - Kødbyen, Høkerboderne, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of D
-nominatim Hart
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Juno the Bakery, Århusgade, Indre Østerbro, Østerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 21
-nominatim Juno the bakery
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Pompette, Møllegade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 2200, Denma
-nominatim Pompette
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Restaurant Barr, Strandgade, Gammelholm, Christianshavn, Copenhagen, Copenhagen Municipality, Capital Region of Denmark,
-nominatim Barr
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Oliviers & Co TorvehallerneKBH Torvehallerne, Rømersgade, Nørrevold, Indre By, Copenhagen, Copenhagen Municipality, Capi
-nominatim TorvehallerneKBH
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Copenhagen Street Food - Reffen, Refshalevej, Refshaleøen, Indre By, Copenhagen, Copenhagen Municipality, Capital Region
-nominatim Reffen - Copenhagen Street Food
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Pinseria C´ho Fame
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Høst, Ahlefeldtsgade, Nørrevold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1
-nominatim Høst
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Frank, Ny Adelgade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1104, Denmark
-nominatim Frank
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Ancestrale, Oehlenschlægersgade, Vestervold, Vesterbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 
-nominatim Ancestrale
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Kødbyens Fiskebar, Flæsketorvet, Den Gule By, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region 
-nominatim Kødbyens Fiskebar
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Hija de Sanchez Cantina, Helsinkigade, Sundmolen, Nordhavn, Copenhagen, Copenhagen Municipality, Capital Region of Denma
-nominatim Sanchez
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Copenhagen Fleamarket
-google: no coordinates at www.google.com, title   Google Maps  
-MISSING   Saturday Loppemarked
-google: no coordinates at www.google.com, title   Google Maps  
-   matched BauBau, Birkegade, De Gamles By, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1635, Denmark
-nominatim BauBau
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Reseller, Pilestræde, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1112, Denmar
-nominatim Reseller
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Holzweiler
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Another nué
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Norse Projects, Værnedamsvej, Vestervold, Vesterbro, Copenhagen, Frederiksberg Municipality, Capital Region of Denmark, 
-nominatim Norse Projects
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Norse Projects, Værnedamsvej, Vestervold, Vesterbro, Copenhagen, Frederiksberg Municipality, Capital Region of Denmark, 
-nominatim Norse Projects HQ
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Goods, Østerbrogade, Østervold, Østerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1350, Denmark
-nominatim Goods
-google: no coordinates at www.google.com, title   Google Maps  
-   matched COS, Købmagergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1150, Denmark
-nominatim COS
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Uniqlo, Vimmelskaftet, Nørrevold, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1162, Denmar
-nominatim Uniqlo Closes soon
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Aesop, Værnedamsvej, Vestervold, Vesterbro, Copenhagen, Frederiksberg Municipality, Capital Region of Denmark, 1619, Den
-nominatim Aesop
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Le Labo
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Locale 21, Ny Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1111, Den
-nominatim Locale 21
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Palazzo Diner
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Prolog Coffee Bar Papirøen, Papirøen, Holmen, Christianshavn, Copenhagen, Copenhagen Municipality, Capital Region of Den
-nominatim Prolog Coffee Bar Papirøen
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Dansk Made for Rooms
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Træbanksøen, Lille Birkholm 2, Hjortespring, Herlev, Herlev Municipality, Capital Region of Denmark, Denmark
-nominatim Lago
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Illums Bolighus, Amagertorv, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1160,
-nominatim Illums Bolighus
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   B&W Market
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Lyngby Lokal, Toftebæksvej, Lundtofte, Kongens Lyngby, Lyngby-Taarbæk Municipality, Capital Region of Denmark, 2800, Den
-nominatim Lokal ApS.
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Copenhagen Contemporary, Refshalevej, Refshaleøen, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denm
-nominatim Copenhagen Contemporary
-google: no coordinates at www.google.com, title   Google Maps  
-   matched National Gallery of Art, Sølvgade, Østervold, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 
-nominatim SMK – Statens Museum for Kunst
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Ny Carlsberg Glyptotek, H.C. Andersens Boulevard, Postbyen, Islands Brygge, Ballonparken, Copenhagen, Copenhagen Municip
-nominatim Ny Carlsberg Glyptotek
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Rosenborg Castle, Grønne Bro, Østervold, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1123,
-nominatim Rosenborg Castle
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   norange coffee roasters
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Andersen & Maillard, Göteborg Plads, Marmormolen, Nordhavn, Copenhagen, Copenhagen Municipality, Capital Region of Denma
-nominatim Andersen & Maillard
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Alle Tiders, Halmtorvet, Postbyen, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region
-nominatim Alle Tiders
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Stoy
 google: no coordinates at www.google.com, title   Google Maps  
@@ -204,85 +31,19 @@ MISSING   Auren’s Deli - Cornerstore
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Auren's Deli
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Kaf' Bar, Antonigade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1106, Denmar
-nominatim Kaf' Bar
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Ferm Living, Kuglegårdsvej, Holmen, Amagerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1436, Den
-nominatim Ferm Living
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Ordrupgaard, Kratvænget, Charlottenlund, Klampenborg, Gentofte Municipality, Capital Region of Denmark, 2920, Denmark
-nominatim Ordrupgaard
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Another Aspect, Møntergade, Nyboder, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1116, Den
-nominatim Another Aspect
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Ancher Studio ApS
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Rosforth & Rosforth, Knippelsbro, Gammelholm, Christianshavn, Copenhagen, Copenhagen Municipality, Capital Region of Den
-nominatim Rosforth & Rosforth
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   The Roe Bar
-google: no coordinates at www.google.com, title   Google Maps  
-   matched bird : downtown, Store Kongensgade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark
-nominatim bird : downtown
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Danish Museum of Art & Design, Bredgade, Frederiksstaden, Indre By, Copenhagen, Copenhagen Municipality, Capital Region 
-nominatim Designmuseum Danmark
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Angmas
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Red Cross Op Shop
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Godt Fund vintage, Ravnsborggade, Nørrevold, Nørrebro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1
-nominatim Godt Fund Vintage
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Noma, Bjørnekloen, Freetown Christiania, Holmen, Amagerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denma
-nominatim Noma
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Lille Bakery, Refshalevej, Refshaleøen, Christianshavn, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 
-nominatim Lille Bakery
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Atelier September, Fredericiagade, Nyboder, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 13
-nominatim Atelier September
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Lille Petra
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Sing Tehus, Rosenvængets Allé, Østervold, Østerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1317
-nominatim Sing Tehus
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Sonny, Frederiksberg Allé, Frederiksberg, Frederiksberg Municipality, Capital Region of Denmark, 1621, Denmark
-nominatim Sonny
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Apollo Bar, Nyhavn, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1056, Denmark
-nominatim Apollo Bar
-google: no coordinates at www.google.com, title   Google Maps  
-   matched La Cabra Nordhavn, Århusgade, Marmormolen, Østerbro, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 215
-nominatim La Cabra
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Riviera, Nansensgade, Nørrevold, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1359, Denmark
-nominatim Riviera
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Orsa Coffee, Vesterbrogade, Vestervold, Meatpacking District, Copenhagen, Copenhagen Municipality, Capital Region of Den
-nominatim ORSA
 google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Audo House
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Hay House, Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1067, Denmar
-nominatim HAY House
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Frama, Fredericiagade, Nyboder, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1312, Denmark
-nominatim Frama
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Vipp Home | Store & Showroom Closed
 google: no coordinates at www.google.com, title   Google Maps  
-   matched Montana Mobile, Bredgade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1255, De
-nominatim Montana
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Andersen & Maillard, Göteborg Plads, Marmormolen, Nordhavn, Copenhagen, Copenhagen Municipality, Capital Region of Denma
-nominatim Andersen & Maillard
-google: no coordinates at www.google.com, title   Google Maps  
 MISSING   Louis Poulsen
-google: no coordinates at www.google.com, title   Google Maps  
-   matched Vipp, Ny Østergade, Gammelholm, Indre By, Copenhagen, Copenhagen Municipality, Capital Region of Denmark, 1111, Denmark
-nominatim Vipp
-79 placed, 25 without coordinates
+77 placed, 27 without coordinates
