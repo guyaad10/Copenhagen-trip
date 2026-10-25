@@ -10,7 +10,7 @@ Plain HTML, CSS and JavaScript. No build step.
 - `js/data.js` – all trip content: days, places, tips, recommendations
 - `js/app.js` – rendering, the day pages and the map
 - `css/style.css` – styles (colors are tokens at the top, with a dark mode)
-- `vendor/leaflet/` – Leaflet 1.9.4 for the map (map tiles come from CARTO / OpenStreetMap)
+- `vendor/leaflet/` – Leaflet 1.9.4 for the map (map tiles come from OpenStreetMap, no API key needed)
 
 ## Adding a place
 

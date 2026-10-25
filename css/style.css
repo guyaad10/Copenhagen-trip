@@ -8,10 +8,10 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346;
-  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; color-scheme:dark}}
+  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346;
-  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; color-scheme:dark}
+  --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -151,3 +151,4 @@ button.btn{background:none;cursor:pointer;font-family:inherit}
 .row.mini .gable{height:16px}
 .row.mini .facade{min-height:0!important;padding:6px 4px;gap:0}
 .row.mini .wins{display:none}
+.leaflet-tile-pane{filter:var(--tile-filter)}

@@ -110,8 +110,6 @@ const mapState = { day: "all", types: new Set(), sel: null };
 let lmap = null, markers = {}, routeLine = null;
 
 const cssVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-const dark = () => document.documentElement.dataset.theme === "dark" ||
-  (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
 
 function visiblePlaces(){
   return PLACES.filter(p => {
@@ -144,9 +142,9 @@ function buildMap(){
   const el = document.getElementById("map");
   if (typeof L === "undefined") { el.innerHTML = '<p class="maperr">המפה לא נטענה. בדקו חיבור לאינטרנט.</p>'; return; }
   lmap = L.map(el, { zoomControl: true, attributionControl: true }).setView([55.680, 12.580], 14);
-  L.tileLayer(`https://{s}.basemaps.cartocdn.com/${dark() ? "dark_all" : "rastertiles/voyager"}/{z}/{x}/{y}{r}.png`, {
-    maxZoom: 19, subdomains: "abcd",
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(lmap);
   drawMarkers(true);
 }
