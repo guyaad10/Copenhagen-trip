@@ -38,19 +38,24 @@ const savePlan = () => { try { localStorage.setItem(PLAN_KEY, JSON.stringify(pla
 // place id -> days it appears on
 const PLACE_DAYS = {};
 // Where an added place goes: the day's original stops are anchors, and the place joins the closest one
-// (measured to its own places, never to places we added), or, if none is within walking distance,
-// gets its own stop right after the closest one.
+// (measured to its own places, never to places added to it). If none is within walking distance,
+// it joins a new anchor that an earlier added place opened nearby, or opens one right after the closest stop.
 const metres = (a, b) => Math.hypot((a.lat - b.lat) * 111000, (a.lng - b.lng) * 63000);
 const NEAR = 900;
 function nearestStop(stops, p){
-  let best = null;
-  stops.forEach((s, i) => {
-    const ps = stopPlaces(s).filter(id => id !== HOME).map(id => PLACE[id]);
-    if (s.added || !ps.length) return;
-    const dist = Math.min(...ps.map(q => metres(p, q)));
-    if (!best || dist < best.dist) best = { i, dist };
-  });
+  const closest = keep => {
+    let best = null;
+    stops.forEach((s, i) => {
+      const ps = stopPlaces(s).filter(id => id !== HOME).map(id => PLACE[id]);
+      if (!keep(s) || !ps.length) return;
+      const dist = Math.min(...ps.map(q => metres(p, q)));
+      if (!best || dist < best.dist) best = { i, dist };
+    });
+    return best;
+  };
+  const best = closest(s => !s.added), opened = closest(s => s.added);
   if (best && best.dist <= NEAR) return { i: best.i, near: true };
+  if (opened && opened.dist <= NEAR) return { i: opened.i, near: true };
   if (best) return { i: best.i + 1 };
   let at = stops.length; // no stop to go near: before the trailing airport/flight stops
   while (at > 0 && !stopPlaces(stops[at-1]).length) at--;
