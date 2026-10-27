@@ -239,10 +239,122 @@ function day(id){
     </header>
     ${d.route?`<div class="route"><b>איך מגיעים</b>${esc(d.route)}</div>`:""}
     <ol class="timeline">${stops}</ol>
+    ${dayMapHtml(d)}
     <nav class="pager">
       <button ${prev?`data-go="${prev.id}"`:"disabled"}>→ ${prev?`יום ${prev.name}`:""}</button>
       <button ${next?`data-go="${next.id}"`:"disabled"}>${next?`יום ${next.name}`:""} ←</button>
     </nav>`;
+  buildDayMap(d);
+}
+
+/* ---------- the day's route: numbered stops joined by curved arrows ---------- */
+let dmap = null;
+const FIT_ICON = "M12 2v4M12 18v4M2 12h4M18 12h4M12 8a4 4 0 1 0 0 8a4 4 0 1 0 0-8";
+// The day's places in order, each once (our added places included).
+const routeOf = d => { const seen = new Set(); return d.stops.flatMap(stopAll).filter(id => PLACE[id] && !seen.has(id) && seen.add(id)).map(id => PLACE[id]); };
+const walkUrl = ps => "https://www.google.com/maps/dir/?api=1&travelmode=walking&origin=" + ps[0].lat + "," + ps[0].lng +
+  "&destination=" + ps[ps.length-1].lat + "," + ps[ps.length-1].lng +
+  (ps.length > 2 ? "&waypoints=" + encodeURIComponent(ps.slice(1, -1).map(p => p.lat + "," + p.lng).join("|")) : "");
+
+function dayMapHtml(d){
+  const ps = routeOf(d);
+  if (!ps.length) return "";
+  return `
+    <section class="daymap" style="--c:var(${d.c})">
+      <h2>המסלול של היום</h2>
+      <div class="dmwrap">
+        <div id="dmap" dir="ltr" role="region" aria-label="מפת המסלול של יום ${d.name}"></div>
+        <button class="fullbtn" id="dmfit" aria-label="הצגת כל המסלול">${svgPath(FIT_ICON)}</button>
+        <span class="dmhint" aria-hidden="true">שתי אצבעות להזזת המפה</span>
+      </div>
+      <ol class="dmlist">${ps.map((p, i) => `
+        <li><button class="dmrow" data-dmstop="${i}"><span class="dmnum">${i+1}</span><span class="dmname">${esc(p.he)}</span><small>${esc(TYPES[p.type].he)}</small></button></li>`).join("")}
+      </ol>
+      ${ps.length > 1 ? `<a class="btn" style="align-self:flex-start" href="${esc(walkUrl(ps))}" target="_blank" rel="noopener">מסלול הליכה ב‑Google Maps ↗</a>` : ""}
+    </section>`;
+}
+
+// Curved connectors between the stops, drawn as one SVG over the map (like node links in Figma or Weavy).
+const FlowLayer = typeof L !== "undefined" ? L.Layer.extend({
+  initialize(pts){ this._pts = pts; },
+  onAdd(map){
+    this._svg = L.SVG.create("svg");
+    this._svg.setAttribute("class", "flow leaflet-zoom-hide");
+    map.getPanes().overlayPane.appendChild(this._svg);
+    map.on("zoomend viewreset", this._draw, this);
+    this._draw();
+  },
+  onRemove(map){ this._svg.remove(); map.off("zoomend viewreset", this._draw, this); },
+  _draw(){
+    const map = this._map, pts = this._pts.map(ll => map.latLngToLayerPoint(ll));
+    const pad = 80, xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+    const x0 = Math.min(...xs) - pad, y0 = Math.min(...ys) - pad, w = Math.max(...xs) + pad - x0, h = Math.max(...ys) + pad - y0;
+    L.DomUtil.setPosition(this._svg, L.point(x0, y0));
+    this._svg.setAttribute("viewBox", `0 0 ${w} ${h}`);
+    Object.assign(this._svg.style, { width: w + "px", height: h + "px" });
+    const f = n => n.toFixed(1);
+    let out = "";
+    for (let i = 0; i < pts.length - 1; i++) {
+      const a = { x: pts[i].x - x0, y: pts[i].y - y0 }, b = { x: pts[i+1].x - x0, y: pts[i+1].y - y0 };
+      const dx = b.x - a.x, dy = b.y - a.y, len = Math.hypot(dx, dy);
+      if (len < 56) continue; // the two stops overlap on the map at this zoom
+      // a gentle bend to one side, like a node link, so a there-and-back never draws on top of itself
+      const bend = Math.min(len * .22, 70), nx = -dy / len * bend, ny = dx / len * bend;
+      const c1 = { x: a.x + dx * .3 + nx, y: a.y + dy * .3 + ny }, c2 = { x: a.x + dx * .7 + nx, y: a.y + dy * .7 + ny };
+      const trim = (p, c, r) => { const l = Math.hypot(c.x - p.x, c.y - p.y); return { x: p.x + (c.x - p.x) / l * r, y: p.y + (c.y - p.y) / l * r }; };
+      const s = trim(a, c1, 22), e = trim(b, c2, 22), tip = trim(b, c2, 19);
+      const d = `M${f(s.x)} ${f(s.y)}C${f(c1.x)} ${f(c1.y)} ${f(c2.x)} ${f(c2.y)} ${f(e.x)} ${f(e.y)}`;
+      // arrowhead pointing along the curve's last tangent
+      const tl = Math.hypot(b.x - c2.x, b.y - c2.y), ux = (b.x - c2.x) / tl, uy = (b.y - c2.y) / tl;
+      const back = { x: tip.x - ux * 11, y: tip.y - uy * 11 };
+      const head = `M${f(back.x + uy * 7)} ${f(back.y - ux * 7)}L${f(tip.x)} ${f(tip.y)}L${f(back.x - uy * 7)} ${f(back.y + ux * 7)}Z`;
+      out += `<path class="fcase" d="${d}"/><path class="fline" d="${d}"/><path class="fflow" d="${d}"/>` +
+        `<circle class="fport" cx="${f(s.x)}" cy="${f(s.y)}" r="4"/><path class="fhead" d="${head}"/>`;
+    }
+    this._svg.innerHTML = out;
+  }
+}) : null;
+
+function buildDayMap(d){
+  if (dmap) { dmap.remove(); dmap = null; }
+  const el = document.getElementById("dmap");
+  if (!el) return;
+  if (typeof L === "undefined") { el.innerHTML = '<p class="maperr">המפה לא נטענה. בדקו חיבור לאינטרנט.</p>'; return; }
+  const ps = routeOf(d), lls = ps.map(p => [p.lat, p.lng]);
+  // On touch screens one finger keeps scrolling the page; two fingers move and zoom the map.
+  const touch = L.Browser.mobile || matchMedia("(pointer: coarse)").matches;
+  dmap = L.map(el, { dragging: !touch, scrollWheelZoom: false, tap: false, zoomSnap: .25 });
+  el.closest(".dmwrap").classList.toggle("touch", touch);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(dmap);
+  const fit = () => ps.length > 1 ? dmap.fitBounds(L.latLngBounds(lls), { padding: [44, 44], maxZoom: 17 }) : dmap.setView(lls[0], 16);
+  fit();
+  if (ps.length > 1) new FlowLayer(lls).addTo(dmap);
+  const nodes = ps.map((p, i) => {
+    const m = L.marker(lls[i], {
+      icon: L.divIcon({ className: "pinwrap", html: `<div class="node"><b>${i+1}</b><span class="nicon">${icon(p.type)}</span></div>`, iconSize: [36,36], iconAnchor: [18,18] }),
+      title: p.he, keyboard: true, zIndexOffset: 100 * (ps.length - i)
+    }).addTo(dmap);
+    m.bindTooltip(esc(p.he), { direction: "top", offset: [0, -20], className: "nodetip" });
+    m.on("click", () => pick(i, false));
+    return m;
+  });
+  const rows = [...document.querySelectorAll(".dmrow")];
+  function pick(i, pan){
+    rows.forEach((r, j) => r.classList.toggle("on", j === i));
+    nodes.forEach((m, j) => m.getElement()?.querySelector(".node")?.classList.toggle("sel", j === i));
+    if (pan) { dmap.setView(lls[i], Math.max(dmap.getZoom(), 16)); nodes[i].openTooltip(); }
+  }
+  rows.forEach((r, i) => r.addEventListener("click", () => { pick(i, true); el.scrollIntoView({ block: "nearest", behavior: "smooth" }); }));
+  document.getElementById("dmfit").addEventListener("click", () => { pick(-1); dmap.closeTooltip(); fit(); });
+  // the hint shows once a one-finger touch starts on the map
+  let hintTimer;
+  el.addEventListener("touchstart", e => {
+    if (!touch || e.touches.length > 1) return;
+    const w = el.closest(".dmwrap"); w.classList.add("hinting");
+    clearTimeout(hintTimer); hintTimer = setTimeout(() => w.classList.remove("hinting"), 1400);
+  }, { passive: true });
 }
 
 /* ---------- map ---------- */
@@ -461,6 +573,7 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") { if (mapSta
 function render(){
   const id = (location.hash||"").slice(1);
   if (id !== "map" && lmap) { hideCard(); lmap.remove(); lmap = null; }
+  if (dmap) { dmap.remove(); dmap = null; }
   document.documentElement.classList.remove("noscroll");
   if (id === "map") mapView();
   else if (DAYS.some(d => d.id === id)) day(id);
