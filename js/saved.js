@@ -7,16 +7,26 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.707504,
+  "lat": 55.707516,
   "lng": 12.594382
+ },
+ {
+  "name": "Massimo Dutti",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Massimo+Dutti/data=!4m2!3m1!1s0x465253863670cbe9:0xba7abeb978061ba2",
+  "tags": [
+   "Fashion"
+  ],
+  "lat": 55.679395,
+  "lng": 12.582045
  },
  {
   "name": "Axel Copenhagen",
   "note": "",
   "url": "https://www.google.com/maps/place/Axel+Copenhagen/data=!4m2!3m1!1s0x465253175ef109e9:0x32cbfff91cf041db",
   "tags": [],
-  "lat": 55.678489,
-  "lng": 12.573769
+  "lat": 55.678471,
+  "lng": 12.573749
  },
  {
   "name": "Lidkøb Østerbro",
@@ -25,8 +35,8 @@ const SAVED = [
   "tags": [
    "Vintage"
   ],
-  "lat": 55.711774,
-  "lng": 12.575449
+  "lat": 55.711841,
+  "lng": 12.575429
  },
  {
   "name": "Hotel NH Collection Copenhagen",
@@ -35,8 +45,18 @@ const SAVED = [
   "tags": [
    "Hotel"
   ],
-  "lat": 55.673777,
-  "lng": 12.588
+  "lat": 55.67395,
+  "lng": 12.587911
+ },
+ {
+  "name": "Helle Mardahl Studio",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Helle+Mardahl+Studio/data=!4m2!3m1!1s0x465253eea3cfddd9:0xf8578f8971215ad1",
+  "tags": [
+   "Design store and architecture"
+  ],
+  "lat": 55.681661,
+  "lng": 12.58781
  },
  {
   "name": "Hart Bakery",
@@ -45,8 +65,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.677,
-  "lng": 12.542
+  "lat": 55.666836,
+  "lng": 12.577014
  },
  {
   "name": "Hart",
@@ -55,8 +75,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.668328,
-  "lng": 12.557958
+  "lat": 55.685187,
+  "lng": 12.588321
  },
  {
   "name": "Palmehuset",
@@ -65,8 +85,8 @@ const SAVED = [
   "tags": [
    "Park"
   ],
-  "lat": 55.655212,
-  "lng": 12.505112
+  "lat": 55.687481,
+  "lng": 12.572988
  },
  {
   "name": "New Mags",
@@ -75,8 +95,8 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.681774,
-  "lng": 12.58174
+  "lat": 55.681986,
+  "lng": 12.58207
  },
  {
   "name": "Wild horses",
@@ -85,8 +105,18 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.652463,
-  "lng": 12.538756
+  "lat": 55.652456,
+  "lng": 12.53885
+ },
+ {
+  "name": "Ambra",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Ambra/data=!4m2!3m1!1s0x465253e4d480d49f:0x2646c9be32363c03",
+  "tags": [
+   "Restaurant"
+  ],
+  "lat": 55.684255,
+  "lng": 12.587485
  },
  {
   "name": "studio x kitchen",
@@ -95,8 +125,16 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.684722,
-  "lng": 12.58364
+  "lat": 55.684687,
+  "lng": 12.583584
+ },
+ {
+  "name": "Bottega Barlie",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Bottega+Barlie/data=!4m2!3m1!1s0x465253abcba36d93:0xedc6bea2da937cc2",
+  "tags": [],
+  "lat": 55.687216,
+  "lng": 12.585634
  },
  {
   "name": "Rondo",
@@ -105,8 +143,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.693209,
-  "lng": 12.55229
+  "lat": 55.69323,
+  "lng": 12.552212
  },
  {
   "name": "BRUS",
@@ -115,8 +153,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.691866,
-  "lng": 12.555782
+  "lat": 55.692153,
+  "lng": 12.556145
  },
  {
   "name": "Bæst",
@@ -125,8 +163,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.692219,
-  "lng": 12.555909
+  "lat": 55.692312,
+  "lng": 12.556078
  },
  {
   "name": "SURT",
@@ -135,8 +173,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.667518,
-  "lng": 12.531556
+  "lat": 55.667474,
+  "lng": 12.5315
  },
  {
   "name": "Restaurant JATAK",
@@ -145,16 +183,16 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.687044,
-  "lng": 12.547852
+  "lat": 55.687049,
+  "lng": 12.547969
  },
  {
   "name": "Samsøe Samsøe",
   "note": "",
   "url": "https://www.google.com/maps/place/Sams%C3%B8e+Sams%C3%B8e/data=!4m2!3m1!1s0x465253109bdc8cf1:0xb828bb38b0659d9e",
   "tags": [],
-  "lat": 55.673822,
-  "lng": 12.550038
+  "lat": 55.681118,
+  "lng": 12.576907
  },
  {
   "name": "GAO Dumpling Bar",
@@ -163,16 +201,16 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.687697,
-  "lng": 12.559889
+  "lat": 55.668977,
+  "lng": 12.552263
  },
  {
   "name": "Gasoline Grill",
   "note": "",
   "url": "https://www.google.com/maps/place/Gasoline+Grill/data=!4m2!3m1!1s0x46525319a9ee66e1:0xb6850b6a3fa2148a",
   "tags": [],
-  "lat": 55.683239,
-  "lng": 12.585165
+  "lat": 55.683242,
+  "lng": 12.58515
  },
  {
   "name": "Gasoline Grill - Streetfood",
@@ -181,8 +219,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.683239,
-  "lng": 12.585165
+  "lat": 55.677877,
+  "lng": 12.596809
  },
  {
   "name": "8 House",
@@ -191,8 +229,8 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.617471,
-  "lng": 12.57172
+  "lat": 55.617601,
+  "lng": 12.571744
  },
  {
   "name": "Superkilen Park",
@@ -201,8 +239,8 @@ const SAVED = [
   "tags": [
    "Park"
   ],
-  "lat": 55.699678,
-  "lng": 12.542397
+  "lat": 55.701342,
+  "lng": 12.542638
  },
  {
   "name": "Hooked",
@@ -211,16 +249,16 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.669498,
-  "lng": 12.558207
+  "lat": 55.689957,
+  "lng": 12.554996
  },
  {
   "name": "Elmegade",
   "note": "Nice St with cute stores",
   "url": "https://www.google.com/maps/place/Elmegade/data=!4m2!3m1!1s0x465253aa09bb79dd:0xf52ce2de8247384d",
   "tags": [],
-  "lat": 55.689831,
-  "lng": 12.558469
+  "lat": 55.689943,
+  "lng": 12.558811
  },
  {
   "name": "Tivoli Gardens",
@@ -229,8 +267,18 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.673416,
-  "lng": 12.569182
+  "lat": 55.673663,
+  "lng": 12.568234
+ },
+ {
+  "name": "Hotel NH Copenhagen Grand Joanne",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Hotel+NH+Copenhagen+Grand+Joanne/data=!4m2!3m1!1s0x46525303e1a8c0e5:0x9f2e96ae392ef6cf",
+  "tags": [
+   "Hotel"
+  ],
+  "lat": 55.673554,
+  "lng": 12.562519
  },
  {
   "name": "MUJI København",
@@ -239,8 +287,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.679286,
-  "lng": 12.5805
+  "lat": 55.679403,
+  "lng": 12.580566
  },
  {
   "name": "Apotek 57",
@@ -249,8 +297,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.686933,
-  "lng": 12.58593
+  "lat": 55.686987,
+  "lng": 12.585786
  },
  {
   "name": "Hart",
@@ -259,8 +307,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.668328,
-  "lng": 12.557958
+  "lat": 55.701762,
+  "lng": 12.581173
  },
  {
   "name": "Juno the bakery",
@@ -269,8 +317,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.706159,
-  "lng": 12.581796
+  "lat": 55.706181,
+  "lng": 12.581815
  },
  {
   "name": "Pompette",
@@ -279,8 +327,8 @@ const SAVED = [
   "tags": [
    "Bar"
   ],
-  "lat": 55.69056,
-  "lng": 12.555409
+  "lat": 55.690513,
+  "lng": 12.555338
  },
  {
   "name": "Barr",
@@ -289,8 +337,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.677903,
-  "lng": 12.596267
+  "lat": 55.677819,
+  "lng": 12.5963
  },
  {
   "name": "TorvehallerneKBH",
@@ -300,8 +348,8 @@ const SAVED = [
    "Restaurant",
    "Attractions and museums"
   ],
-  "lat": 55.684128,
-  "lng": 12.569273
+  "lat": 55.683785,
+  "lng": 12.568928
  },
  {
   "name": "Reffen - Copenhagen Street Food",
@@ -310,8 +358,18 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.693572,
-  "lng": 12.608974
+  "lat": 55.693633,
+  "lng": 12.608232
+ },
+ {
+  "name": "Pinseria C´ho Fame",
+  "note": "Pizza",
+  "url": "https://www.google.com/maps/place/Pinseria+C%C2%B4ho+Fame/data=!4m2!3m1!1s0x465253c3ef1aa2d3:0xa85f326f9ec9c417",
+  "tags": [
+   "Restaurant"
+  ],
+  "lat": 55.678104,
+  "lng": 12.569625
  },
  {
   "name": "Høst",
@@ -320,8 +378,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.683282,
-  "lng": 12.566102
+  "lat": 55.683352,
+  "lng": 12.566153
  },
  {
   "name": "Frank",
@@ -330,8 +388,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.681103,
-  "lng": 12.584218
+  "lat": 55.681515,
+  "lng": 12.583125
  },
  {
   "name": "Ancestrale",
@@ -340,8 +398,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.671211,
-  "lng": 12.549671
+  "lat": 55.67126,
+  "lng": 12.549683
  },
  {
   "name": "Kødbyens Fiskebar",
@@ -350,8 +408,8 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.66785,
-  "lng": 12.55927
+  "lat": 55.667884,
+  "lng": 12.559289
  },
  {
   "name": "Sanchez",
@@ -360,8 +418,18 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.6703,
-  "lng": 12.556
+  "lat": 55.669811,
+  "lng": 12.555054
+ },
+ {
+  "name": "Copenhagen Fleamarket",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Copenhagen+Fleamarket/data=!4m2!3m1!1s0x4652539709531313:0x9031c6514e0176d",
+  "tags": [
+   "Vintage"
+  ],
+  "lat": 55.683461,
+  "lng": 12.568561
  },
  {
   "name": "Saturday Loppemarked",
@@ -370,8 +438,8 @@ const SAVED = [
   "tags": [
    "Vintage"
   ],
-  "lat": 55.6835,
-  "lng": 12.568
+  "lat": 55.678569,
+  "lng": 12.530012
  },
  {
   "name": "BauBau",
@@ -380,8 +448,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.689944,
-  "lng": 12.558211
+  "lat": 55.689957,
+  "lng": 12.558164
  },
  {
   "name": "Reseller",
@@ -390,8 +458,28 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.681125,
-  "lng": 12.579731
+  "lat": 55.68078,
+  "lng": 12.578175
+ },
+ {
+  "name": "Holzweiler",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Holzweiler/data=!4m2!3m1!1s0x465253ef711a27f5:0x95ea0f5bf917f5c7",
+  "tags": [
+   "Fashion"
+  ],
+  "lat": 55.681714,
+  "lng": 12.580635
+ },
+ {
+  "name": "Another nué",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Another+nu%C3%A9/data=!4m2!3m1!1s0x4652531071ac4b33:0x2b2c641a40e3adfe",
+  "tags": [
+   "Fashion"
+  ],
+  "lat": 55.681097,
+  "lng": 12.574493
  },
  {
   "name": "Norse Projects",
@@ -400,8 +488,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.673778,
-  "lng": 12.549749
+  "lat": 55.680622,
+  "lng": 12.578716
  },
  {
   "name": "Norse Projects HQ",
@@ -410,8 +498,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.673778,
-  "lng": 12.549749
+  "lat": 55.681772,
+  "lng": 12.607376
  },
  {
   "name": "Goods",
@@ -420,8 +508,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.696593,
-  "lng": 12.579999
+  "lat": 55.69657,
+  "lng": 12.580113
  },
  {
   "name": "COS",
@@ -430,8 +518,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.679731,
-  "lng": 12.579055
+  "lat": 55.679764,
+  "lng": 12.579039
  },
  {
   "name": "Uniqlo Closes soon",
@@ -440,8 +528,8 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.678714,
-  "lng": 12.574779
+  "lat": 55.678698,
+  "lng": 12.574823
  },
  {
   "name": "Aesop",
@@ -450,8 +538,16 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.673463,
-  "lng": 12.549801
+  "lat": 55.673448,
+  "lng": 12.549708
+ },
+ {
+  "name": "Le Labo",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Le+Labo/data=!4m2!3m1!1s0x46525322a68575db:0x60e00e0a0755d69",
+  "tags": [],
+  "lat": 55.681112,
+  "lng": 12.589023
  },
  {
   "name": "Locale 21",
@@ -460,8 +556,18 @@ const SAVED = [
   "tags": [
    "Restaurant"
   ],
-  "lat": 55.681731,
-  "lng": 12.581843
+  "lat": 55.681735,
+  "lng": 12.581807
+ },
+ {
+  "name": "Palazzo Diner",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Palazzo+Diner/data=!4m2!3m1!1s0x465253b76b17d559:0x960fbfebe16968e1",
+  "tags": [
+   "Restaurant"
+  ],
+  "lat": 55.67636,
+  "lng": 12.564395
  },
  {
   "name": "Prolog Coffee Bar Papirøen",
@@ -470,8 +576,28 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.678384,
-  "lng": 12.598727
+  "lat": 55.678353,
+  "lng": 12.598722
+ },
+ {
+  "name": "Dansk Made for Rooms",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Dansk+Made+for+Rooms/data=!4m2!3m1!1s0x465253745440f031:0x75110d3ac604b130",
+  "tags": [
+   "Design store and architecture"
+  ],
+  "lat": 55.669496,
+  "lng": 12.553743
+ },
+ {
+  "name": "Lago",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Lago/data=!4m2!3m1!1s0x4652534a6e40bafd:0x52237bb5304c30f5",
+  "tags": [
+   "Restaurant"
+  ],
+  "lat": 55.684466,
+  "lng": 12.55952
  },
  {
   "name": "Illums Bolighus",
@@ -480,8 +606,28 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.67889,
-  "lng": 12.578573
+  "lat": 55.678874,
+  "lng": 12.578629
+ },
+ {
+  "name": "B&W Market",
+  "note": "",
+  "url": "https://www.google.com/maps/place/B%26W+Market/data=!4m2!3m1!1s0x465252d79695b455:0x2e75a330053d13e6",
+  "tags": [
+   "Vintage"
+  ],
+  "lat": 55.692778,
+  "lng": 12.612612
+ },
+ {
+  "name": "Lokal ApS.",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029",
+  "tags": [
+   "Bakery & Coffee"
+  ],
+  "lat": 55.666083,
+  "lng": 12.552014
  },
  {
   "name": "Copenhagen Contemporary",
@@ -490,8 +636,8 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.693412,
-  "lng": 12.613598
+  "lat": 55.69354,
+  "lng": 12.613569
  },
  {
   "name": "SMK – Statens Museum for Kunst",
@@ -500,8 +646,8 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.688764,
-  "lng": 12.57837
+  "lat": 55.688813,
+  "lng": 12.57833
  },
  {
   "name": "Ny Carlsberg Glyptotek",
@@ -510,8 +656,8 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.672534,
-  "lng": 12.571766
+  "lat": 55.67298,
+  "lng": 12.572543
  },
  {
   "name": "Rosenborg Castle",
@@ -520,8 +666,18 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.685693,
-  "lng": 12.57742
+  "lat": 55.685827,
+  "lng": 12.577269
+ },
+ {
+  "name": "norange coffee roasters",
+  "note": "",
+  "url": "https://www.google.com/maps/place/norange+coffee+roasters/data=!4m2!3m1!1s0x46525315f98de84b:0x2a322a83ba2b2b56",
+  "tags": [
+   "Bakery & Coffee"
+  ],
+  "lat": 55.690965,
+  "lng": 12.561659
  },
  {
   "name": "Andersen & Maillard",
@@ -530,8 +686,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.707207,
-  "lng": 12.596715
+  "lat": 55.690366,
+  "lng": 12.555104
  },
  {
   "name": "Alle Tiders",
@@ -540,8 +696,38 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.670035,
-  "lng": 12.560523
+  "lat": 55.670011,
+  "lng": 12.560509
+ },
+ {
+  "name": "Stoy",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Stoy/data=!4m2!3m1!1s0x4652539f4ccfcbe7:0xbd109f34eab1b9c3",
+  "tags": [
+   "Fashion"
+  ],
+  "lat": 55.682224,
+  "lng": 12.577063
+ },
+ {
+  "name": "Auren’s Deli - Cornerstore",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Auren%E2%80%99s+Deli+-+Cornerstore/data=!4m2!3m1!1s0x4652538134eb867b:0x2ea3ae743f1f4f7a",
+  "tags": [
+   "Bakery & Coffee"
+  ],
+  "lat": 55.68631,
+  "lng": 12.534767
+ },
+ {
+  "name": "Auren's Deli",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Auren's+Deli/data=!4m2!3m1!1s0x465253444c54696d:0xec56eb118f3b331b",
+  "tags": [
+   "Bakery & Coffee"
+  ],
+  "lat": 55.686522,
+  "lng": 12.532753
  },
  {
   "name": "Kaf' Bar",
@@ -550,8 +736,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.680431,
-  "lng": 12.581254
+  "lat": 55.680439,
+  "lng": 12.581269
  },
  {
   "name": "Ferm Living",
@@ -560,8 +746,8 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.6779,
-  "lng": 12.60021
+  "lat": 55.677915,
+  "lng": 12.600284
  },
  {
   "name": "Ordrupgaard",
@@ -570,8 +756,8 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.767189,
-  "lng": 12.56296
+  "lat": 55.76682,
+  "lng": 12.562508
  },
  {
   "name": "Another Aspect",
@@ -580,8 +766,16 @@ const SAVED = [
   "tags": [
    "Fashion"
   ],
-  "lat": 55.681618,
-  "lng": 12.579038
+  "lat": 55.681586,
+  "lng": 12.57904
+ },
+ {
+  "name": "Ancher Studio ApS",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Ancher+Studio+ApS/data=!4m2!3m1!1s0x465253861506fb85:0xc2c4fe12fb412a44",
+  "tags": [],
+  "lat": 55.686264,
+  "lng": 12.53496
  },
  {
   "name": "Rosforth & Rosforth",
@@ -590,8 +784,18 @@ const SAVED = [
   "tags": [
    "Bar"
   ],
-  "lat": 55.674357,
-  "lng": 12.587924
+  "lat": 55.674209,
+  "lng": 12.587707
+ },
+ {
+  "name": "The Roe Bar",
+  "note": "",
+  "url": "https://www.google.com/maps/place/The+Roe+Bar/data=!4m2!3m1!1s0x465253004db2f18d:0x321e5c7b2849a7b8",
+  "tags": [
+   "Bar"
+  ],
+  "lat": 55.682246,
+  "lng": 12.578475
  },
  {
   "name": "bird : downtown",
@@ -600,8 +804,8 @@ const SAVED = [
   "tags": [
    "Bar"
   ],
-  "lat": 55.682379,
-  "lng": 12.586223
+  "lat": 55.682354,
+  "lng": 12.586253
  },
  {
   "name": "Designmuseum Danmark",
@@ -610,8 +814,28 @@ const SAVED = [
   "tags": [
    "Attractions and museums"
   ],
-  "lat": 55.686374,
-  "lng": 12.594408
+  "lat": 55.68643,
+  "lng": 12.593614
+ },
+ {
+  "name": "Angmas",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Angmas/data=!4m2!3m1!1s0x465253b0ae103a99:0xdc403699a3bd23d3",
+  "tags": [
+   "Vintage"
+  ],
+  "lat": 55.697609,
+  "lng": 12.552294
+ },
+ {
+  "name": "Red Cross Op Shop",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Red+Cross+Op+Shop/data=!4m2!3m1!1s0x465253074953a2b1:0xb9f4cb4e07a01fb7",
+  "tags": [
+   "Vintage"
+  ],
+  "lat": 55.688434,
+  "lng": 12.559894
  },
  {
   "name": "Godt Fund Vintage",
@@ -620,8 +844,8 @@ const SAVED = [
   "tags": [
    "Vintage"
   ],
-  "lat": 55.689612,
-  "lng": 12.56341
+  "lat": 55.689591,
+  "lng": 12.56337
  },
  {
   "name": "Noma",
@@ -630,8 +854,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.68251,
-  "lng": 12.610789
+  "lat": 55.682827,
+  "lng": 12.610481
  },
  {
   "name": "Lille Bakery",
@@ -640,8 +864,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.690093,
-  "lng": 12.613093
+  "lat": 55.690055,
+  "lng": 12.613327
  },
  {
   "name": "Atelier September",
@@ -650,8 +874,18 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.687412,
-  "lng": 12.584984
+  "lat": 55.687392,
+  "lng": 12.584927
+ },
+ {
+  "name": "Lille Petra",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Lille+Petra/data=!4m2!3m1!1s0x4652530c1e16c0cb:0x2cd85a831121afb0",
+  "tags": [
+   "Bakery & Coffee"
+  ],
+  "lat": 55.68287,
+  "lng": 12.581134
  },
  {
   "name": "Sing Tehus",
@@ -660,8 +894,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.698824,
-  "lng": 12.579553
+  "lat": 55.698774,
+  "lng": 12.579343
  },
  {
   "name": "Sonny",
@@ -670,8 +904,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.673307,
-  "lng": 12.548207
+  "lat": 55.676964,
+  "lng": 12.574255
  },
  {
   "name": "Apollo Bar",
@@ -680,8 +914,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.680045,
-  "lng": 12.588368
+  "lat": 55.680023,
+  "lng": 12.588317
  },
  {
   "name": "La Cabra",
@@ -690,8 +924,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.707173,
-  "lng": 12.592049
+  "lat": 55.681586,
+  "lng": 12.57904
  },
  {
   "name": "Riviera",
@@ -700,8 +934,8 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.683595,
-  "lng": 12.565423
+  "lat": 55.683654,
+  "lng": 12.56546
  },
  {
   "name": "ORSA",
@@ -710,8 +944,18 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.672473,
-  "lng": 12.55528
+  "lat": 55.672472,
+  "lng": 12.555282
+ },
+ {
+  "name": "Audo House",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Audo+House/data=!4m2!3m1!1s0x4652533329085745:0x6155b8f50f23d874",
+  "tags": [
+   "Design store and architecture"
+  ],
+  "lat": 55.707515,
+  "lng": 12.594383
  },
  {
   "name": "HAY House",
@@ -720,8 +964,8 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.678976,
-  "lng": 12.580137
+  "lat": 55.678979,
+  "lng": 12.580129
  },
  {
   "name": "Frama",
@@ -730,8 +974,18 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.68692,
-  "lng": 12.585951
+  "lat": 55.686926,
+  "lng": 12.586056
+ },
+ {
+  "name": "Vipp Home | Store & Showroom Closed",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Vipp+Home+%7C+Store+%26+Showroom+Closed/data=!4m2!3m1!1s0x46525319f3b23cf7:0xa7a385843c170110",
+  "tags": [
+   "Design store and architecture"
+  ],
+  "lat": 55.682092,
+  "lng": 12.581276
  },
  {
   "name": "Montana",
@@ -740,8 +994,8 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.682037,
-  "lng": 12.588533
+  "lat": 55.682091,
+  "lng": 12.588553
  },
  {
   "name": "Andersen & Maillard",
@@ -750,8 +1004,18 @@ const SAVED = [
   "tags": [
    "Bakery & Coffee"
   ],
-  "lat": 55.707207,
-  "lng": 12.596715
+  "lat": 55.681373,
+  "lng": 12.582466
+ },
+ {
+  "name": "Louis Poulsen",
+  "note": "",
+  "url": "https://www.google.com/maps/place/Louis+Poulsen/data=!4m2!3m1!1s0x46525316d180b70f:0x56958739f15a5305",
+  "tags": [
+   "Design store and architecture"
+  ],
+  "lat": 55.67886,
+  "lng": 12.601072
  },
  {
   "name": "Vipp",
@@ -760,219 +1024,8 @@ const SAVED = [
   "tags": [
    "Design store and architecture"
   ],
-  "lat": 55.682119,
-  "lng": 12.581226
+  "lat": 55.679149,
+  "lng": 12.583607
  }
 ];
-const SAVED_MISSING = [
- {
-  "name": "Massimo Dutti",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Massimo+Dutti/data=!4m2!3m1!1s0x465253863670cbe9:0xba7abeb978061ba2",
-  "tags": [
-   "Fashion"
-  ]
- },
- {
-  "name": "Helle Mardahl Studio",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Helle+Mardahl+Studio/data=!4m2!3m1!1s0x465253eea3cfddd9:0xf8578f8971215ad1",
-  "tags": [
-   "Design store and architecture"
-  ]
- },
- {
-  "name": "Ambra",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Ambra/data=!4m2!3m1!1s0x465253e4d480d49f:0x2646c9be32363c03",
-  "tags": [
-   "Restaurant"
-  ]
- },
- {
-  "name": "Bottega Barlie",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Bottega+Barlie/data=!4m2!3m1!1s0x465253abcba36d93:0xedc6bea2da937cc2",
-  "tags": []
- },
- {
-  "name": "Hotel NH Copenhagen Grand Joanne",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Hotel+NH+Copenhagen+Grand+Joanne/data=!4m2!3m1!1s0x46525303e1a8c0e5:0x9f2e96ae392ef6cf",
-  "tags": [
-   "Hotel"
-  ]
- },
- {
-  "name": "Pinseria C´ho Fame",
-  "note": "Pizza",
-  "url": "https://www.google.com/maps/place/Pinseria+C%C2%B4ho+Fame/data=!4m2!3m1!1s0x465253c3ef1aa2d3:0xa85f326f9ec9c417",
-  "tags": [
-   "Restaurant"
-  ]
- },
- {
-  "name": "Copenhagen Fleamarket",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Copenhagen+Fleamarket/data=!4m2!3m1!1s0x4652539709531313:0x9031c6514e0176d",
-  "tags": [
-   "Vintage"
-  ]
- },
- {
-  "name": "Holzweiler",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Holzweiler/data=!4m2!3m1!1s0x465253ef711a27f5:0x95ea0f5bf917f5c7",
-  "tags": [
-   "Fashion"
-  ]
- },
- {
-  "name": "Another nué",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Another+nu%C3%A9/data=!4m2!3m1!1s0x4652531071ac4b33:0x2b2c641a40e3adfe",
-  "tags": [
-   "Fashion"
-  ]
- },
- {
-  "name": "Le Labo",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Le+Labo/data=!4m2!3m1!1s0x46525322a68575db:0x60e00e0a0755d69",
-  "tags": []
- },
- {
-  "name": "Palazzo Diner",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Palazzo+Diner/data=!4m2!3m1!1s0x465253b76b17d559:0x960fbfebe16968e1",
-  "tags": [
-   "Restaurant"
-  ]
- },
- {
-  "name": "Dansk Made for Rooms",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Dansk+Made+for+Rooms/data=!4m2!3m1!1s0x465253745440f031:0x75110d3ac604b130",
-  "tags": [
-   "Design store and architecture"
-  ]
- },
- {
-  "name": "Lago",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Lago/data=!4m2!3m1!1s0x4652534a6e40bafd:0x52237bb5304c30f5",
-  "tags": [
-   "Restaurant"
-  ]
- },
- {
-  "name": "B&W Market",
-  "note": "",
-  "url": "https://www.google.com/maps/place/B%26W+Market/data=!4m2!3m1!1s0x465252d79695b455:0x2e75a330053d13e6",
-  "tags": [
-   "Vintage"
-  ]
- },
- {
-  "name": "Lokal ApS.",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Lokal+ApS./data=!4m2!3m1!1s0x46525300721f4fc3:0x4a1a87efca035029",
-  "tags": [
-   "Bakery & Coffee"
-  ]
- },
- {
-  "name": "norange coffee roasters",
-  "note": "",
-  "url": "https://www.google.com/maps/place/norange+coffee+roasters/data=!4m2!3m1!1s0x46525315f98de84b:0x2a322a83ba2b2b56",
-  "tags": [
-   "Bakery & Coffee"
-  ]
- },
- {
-  "name": "Stoy",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Stoy/data=!4m2!3m1!1s0x4652539f4ccfcbe7:0xbd109f34eab1b9c3",
-  "tags": [
-   "Fashion"
-  ]
- },
- {
-  "name": "Auren’s Deli - Cornerstore",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Auren%E2%80%99s+Deli+-+Cornerstore/data=!4m2!3m1!1s0x4652538134eb867b:0x2ea3ae743f1f4f7a",
-  "tags": [
-   "Bakery & Coffee"
-  ]
- },
- {
-  "name": "Auren's Deli",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Auren's+Deli/data=!4m2!3m1!1s0x465253444c54696d:0xec56eb118f3b331b",
-  "tags": [
-   "Bakery & Coffee"
-  ]
- },
- {
-  "name": "Ancher Studio ApS",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Ancher+Studio+ApS/data=!4m2!3m1!1s0x465253861506fb85:0xc2c4fe12fb412a44",
-  "tags": []
- },
- {
-  "name": "The Roe Bar",
-  "note": "",
-  "url": "https://www.google.com/maps/place/The+Roe+Bar/data=!4m2!3m1!1s0x465253004db2f18d:0x321e5c7b2849a7b8",
-  "tags": [
-   "Bar"
-  ]
- },
- {
-  "name": "Angmas",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Angmas/data=!4m2!3m1!1s0x465253b0ae103a99:0xdc403699a3bd23d3",
-  "tags": [
-   "Vintage"
-  ]
- },
- {
-  "name": "Red Cross Op Shop",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Red+Cross+Op+Shop/data=!4m2!3m1!1s0x465253074953a2b1:0xb9f4cb4e07a01fb7",
-  "tags": [
-   "Vintage"
-  ]
- },
- {
-  "name": "Lille Petra",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Lille+Petra/data=!4m2!3m1!1s0x4652530c1e16c0cb:0x2cd85a831121afb0",
-  "tags": [
-   "Bakery & Coffee"
-  ]
- },
- {
-  "name": "Audo House",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Audo+House/data=!4m2!3m1!1s0x4652533329085745:0x6155b8f50f23d874",
-  "tags": [
-   "Design store and architecture"
-  ]
- },
- {
-  "name": "Vipp Home | Store & Showroom Closed",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Vipp+Home+%7C+Store+%26+Showroom+Closed/data=!4m2!3m1!1s0x46525319f3b23cf7:0xa7a385843c170110",
-  "tags": [
-   "Design store and architecture"
-  ]
- },
- {
-  "name": "Louis Poulsen",
-  "note": "",
-  "url": "https://www.google.com/maps/place/Louis+Poulsen/data=!4m2!3m1!1s0x46525316d180b70f:0x56958739f15a5305",
-  "tags": [
-   "Design store and architecture"
-  ]
- }
-];
+const SAVED_MISSING = [];

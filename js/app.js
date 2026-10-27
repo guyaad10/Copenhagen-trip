@@ -16,11 +16,103 @@ SAVED.forEach((s, i) => {
 });
 PLACES.forEach(p => { if (!p.wiki && WIKI[p.id]) p.wiki = WIKI[p.id]; });
 const PLACE = Object.fromEntries(PLACES.map(p => [p.id, p]));
+const HOME = "hotel";
 const placeUrl = p => p.url || MAP(p.q || p.en || p.he);
 const stopPlaces = s => s.ps || (s.p ? [s.p] : []);
+const stopAll = s => [...stopPlaces(s), ...(s.extra || [])]; // with the places we added to the stop
+
+/* Our own edits to the itinerary live in this browser (localStorage), on top of the stops in data.js.
+   Entries are "dayId:placeId": `add` puts a place on a day, `remove` takes a place that data.js already has off it. */
+const PLAN_KEY = "cph-plan-v1";
+const BASE_STOPS = Object.fromEntries(DAYS.map(d => [d.id, d.stops]));
+const plan = { add: [], remove: [] };
+const planKey = (dayId, id) => dayId + ":" + id;
+const validKey = k => { const [d, id] = k.split(":"); return BASE_STOPS[d] && PLACE[id]; };
+try {
+  const saved = JSON.parse(localStorage.getItem(PLAN_KEY));
+  if (saved) { plan.add = (saved.add || []).filter(validKey); plan.remove = (saved.remove || []).filter(validKey); }
+} catch (e) {}
+const savePlan = () => { try { localStorage.setItem(PLAN_KEY, JSON.stringify(plan)); } catch (e) {} };
+
 // place id -> days it appears on
 const PLACE_DAYS = {};
-DAYS.forEach(d => d.stops.forEach(s => stopPlaces(s).forEach(id => (PLACE_DAYS[id] = PLACE_DAYS[id] || []).push(d))));
+// Where an added place goes: into the day's closest stop (a stop of the same kind counts as closer),
+// or, if nothing is within walking distance, as its own stop right after the closest one.
+const metres = (a, b) => Math.hypot((a.lat - b.lat) * 111000, (a.lng - b.lng) * 63000);
+const NEAR = 900;
+function nearestStop(stops, p){
+  let best = null;
+  stops.forEach((s, i) => {
+    const ps = stopAll(s).filter(id => id !== HOME).map(id => PLACE[id]);
+    if (!ps.length) return;
+    const dist = Math.min(...ps.map(q => metres(p, q)));
+    const score = ps.some(q => q.type === p.type) ? dist * 0.6 : dist;
+    if (!best || score < best.score) best = { i, dist, score };
+  });
+  if (best && best.dist <= NEAR) return { i: best.i, near: true };
+  if (best) return { i: best.i + 1 };
+  let at = stops.length; // no stop to go near: before the trailing airport/flight stops
+  while (at > 0 && !stopPlaces(stops[at-1]).length) at--;
+  return { i: at };
+}
+
+function applyPlan(){
+  Object.keys(PLACE_DAYS).forEach(k => delete PLACE_DAYS[k]);
+  DAYS.forEach(d => {
+    const stops = [];
+    BASE_STOPS[d.id].forEach(s => {
+      const ids = stopPlaces(s), keep = ids.filter(id => !plan.remove.includes(planKey(d.id, id)));
+      if (keep.length === ids.length) stops.push(s);
+      else if (keep.length) stops.push({ ...s, p: undefined, ps: keep, h: keep.map(id => PLACE[id].he).join(" ו‑"), en: "" });
+    });
+    plan.add.filter(k => k.startsWith(d.id + ":")).forEach(k => {
+      const p = PLACE[k.split(":")[1]];
+      const at = nearestStop(stops, p);
+      if (at.near) { const s = stops[at.i] = { ...stops[at.i] }; s.extra = [...(s.extra || []), p.id]; }
+      else stops.splice(at.i, 0, { p: p.id, h: p.he, en: p.en || TYPES[p.type].he, note: p.note, added: true });
+    });
+    d.stops = stops;
+    stops.forEach(s => stopAll(s).forEach(id => (PLACE_DAYS[id] = PLACE_DAYS[id] || []).push(d)));
+  });
+}
+applyPlan();
+
+// Put a place on a day, or take it off again (restores the original stop if data.js had it).
+function togglePlan(dayId, id){
+  const k = planKey(dayId, id);
+  const drop = arr => { const i = arr.indexOf(k); if (i >= 0) arr.splice(i, 1); return i >= 0; };
+  if ((PLACE_DAYS[id] || []).some(d => d.id === dayId)) {
+    if (!drop(plan.add)) plan.remove.push(k);
+  } else if (!drop(plan.remove)) plan.add.push(k);
+  savePlan(); applyPlan();
+}
+function onPlan(btn){
+  const dayId = btn.dataset.plan, ids = btn.dataset.pid.split(",");
+  ids.forEach(id => togglePlan(dayId, id));
+  if (location.hash === "#map") drawMarkers(false); else render();
+  if (btn.classList.contains("del")) undoToast(dayId, ids);
+}
+// After a removal from a day page: a few seconds to take it back.
+let toastTimer;
+function undoToast(dayId, ids){
+  document.getElementById("toast")?.remove();
+  const t = document.createElement("div");
+  t.id = "toast"; t.className = "toast"; t.setAttribute("role", "status");
+  const d = DAYS.find(x => x.id === dayId);
+  t.innerHTML = `<span>${esc(ids.map(id => PLACE[id].he).join(" ו‑"))} הוסר מיום ${d.name}</span><button>ביטול</button>`;
+  t.querySelector("button").addEventListener("click", () => {
+    ids.forEach(id => togglePlan(dayId, id)); t.remove(); render();
+  });
+  document.body.appendChild(t);
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.remove(), 6000);
+}
+const TRASH = "M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3";
+const delBtn = (dayId, ids, label) =>
+  `<button class="iconbtn del" data-plan="${dayId}" data-pid="${ids.join(",")}" aria-label="${esc(label)}" title="${esc(label)}">${svgPath(TRASH)}</button>`;
+function bindPlan(root){
+  root?.querySelectorAll("[data-plan]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); onPlan(b); }));
+}
 
 function cphToday(){
   try { return new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Copenhagen"}).format(new Date()); }
@@ -104,6 +196,7 @@ function home(){
     <section><h2>לפני שיוצאים</h2>${tips}</section>
     <section><h2>המלצות</h2>${recs}
       <a class="btn" style="align-self:flex-start" href="${LINKS.guide}" target="_blank" rel="noopener">מדריך המלצות למטייל ↗</a></section>
+    ${plan.add.length || plan.remove.length ? '<button class="btn" style="align-self:flex-start" data-planreset>איפוס השינויים בלוח הזמנים</button>' : ""}
     <footer>נבנה מתוך המסמך "קופנהגן - מסלול והמלצות". שעות ומחירים משוערים, כדאי לבדוק לפני.</footer>`;
 }
 
@@ -114,13 +207,21 @@ function day(id){
     const ps = stopPlaces(s).map(pid => PLACE[pid]);
     const links = [...(s.links||[]), ...ps.map(p => [ps.length > 1 ? p.he + " במפה" : "ב‑Google Maps", placeUrl(p)])];
     const t = ps[0] ? ps[0].type : null;
+    const more = (s.extra || []).map(pid => PLACE[pid]).map(p => `
+      <div class="addon"><span class="aicon">${icon(p.type)}</span>
+        <div class="aname"><b>${esc(p.he)}</b><small>${esc(TYPES[p.type].he)} · נוסף על ידינו</small></div>
+        ${delBtn(d.id, [p.id], "הסרת " + p.he + " מהיום")}
+        <div class="links"><button class="btn" data-place="${p.id}" data-day="${d.id}">על המפה</button>${btn(["Google Maps", placeUrl(p)])}</div>
+      </div>`).join("");
+    const own = ps.filter(p => p.id !== HOME).map(p => p.id);
     return `
     <li class="stop" style="--c:var(${d.c})"><span class="smark">${stopIcon(s)?svgPath(stopIcon(s)):""}</span><div class="card">
-      <div class="cardhead"><div><h3>${esc(s.h)}</h3><div class="en">${esc(s.en)}</div></div></div>
+      <div class="cardhead"><div><h3>${esc(s.h)}</h3><div class="en">${esc(s.en)}</div></div>${s.added?'<span class="chip addedchip">נוסף על ידינו</span>':""}${own.length?delBtn(d.id, own, "הסרה מהיום"):""}</div>
       ${s.flights?s.flights.map(([n,a,b])=>`<div class="flightrow"><b class="latin">${n}</b><span>${esc(a)} ← ${esc(b)}</span></div>`).join(""):""}
       ${s.facts?`<dl class="facts">${s.facts.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join("")}</dl>`:""}
       ${s.note?`<p class="note">${fmt(s.note)}</p>`:""}
       ${links.length || ps.length ? `<div class="links">${ps.length?`<button class="btn" data-place="${ps[0].id}" data-day="${d.id}">על המפה</button>`:""}${links.map(btn).join("")}</div>`:""}
+      ${more?`<div class="addons"><span class="addhead">גם בסביבה</span>${more}</div>`:""}
     </div></li>`;
   }).join("");
   app.innerHTML = `
@@ -144,7 +245,6 @@ let lmap = null, markers = {}, routeLines = [];
 
 const cssVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
-const HOME = "hotel";
 const HOME_ICON = "M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10";
 
 function visiblePlaces(){
@@ -213,7 +313,7 @@ function drawMarkers(fit){
     markers[p.id] = m;
   });
   DAYS.filter(d => mapState.days.has(d.id)).forEach(d => {
-    const pts = d.stops.flatMap(stopPlaces).map(id => PLACE[id]).filter(p => list.includes(p)).map(p => [p.lat, p.lng]);
+    const pts = d.stops.flatMap(stopAll).map(id => PLACE[id]).filter(p => list.includes(p)).map(p => [p.lat, p.lng]);
     if (pts.length > 1) routeLines.push(L.polyline(pts, { color: cssVar(d.c), weight: 4, dashArray: "6 8", opacity: .9 }).addTo(lmap));
   });
   if (fit && !mapState.days.size && !mapState.types.size) {
@@ -264,6 +364,7 @@ function placeCard(p){
       <div><h3>${esc(p.he)}</h3><div class="en">${esc(TYPES[p.type].he)}${p.en ? " · " + esc(p.en) : ""}</div></div>
       ${p.note ? `<p class="note">${esc(p.note)}</p>` : ""}
       <a class="gbtn" href="${esc(placeUrl(p))}" target="_blank" rel="noopener">${svgPath("M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11zM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5")}פתיחה ב‑Google Maps</a>
+      ${p.id === HOME ? "" : `<div class="planbox"><b>בלוח הזמנים</b><div class="plandays">${DAYS.map(d => `<button class="fchip" style="--c:var(${d.c})" aria-pressed="${days.includes(d)}" data-plan="${d.id}" data-pid="${p.id}"><i class="dot"></i>${d.name} ${d.date}</button>`).join("")}</div></div>`}
       ${days.length ? `<div class="links">${days.map(d => `<button class="btn daybtn" style="--c:var(${d.c})" data-go="${d.id}">יום ${d.name}</button>`).join("")}</div>` : ""}
     </div>
   </div>`;
@@ -302,11 +403,14 @@ function renderSel(){
     const d = drawer();
     d.querySelector(".dcontent").innerHTML = html;
     d.classList.add("open");
+    bindPlan(d);
   } else {
     document.getElementById("drawer")?.classList.remove("open");
+    if (popup) { popup.off("remove"); lmap.closePopup(popup); }
     popup = L.popup({ className: "placepop", maxWidth: 300, minWidth: 260, offset: [0, -14], autoPanPaddingTopLeft: [20, 80], autoPanPaddingBottomRight: [20, 20] })
       .setLatLng([p.lat, p.lng]).setContent(html).openOn(lmap);
     popup.on("remove", () => { if (mapState.sel === p.id) { mapState.sel = null; markSel(); } });
+    bindPlan(popup.getElement());
   }
   photo(p).then(src => {
     if (!src) return;
@@ -366,6 +470,9 @@ function go(id){
 app.addEventListener("click", e => {
   if (e.target.closest("#homebtn")) { select(HOME, true); return; }
   if (e.target.closest("#fullbtn")) { setFull(!document.getElementById("mapbox").classList.contains("full")); return; }
+  const pb = e.target.closest("[data-plan]");
+  if (pb) { onPlan(pb); return; }
+  if (e.target.closest("[data-planreset]")) { plan.add = []; plan.remove = []; savePlan(); applyPlan(); render(); return; }
   const g = e.target.closest("[data-go]");
   if (g) { go(g.dataset.go); return; }
   const hd = e.target.closest("[data-homeday]");

@@ -1,16 +1,16 @@
 /* Layout: a Nyhavn row of gabled houses, one per day, opens each day's page; everything else stacks below in one column. */
 :root{
-  --bg:#EDF1F3; --surface:#FFFFFF; --ink:#1A2836; --muted:#5B6A78; --line:#D4DCE2; --accent:#1F5E8C; --accent-soft:#DCE8F1;
+  --bg:#EDF1F3; --surface:#FFFFFF; --ink:#1A2836; --muted:#5B6A78; --line:#D4DCE2; --accent:#1F5E8C; --accent-soft:#DCE8F1; --del:#B4472F; --del-soft:#F6E3DE;
   --h1:#D99A35; --h2:#B4472F; --h3:#2E7C77; --h4:#E3BC4E; --h5:#3D6DA0; --house-ink:#1A2836; --window:#F7F3E8;
   --rec:#4B5B6B; --home:#E0457B; --shadow:0 1px 2px rgba(26,40,54,.06),0 8px 24px rgba(26,40,54,.08); --chip:#F1F5F8; --tile-filter:none;
   --display:"Suez One","Assistant",system-ui,sans-serif;
   --body:"Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346;
+  --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346; --del:#E58A72; --del-soft:#3A2420;
   --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --home:#F06292; --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25); --chip:#1F2C39; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346;
+  --bg:#0F1720; --surface:#17222D; --ink:#E5ECF1; --muted:#98A7B4; --line:#2A3846; --accent:#7DB3DD; --accent-soft:#1D3346; --del:#E58A72; --del-soft:#3A2420;
   --h1:#C98C2F; --h2:#A9472F; --h3:#2D7470; --h4:#C9A644; --h5:#3A6797; --house-ink:#10181F; --window:#F1DFA8; --rec:#8A9BAB; --home:#F06292; --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.25); --chip:#1F2C39; --tile-filter:invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -229,3 +229,27 @@ html.noscroll,html.noscroll body{overflow:hidden}
 .homepin.sel .pin{border-color:var(--ink)}
 .homebtn{top:52px;color:var(--home)}
 @media (prefers-reduced-motion:reduce){.homepin::before{animation:none}}
+
+/* editing the itinerary */
+.planbox{display:flex;flex-direction:column;gap:6px}
+.planbox b{font-size:14px;color:var(--muted)}
+.plandays{display:flex;flex-wrap:wrap;gap:6px}
+.addedchip{margin-inline-start:auto;font-size:12px;padding:1px 10px;white-space:nowrap}
+.addons{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:10px}
+.addhead{font-size:13px;font-weight:700;color:var(--muted)}
+.addon{display:grid;grid-template-columns:28px 1fr auto;gap:4px 10px;align-items:center}
+.addon .aicon{width:28px;height:28px;border-radius:50%;background:var(--c);display:grid;place-items:center}
+.addon .aicon svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.addon .aname{display:flex;flex-direction:column;line-height:1.25}
+.addon .aname small{color:var(--muted);font-size:13px}
+.addon .links{grid-column:2/-1}
+.addon .btn{font-size:14px;padding:3px 12px}
+.iconbtn{flex:none;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--line);background:none;color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0}
+.iconbtn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.iconbtn.del:hover,.iconbtn.del:focus-visible{color:var(--del);border-color:var(--del);background:var(--del-soft)}
+.cardhead .del{margin-inline-start:auto}
+.cardhead .addedchip + .del{margin-inline-start:0}
+.cardhead .addedchip{align-self:center}
+.toast{position:fixed;z-index:2000;bottom:calc(16px + env(safe-area-inset-bottom));inset-inline:16px;margin:0 auto;max-width:480px;background:var(--ink);color:var(--surface);border-radius:14px;padding:10px 12px 10px 16px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow);font-weight:600}
+.toast span{flex:1}
+.toast button{background:none;border:none;color:inherit;font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:6px}
