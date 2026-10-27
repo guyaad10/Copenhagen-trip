@@ -87,9 +87,29 @@ function togglePlan(dayId, id){
   savePlan(); applyPlan();
 }
 function onPlan(btn){
-  togglePlan(btn.dataset.plan, btn.dataset.pid);
+  const dayId = btn.dataset.plan, ids = btn.dataset.pid.split(",");
+  ids.forEach(id => togglePlan(dayId, id));
   if (location.hash === "#map") drawMarkers(false); else render();
+  if (btn.classList.contains("del")) undoToast(dayId, ids);
 }
+// After a removal from a day page: a few seconds to take it back.
+let toastTimer;
+function undoToast(dayId, ids){
+  document.getElementById("toast")?.remove();
+  const t = document.createElement("div");
+  t.id = "toast"; t.className = "toast"; t.setAttribute("role", "status");
+  const d = DAYS.find(x => x.id === dayId);
+  t.innerHTML = `<span>${esc(ids.map(id => PLACE[id].he).join(" ו‑"))} הוסר מיום ${d.name}</span><button>ביטול</button>`;
+  t.querySelector("button").addEventListener("click", () => {
+    ids.forEach(id => togglePlan(dayId, id)); t.remove(); render();
+  });
+  document.body.appendChild(t);
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.remove(), 6000);
+}
+const TRASH = "M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3";
+const delBtn = (dayId, ids, label) =>
+  `<button class="iconbtn del" data-plan="${dayId}" data-pid="${ids.join(",")}" aria-label="${esc(label)}" title="${esc(label)}">${svgPath(TRASH)}</button>`;
 function bindPlan(root){
   root?.querySelectorAll("[data-plan]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); onPlan(b); }));
 }
@@ -190,16 +210,17 @@ function day(id){
     const more = (s.extra || []).map(pid => PLACE[pid]).map(p => `
       <div class="addon"><span class="aicon">${icon(p.type)}</span>
         <div class="aname"><b>${esc(p.he)}</b><small>${esc(TYPES[p.type].he)} · נוסף על ידינו</small></div>
-        <div class="links"><button class="btn" data-place="${p.id}" data-day="${d.id}">על המפה</button>${btn(["Google Maps", placeUrl(p)])}<button class="btn rm" data-plan="${d.id}" data-pid="${p.id}">הסרה</button></div>
+        ${delBtn(d.id, [p.id], "הסרת " + p.he + " מהיום")}
+        <div class="links"><button class="btn" data-place="${p.id}" data-day="${d.id}">על המפה</button>${btn(["Google Maps", placeUrl(p)])}</div>
       </div>`).join("");
-    const unplan = ps.filter(p => p.id !== HOME).map(p => `<button class="btn rm" data-plan="${d.id}" data-pid="${p.id}">${ps.length > 1 ? "הסרת " + esc(p.he) : "הסרה מהיום"}</button>`).join("");
+    const own = ps.filter(p => p.id !== HOME).map(p => p.id);
     return `
     <li class="stop" style="--c:var(${d.c})"><span class="smark">${stopIcon(s)?svgPath(stopIcon(s)):""}</span><div class="card">
-      <div class="cardhead"><div><h3>${esc(s.h)}</h3><div class="en">${esc(s.en)}</div></div>${s.added?'<span class="chip addedchip">נוסף על ידינו</span>':""}</div>
+      <div class="cardhead"><div><h3>${esc(s.h)}</h3><div class="en">${esc(s.en)}</div></div>${s.added?'<span class="chip addedchip">נוסף על ידינו</span>':""}${own.length?delBtn(d.id, own, "הסרה מהיום"):""}</div>
       ${s.flights?s.flights.map(([n,a,b])=>`<div class="flightrow"><b class="latin">${n}</b><span>${esc(a)} ← ${esc(b)}</span></div>`).join(""):""}
       ${s.facts?`<dl class="facts">${s.facts.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join("")}</dl>`:""}
       ${s.note?`<p class="note">${fmt(s.note)}</p>`:""}
-      ${links.length || ps.length ? `<div class="links">${ps.length?`<button class="btn" data-place="${ps[0].id}" data-day="${d.id}">על המפה</button>`:""}${links.map(btn).join("")}${unplan}</div>`:""}
+      ${links.length || ps.length ? `<div class="links">${ps.length?`<button class="btn" data-place="${ps[0].id}" data-day="${d.id}">על המפה</button>`:""}${links.map(btn).join("")}</div>`:""}
       ${more?`<div class="addons"><span class="addhead">גם בסביבה</span>${more}</div>`:""}
     </div></li>`;
   }).join("");
