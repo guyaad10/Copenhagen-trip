@@ -236,3 +236,12 @@ html.noscroll,html.noscroll body{overflow:hidden}
 .plandays{display:flex;flex-wrap:wrap;gap:6px}
 .btn.rm{border-color:var(--line);color:var(--muted)}
 .addedchip{margin-inline-start:auto;font-size:12px;padding:1px 10px;white-space:nowrap}
+.addons{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:10px}
+.addhead{font-size:13px;font-weight:700;color:var(--muted)}
+.addon{display:grid;grid-template-columns:28px 1fr;gap:4px 10px;align-items:center}
+.addon .aicon{width:28px;height:28px;border-radius:50%;background:var(--c);display:grid;place-items:center}
+.addon .aicon svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.addon .aname{display:flex;flex-direction:column;line-height:1.25}
+.addon .aname small{color:var(--muted);font-size:13px}
+.addon .links{grid-column:2}
+.addon .btn{font-size:14px;padding:3px 12px}

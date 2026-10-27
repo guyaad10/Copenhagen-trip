@@ -16,8 +16,10 @@ SAVED.forEach((s, i) => {
 });
 PLACES.forEach(p => { if (!p.wiki && WIKI[p.id]) p.wiki = WIKI[p.id]; });
 const PLACE = Object.fromEntries(PLACES.map(p => [p.id, p]));
+const HOME = "hotel";
 const placeUrl = p => p.url || MAP(p.q || p.en || p.he);
 const stopPlaces = s => s.ps || (s.p ? [s.p] : []);
+const stopAll = s => [...stopPlaces(s), ...(s.extra || [])]; // with the places we added to the stop
 
 /* Our own edits to the itinerary live in this browser (localStorage), on top of the stops in data.js.
    Entries are "dayId:placeId": `add` puts a place on a day, `remove` takes a place that data.js already has off it. */
@@ -34,6 +36,26 @@ const savePlan = () => { try { localStorage.setItem(PLAN_KEY, JSON.stringify(pla
 
 // place id -> days it appears on
 const PLACE_DAYS = {};
+// Where an added place goes: into the day's closest stop (a stop of the same kind counts as closer),
+// or, if nothing is within walking distance, as its own stop right after the closest one.
+const metres = (a, b) => Math.hypot((a.lat - b.lat) * 111000, (a.lng - b.lng) * 63000);
+const NEAR = 900;
+function nearestStop(stops, p){
+  let best = null;
+  stops.forEach((s, i) => {
+    const ps = stopAll(s).filter(id => id !== HOME).map(id => PLACE[id]);
+    if (!ps.length) return;
+    const dist = Math.min(...ps.map(q => metres(p, q)));
+    const score = ps.some(q => q.type === p.type) ? dist * 0.6 : dist;
+    if (!best || score < best.score) best = { i, dist, score };
+  });
+  if (best && best.dist <= NEAR) return { i: best.i, near: true };
+  if (best) return { i: best.i + 1 };
+  let at = stops.length; // no stop to go near: before the trailing airport/flight stops
+  while (at > 0 && !stopPlaces(stops[at-1]).length) at--;
+  return { i: at };
+}
+
 function applyPlan(){
   Object.keys(PLACE_DAYS).forEach(k => delete PLACE_DAYS[k]);
   DAYS.forEach(d => {
@@ -43,14 +65,14 @@ function applyPlan(){
       if (keep.length === ids.length) stops.push(s);
       else if (keep.length) stops.push({ ...s, p: undefined, ps: keep, h: keep.map(id => PLACE[id].he).join(" ו‑"), en: "" });
     });
-    const extra = plan.add.filter(k => k.startsWith(d.id + ":")).map(k => PLACE[k.split(":")[1]])
-      .map(p => ({ p: p.id, h: p.he, en: p.en || TYPES[p.type].he, note: p.note, added: true }));
-    // new places go before the trailing airport/flight stops
-    let at = stops.length;
-    while (at > 0 && !stopPlaces(stops[at-1]).length) at--;
-    stops.splice(at, 0, ...extra);
+    plan.add.filter(k => k.startsWith(d.id + ":")).forEach(k => {
+      const p = PLACE[k.split(":")[1]];
+      const at = nearestStop(stops, p);
+      if (at.near) { const s = stops[at.i] = { ...stops[at.i] }; s.extra = [...(s.extra || []), p.id]; }
+      else stops.splice(at.i, 0, { p: p.id, h: p.he, en: p.en || TYPES[p.type].he, note: p.note, added: true });
+    });
     d.stops = stops;
-    stops.forEach(s => stopPlaces(s).forEach(id => (PLACE_DAYS[id] = PLACE_DAYS[id] || []).push(d)));
+    stops.forEach(s => stopAll(s).forEach(id => (PLACE_DAYS[id] = PLACE_DAYS[id] || []).push(d)));
   });
 }
 applyPlan();
@@ -165,6 +187,11 @@ function day(id){
     const ps = stopPlaces(s).map(pid => PLACE[pid]);
     const links = [...(s.links||[]), ...ps.map(p => [ps.length > 1 ? p.he + " במפה" : "ב‑Google Maps", placeUrl(p)])];
     const t = ps[0] ? ps[0].type : null;
+    const more = (s.extra || []).map(pid => PLACE[pid]).map(p => `
+      <div class="addon"><span class="aicon">${icon(p.type)}</span>
+        <div class="aname"><b>${esc(p.he)}</b><small>${esc(TYPES[p.type].he)} · נוסף על ידינו</small></div>
+        <div class="links"><button class="btn" data-place="${p.id}" data-day="${d.id}">על המפה</button>${btn(["Google Maps", placeUrl(p)])}<button class="btn rm" data-plan="${d.id}" data-pid="${p.id}">הסרה</button></div>
+      </div>`).join("");
     const unplan = ps.filter(p => p.id !== HOME).map(p => `<button class="btn rm" data-plan="${d.id}" data-pid="${p.id}">${ps.length > 1 ? "הסרת " + esc(p.he) : "הסרה מהיום"}</button>`).join("");
     return `
     <li class="stop" style="--c:var(${d.c})"><span class="smark">${stopIcon(s)?svgPath(stopIcon(s)):""}</span><div class="card">
@@ -173,6 +200,7 @@ function day(id){
       ${s.facts?`<dl class="facts">${s.facts.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${fmt(v)}</dd>`).join("")}</dl>`:""}
       ${s.note?`<p class="note">${fmt(s.note)}</p>`:""}
       ${links.length || ps.length ? `<div class="links">${ps.length?`<button class="btn" data-place="${ps[0].id}" data-day="${d.id}">על המפה</button>`:""}${links.map(btn).join("")}${unplan}</div>`:""}
+      ${more?`<div class="addons"><span class="addhead">גם בסביבה</span>${more}</div>`:""}
     </div></li>`;
   }).join("");
   app.innerHTML = `
@@ -196,7 +224,6 @@ let lmap = null, markers = {}, routeLines = [];
 
 const cssVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
-const HOME = "hotel";
 const HOME_ICON = "M3 11l9-7 9 7M5 10v10h5v-6h4v6h5V10";
 
 function visiblePlaces(){
@@ -265,7 +292,7 @@ function drawMarkers(fit){
     markers[p.id] = m;
   });
   DAYS.filter(d => mapState.days.has(d.id)).forEach(d => {
-    const pts = d.stops.flatMap(stopPlaces).map(id => PLACE[id]).filter(p => list.includes(p)).map(p => [p.lat, p.lng]);
+    const pts = d.stops.flatMap(stopAll).map(id => PLACE[id]).filter(p => list.includes(p)).map(p => [p.lat, p.lng]);
     if (pts.length > 1) routeLines.push(L.polyline(pts, { color: cssVar(d.c), weight: 4, dashArray: "6 8", opacity: .9 }).addTo(lmap));
   });
   if (fit && !mapState.days.size && !mapState.types.size) {
