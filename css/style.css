@@ -229,3 +229,10 @@ html.noscroll,html.noscroll body{overflow:hidden}
 .homepin.sel .pin{border-color:var(--ink)}
 .homebtn{top:52px;color:var(--home)}
 @media (prefers-reduced-motion:reduce){.homepin::before{animation:none}}
+
+/* editing the itinerary */
+.planbox{display:flex;flex-direction:column;gap:6px}
+.planbox b{font-size:14px;color:var(--muted)}
+.plandays{display:flex;flex-wrap:wrap;gap:6px}
+.btn.rm{border-color:var(--line);color:var(--muted)}
+.addedchip{margin-inline-start:auto;font-size:12px;padding:1px 10px;white-space:nowrap}
