@@ -1,102 +1,52 @@
-search     hotel  (https://www.scandichotels.com/en/hotels/scandic-spectrum)
-skip wikipedia for louis: mostly one flat color, probably a logo or a blank banner
-search     louis  (https://spotlight.dk/shop/louis-poulsen-showroom-18641p.html)
-skip search for bertels: mostly one flat color, probably a logo or a blank banner
-skip search for bertels: mostly one flat color, probably a logo or a blank banner
-search     bertels  (https://www.liyadacakes.com/%D7%94%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95/%D7%A7%D7%95%D7%A0%D7%93%D7%99%D7%98%D7%95%D7%A8%D7%99%D7%94/%D7%A2%D7%95%D7%92%D7%95%D7%AA-%D7%92%D7%91%D7%99%D7%A0%D7%94)
-wikipedia failed for tivolifood: HTTP Error 404: Not Found
-search     tivolifood  (https://www.copenhagentourism.org/tivoli-gardens-copenhagen/)
-skip search for Axel Copenhagen: URL can't contain control characters. '/media/eb/c8/c3/1748941464/Axel logo pos.svg?ts=1748941464' (found at least ' ')
-skip search for Axel Copenhagen: URL can't contain control characters. '/media/eb/c8/c3/1748941464/Axel logo pos.svg?ts=1748941464' (found at least ' ')
-search     Axel Copenhagen  (https://guldsmedenhotels.com/axel-guldsmeden-spa-hotel/)
-wikipedia failed for Hotel NH Collection Copenhagen: HTTP Error 404: Not Found
-osm/website failed for Hotel NH Collection Copenhagen: HTTP Error 403: Forbidden
-search     Hotel NH Collection Copenhagen  (https://www.booking.com/city/us/sierra-vista.html?msockid=35251aea09ab61ee333d0d17083d60c5)
-skip search for Palmehuset: mostly one flat color, probably a logo or a blank banner
-skip search for Palmehuset: mostly one flat color, probably a logo or a blank banner
-search     Palmehuset  (https://www.visitcopenhagen.com/copenhagen/planning/the-botanical-garden-gdk422317)
-wikipedia failed for Bæst: HTTP Error 404: Not Found
-skip website for Bæst: mostly one flat color, probably a logo or a blank banner
-skip search for Bæst: mostly one flat color, probably a logo or a blank banner
-search     Bæst  (https://www.visitcopenhagen.com/copenhagen/planning/baest-gdk944378)
-skip website for Restaurant JATAK: mostly one flat color, probably a logo or a blank banner
-skip search for Restaurant JATAK: mostly one flat color, probably a logo or a blank banner
-search     Restaurant JATAK  (https://www.jatakcph.com/solar-menu)
-skip website for GAO Dumpling Bar: too small (197x204), probably a logo
-skip search for GAO Dumpling Bar: too small (197x204), probably a logo
-skip search for GAO Dumpling Bar: too small (197x204), probably a logo
-search     GAO Dumpling Bar  (https://www.visitcopenhagen.com/copenhagen/planning/gao-gdk1089554)
-skip website for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
-skip search for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
-skip search for Gasoline Grill: mostly one flat color, probably a logo or a blank banner
-search     Gasoline Grill  (https://www.tivoli.dk/en/food-and-drinks/gasoline-grill)
-skip search for Gasoline Grill - Streetfood: mostly one flat color, probably a logo or a blank banner
-skip search for Gasoline Grill - Streetfood: mostly one flat color, probably a logo or a blank banner
-skip search for Gasoline Grill - Streetfood: mostly one flat color, probably a logo or a blank banner
-search     Gasoline Grill - Streetfood  (https://burgerbreton.com/en/restaurants/gasoline-grill-copenhagen/)
-skip search for MUJI København: mostly one flat color, probably a logo or a blank banner
-search     MUJI København  (https://illum.dk/stories/muji-ultimativ-universalitet/)
-osm/website failed for Pompette: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>
-skip search for Pompette: mostly one flat color, probably a logo or a blank banner
-search     Pompette  (https://www.visitcopenhagen.com/copenhagen/planning/pompette-gdk1111500)
-skip search for Barr: HTTP Error 404: Not Found
-search     Barr  (https://www.cntraveler.com/restaurants/copenhagen/barr)
-wikipedia failed for Reffen - Copenhagen Street Food: HTTP Error 404: Not Found
-skip website for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
-skip search for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
-skip search for Reffen - Copenhagen Street Food: mostly one flat color, probably a logo or a blank banner
-search     Reffen - Copenhagen Street Food  (https://www.copenhagentourism.org/copenhagen-street-food-guide/)
-skip search for Goods: mostly one flat color, probably a logo or a blank banner
-skip search for Goods: mostly one flat color, probably a logo or a blank banner
-search     Goods  (https://www.visitcopenhagen.com/copenhagen/planning/goods-gdk1106253)
-NO PHOTO   COS
-NO PHOTO   Uniqlo Closes soon
+search     Massimo Dutti  (https://massimo.dk/apps/where-to-buy/cities/copenhagen)
+search     Helle Mardahl Studio  (https://hellemardahl.com/)
+skip search for Ambra: mostly one flat color, probably a logo or a blank banner
+skip search for Ambra: mostly one flat color, probably a logo or a blank banner
+search     Ambra  (https://www.visitcopenhagen.com/copenhagen/planning/ambra-gdk1141336)
+search     Bottega Barlie  (https://www.visitcopenhagen.com/copenhagen/planning/bottega-barlie-gdk1148457)
+search     Hotel NH Copenhagen Grand Joanne  (https://www.booking.com/hotel/index.fr.html?msockid=2d02c35231b16c1f3e75d4ad30926d69)
+search     Pinseria C´ho Fame  (https://restaurantguru.com/Cho-Fame-Copenhagen)
+search     Copenhagen Fleamarket  (https://www.copenhagentourism.org/copenhagen-flea-markets/)
+skip search for Holzweiler: mostly one flat color, probably a logo or a blank banner
+search     Holzweiler  (https://www.snohetta.com/projects/holzweiler-copenhagen)
+search     Another nué  (https://evendo.com/locations/denmark/copenhagen/shop/another-nue)
+search     COS  (https://www.visitcopenhagen.com/copenhagen/planning/cos-gdk843115)
+skip search for Uniqlo Closes soon: mostly one flat color, probably a logo or a blank banner
+skip search for Uniqlo Closes soon: mostly one flat color, probably a logo or a blank banner
+search     Uniqlo Closes soon  (https://danmarkm.com/uniqlo-i54759.html)
 NO PHOTO   Aesop
-search     Locale 21  (https://intravel.net/copenhagen/restaurants-cafes/locale-21)
-search     Illums Bolighus  (https://www.visitcopenhagen.com/copenhagen/planning/illums-bolighus-gdk412280)
-skip search for Alle Tiders: HTTP Error 404: Not Found
-search     Alle Tiders  (https://joinpearl.co/restaurants/copenhagen/alle-tiders)
-search     Kaf' Bar  (https://cafekaf.com/)
-skip search for Ferm Living: HTTP Error 404: Not Found
-skip search for Ferm Living: HTTP Error 404: Not Found
-skip search for Ferm Living: HTTP Error 404: Not Found
-skip search for Ferm Living: HTTP Error 404: Not Found
-search     Ferm Living  (https://www.visitcopenhagen.com/copenhagen/planning/ferm-living-gdk1123474)
-search     Another Aspect  (https://dictionary.cambridge.org/dictionary/english/another)
-search     Rosforth & Rosforth  (https://jungle.am/@rosforth-rosforth)
-skip search for bird : downtown: mostly one flat color, probably a logo or a blank banner
-search     bird : downtown  (https://wanderlog.com/place/details/14377058/bird--downtown)
-skip search for Godt Fund Vintage: mostly one flat color, probably a logo or a blank banner
-search     Godt Fund Vintage  (https://www.coingecko.com/learn/how-to-use-rabby-wallet)
+search     Le Labo  (https://www.lelabofragrances.com/store-search.html)
+skip search for Palazzo Diner: mostly one flat color, probably a logo or a blank banner
+skip search for Palazzo Diner: mostly one flat color, probably a logo or a blank banner
+search     Palazzo Diner  (https://restaurantguru.com/Palazzo-Diner-Copenhagen)
+search     Dansk Made for Rooms  (https://www.visitcopenhagen.com/copenhagen/planning/dansk-made-for-rooms-gdk823981)
+skip search for Lago: mostly one flat color, probably a logo or a blank banner
+search     Lago  (https://restaurantguru.com/Lago-Copenhagen)
+search     B&W Market  (https://whereisthemarket.com/market/bw-market-copenhagen/)
+search     Lokal ApS.  (https://www.lokalcph.dk/)
+search     norange coffee roasters  (https://norange.dk/)
+skip search for Stoy: mostly one flat color, probably a logo or a blank banner
+skip search for Stoy: mostly one flat color, probably a logo or a blank banner
+search     Stoy  (https://www.cntraveler.com/shops/copenhagen/stoy)
+skip search for Auren’s Deli - Cornerstore: mostly one flat color, probably a logo or a blank banner
+search     Auren’s Deli - Cornerstore  (https://www.visitcopenhagen.com/copenhagen/planning/aurens-deli-gdk1137432)
+skip search for Auren's Deli: mostly one flat color, probably a logo or a blank banner
+search     Auren's Deli  (https://www.visitcopenhagen.com/copenhagen/planning/aurens-deli-gdk1137432)
+skip search for Ancher Studio ApS: <urlopen error [Errno -2] Name or service not known>
+skip search for Ancher Studio ApS: <urlopen error [Errno -2] Name or service not known>
+search     Ancher Studio ApS  (https://www.visitcopenhagen.com/copenhagen/planning/ancher-studio-gdk1155974)
+search     The Roe Bar  (https://louise-roe.com/pages/the-roe-bar-1)
+search     Angmas  (https://www.angmas.dk/en)
+search     Red Cross Op Shop  (https://wanderlog.com/place/details/4020552/red-cross-op-shop)
 skip website for Atelier September: too small (596x142), probably a logo
-NO PHOTO   Atelier September
-skip website for Sing Tehus: mostly one flat color, probably a logo or a blank banner
-skip search for Sing Tehus: mostly one flat color, probably a logo or a blank banner
-skip search for Sing Tehus: mostly one flat color, probably a logo or a blank banner
-search     Sing Tehus  (https://flavorsontheroad.com/sing-tehus/)
-skip website for Sonny: mostly one flat color, probably a logo or a blank banner
-skip search for Sonny: mostly one flat color, probably a logo or a blank banner
-search     Sonny  (https://www.visitcopenhagen.com/copenhagen/planning/sonny-gdk1092007)
-search     Apollo Bar  (https://www.bonappetit.com/city-guides/copenhagen/venue/apollo-bar)
-skip website for La Cabra: mostly one flat color, probably a logo or a blank banner
-skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
-skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
-skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
-skip search for La Cabra: mostly one flat color, probably a logo or a blank banner
-search     La Cabra  (https://www.visitcopenhagen.com/copenhagen/planning/la-cabra-gdk1153820)
-osm/website failed for Riviera: HTTP Error 429: Too Many Requests
-search     Riviera  (https://dictionary.cambridge.org/dictionary/english/pause)
-osm/website failed for ORSA: HTTP Error 429: Too Many Requests
-NO PHOTO   ORSA
-skip search for HAY House: mostly one flat color, probably a logo or a blank banner
-skip search for HAY House: cannot identify image file <_io.BytesIO object at 0x7f22792fe700>
-skip search for HAY House: mostly one flat color, probably a logo or a blank banner
-skip search for HAY House: too small (114x114), probably a logo
-skip search for HAY House: cannot identify image file <_io.BytesIO object at 0x7f22792fe700>
-NO PHOTO   HAY House
-skip website for Frama: mostly one flat color, probably a logo or a blank banner
-skip search for Frama: too small (200x200), probably a logo
-search     Frama  (https://www.ibm.com/think/topics/security-operations-center)
-search     Montana  (https://www.visitcopenhagen.com/copenhagen/planning/montana-store-gdk639746)
-search     Vipp  (https://vipp.com/en/world-of-vipp/inspiration/spaces/vipp-home)
-97 of 105 places have a photo
+skip search for Atelier September: too small (596x142), probably a logo
+search     Atelier September  (https://www.visitcopenhagen.com/copenhagen/planning/atelier-september-gdk1138576)
+search     Lille Petra  (https://www.andtradition.com/lille-petra)
+skip search for ORSA: mostly one flat color, probably a logo or a blank banner
+search     ORSA  (https://www.visitcopenhagen.com/copenhagen/planning/orsa-coffee-gdk1140270)
+search     Audo House  (https://audocph.com/pages/audo-house)
+search     HAY House  (https://www.hay.com/functions/hay-stores/hay-stores-denmark)
+search     Vipp Home | Store & Showroom Closed  (https://vipp.com/)
+skip search for Louis Poulsen: mostly one flat color, probably a logo or a blank banner
+search     Louis Poulsen  (https://www.3daysofdesign.dk/exhibition/louis-poulsen)
+120 of 132 places have a photo

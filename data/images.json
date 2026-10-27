@@ -10,10 +10,22 @@
   "page": "https://joinpearl.co/restaurants/copenhagen/alle-tiders",
   "src": "search"
  },
+ "Ambra": {
+  "file": "img/places/ambra-b91e95.jpg",
+  "from": "https://files.guidedanmark.org/files/382/309509_Ambra.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/ambra-gdk1141336",
+  "src": "search"
+ },
  "Ancestrale": {
   "file": "img/places/ancestrale-566208.jpg",
   "from": "https://files.guidedanmark.org/files/382/174739_Ancestrale_PR-foto-4.jpg",
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/ancestrale-gdk1093700",
+  "src": "search"
+ },
+ "Ancher Studio ApS": {
+  "file": "img/places/ancher-studio-aps-8219e8.jpg",
+  "from": "https://files.guidedanmark.org/files/382/346043_Ancher_Studio.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/ancher-studio-gdk1155974",
   "src": "search"
  },
  "Andersen & Maillard": {
@@ -21,9 +33,21 @@
   "from": "http://www.andersenmaillard.dk/cdn/shop/files/image001_1200x1200.jpg?v=1707126535",
   "src": "website"
  },
+ "Angmas": {
+  "file": "img/places/angmas-d8ee1e.jpg",
+  "from": "http://www.angmas.dk/cdn/shop/files/488034343_980754267482842_3239891906747246846_n.jpg?v=1744727957",
+  "page": "https://www.angmas.dk/en",
+  "src": "search"
+ },
  "Another Aspect": {
   "note": "search picked an unrelated image",
   "src": "none"
+ },
+ "Another nué": {
+  "file": "img/places/another-nu-2ab779.jpg",
+  "from": "https://media.evendo.com/locations-resized/ShoppingImages/1200x630/e1bb9750-8933-4f43-a87a-a3f2dbc11dc0",
+  "page": "https://evendo.com/locations/denmark/copenhagen/shop/another-nue",
+  "src": "search"
  },
  "Apollo Bar": {
   "file": "img/places/apollo-bar-5f1845.jpg",
@@ -36,15 +60,45 @@
   "from": "http://framacph.com/cdn/shop/articles/Apotek-57-copenhagen-1.webp?v=1719391921",
   "src": "website"
  },
+ "Atelier September": {
+  "file": "img/places/atelier-september-7aaa13.jpg",
+  "from": "https://files.guidedanmark.org/files/382/301641_Atelier_September.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/atelier-september-gdk1138576",
+  "src": "search"
+ },
  "Audo Copenhagen": {
   "file": "img/places/audo-copenhagen-9df26a.jpg",
   "from": "http://audocph.com/cdn/shop/files/Audo_2023_CMA_4P0A3750_FINAL_cbd3b2b2-ca61-4391-95ca-363b4f2b2872.jpg?v=1780926415",
   "src": "website"
  },
+ "Audo House": {
+  "file": "img/places/audo-house-45dc8e.jpg",
+  "from": "http://audocph.com/cdn/shop/files/Audo_2023_CMA_4P0A3750_FINAL_cbd3b2b2-ca61-4391-95ca-363b4f2b2872.jpg?v=1780926415",
+  "page": "https://audocph.com/pages/audo-house",
+  "src": "search"
+ },
+ "Auren's Deli": {
+  "file": "img/places/auren-s-deli-1df638.jpg",
+  "from": "https://files.guidedanmark.org/files/382/298399_Aurens_Deli.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/aurens-deli-gdk1137432",
+  "src": "search"
+ },
+ "Auren’s Deli - Cornerstore": {
+  "file": "img/places/auren-s-deli-cornerstore-b7a875.jpg",
+  "from": "https://files.guidedanmark.org/files/382/298399_Aurens_Deli.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/aurens-deli-gdk1137432",
+  "src": "search"
+ },
  "Axel Copenhagen": {
   "file": "img/places/axel-copenhagen-3dad0d.jpg",
   "from": "https://guldsmedenhotels.com/wp-content/uploads/2023/09/Mulighed-for-Billede-1-Front-billede-min-scaled.jpg",
   "page": "https://guldsmedenhotels.com/axel-guldsmeden-spa-hotel/",
+  "src": "search"
+ },
+ "B&W Market": {
+  "file": "img/places/b-w-market-630b08.jpg",
+  "from": "https://whereisthemarket.com/wp-content/uploads/2024/07/pim-chu-jK8AnaPAIGQ-unsplash-1-scaled.jpg",
+  "page": "https://whereisthemarket.com/market/bw-market-copenhagen/",
   "src": "search"
  },
  "BRUS": {
@@ -64,16 +118,40 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/baubau-gdk1011119",
   "src": "search"
  },
+ "Bottega Barlie": {
+  "file": "img/places/bottega-barlie-bd2fb5.jpg",
+  "from": "https://files.guidedanmark.org/files/382/329884_Bottega_Barlie.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/bottega-barlie-gdk1148457",
+  "src": "search"
+ },
  "Bæst": {
   "file": "img/places/b-st-b92cce.jpg",
   "from": "https://files.guidedanmark.org/files/382/146285_2016_Juli_Bst_P.A.-Jrgensen1_ISpot.jpg",
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/baest-gdk944378",
   "src": "search"
  },
+ "COS": {
+  "file": "img/places/cos-9edf4f.jpg",
+  "from": "https://files.guidedanmark.org/files/382/100102_COS.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/cos-gdk843115",
+  "src": "search"
+ },
  "Copenhagen Contemporary": {
   "file": "img/places/copenhagen-contemporary-efeb89.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Copenhagen%20Contemporary%20Refshale%C3%B8en.jpg?width=900",
   "src": "wikidata"
+ },
+ "Copenhagen Fleamarket": {
+  "file": "img/places/copenhagen-fleamarket-c840af.jpg",
+  "from": "https://www.copenhagentourism.org/wp-content/uploads/2026/05/copenhagen-flea-market.jpg",
+  "page": "https://www.copenhagentourism.org/copenhagen-flea-markets/",
+  "src": "search"
+ },
+ "Dansk Made for Rooms": {
+  "file": "img/places/dansk-made-for-rooms-e930fc.jpg",
+  "from": "https://files.guidedanmark.org/files/382/97156_DANSK_Made_for_Rooms.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/dansk-made-for-rooms-gdk823981",
+  "src": "search"
  },
  "Designmuseum Danmark": {
   "file": "img/places/designmuseum-danmark-a8db5d.jpg",
@@ -129,6 +207,12 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/goods-gdk1106253",
   "src": "search"
  },
+ "HAY House": {
+  "file": "img/places/hay-house-eee445.jpg",
+  "from": "http://www.hay.com/globalassets/blocks/brandsite/footer/about/about-hay/hay-house2_910x1100.jpg",
+  "page": "https://www.hay.com/functions/hay-stores/hay-stores-denmark",
+  "src": "search"
+ },
  "Hart": {
   "file": "img/places/hart-d6a00a.jpg",
   "from": "https://hartbageri.com/wp-content/themes/hartbageri-2.0/assets/og-default.jpg",
@@ -140,6 +224,18 @@
   "from": "https://hartbageri.com/wp-content/themes/hartbageri-2.0/assets/og-default.jpg",
   "src": "website"
  },
+ "Helle Mardahl Studio": {
+  "file": "img/places/helle-mardahl-studio-56c077.jpg",
+  "from": "https://hellemardahl.com/cdn/shop/files/2022.06.14-HELLEMARDAHL_SHOWROOM7212.jpg?crop=center&height=630&v=1667908671&width=1200",
+  "page": "https://hellemardahl.com/",
+  "src": "search"
+ },
+ "Holzweiler": {
+  "file": "img/places/holzweiler-ea3fc3.jpg",
+  "from": "https://snohetta.b-cdn.net/uploads/oa/holzweiler-copenhagen/2019298_CPH_N3_webimageland.jpg?width=1200&height=630&format=jpg&quality=85&crop=1920%2C1008%2C0%2C136",
+  "page": "https://www.snohetta.com/projects/holzweiler-copenhagen",
+  "src": "search"
+ },
  "Hooked": {
   "file": "img/places/hooked-9e26eb.jpg",
   "from": "https://gethooked.dk/wp-content/uploads/2025/09/DSC05364-1-min.jpg",
@@ -148,6 +244,12 @@
  "Hotel NH Collection Copenhagen": {
   "note": "search picked an unrelated image",
   "src": "none"
+ },
+ "Hotel NH Copenhagen Grand Joanne": {
+  "file": "img/places/hotel-nh-copenhagen-grand-joanne-a0641a.jpg",
+  "from": "https://cf.bstatic.com/static/img/fb/10.jpg",
+  "page": "https://www.booking.com/hotel/index.fr.html?msockid=2d02c35231b16c1f3e75d4ad30926d69",
+  "src": "search"
  },
  "Høst": {
   "file": "img/places/h-st-7ae2dd.jpg",
@@ -181,6 +283,18 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/la-cabra-gdk1153820",
   "src": "search"
  },
+ "Lago": {
+  "file": "img/places/lago-1bd19f.jpg",
+  "from": "https://img.restaurantguru.com/w550/h367/r1f6-Lago-Restaurant-and-Cocktailbar-interior-2025-03-2.jpg",
+  "page": "https://restaurantguru.com/Lago-Copenhagen",
+  "src": "search"
+ },
+ "Le Labo": {
+  "file": "img/places/le-labo-a4976d.jpg",
+  "from": "https://lelabo.ips.photos/lelabo-java/images/content/1662_ONE_SIZE_IMAGE_01_17102_1052731429.jpg",
+  "page": "https://www.lelabofragrances.com/store-search.html",
+  "src": "search"
+ },
  "Lidkøb Østerbro": {
   "file": "img/places/lidk-b-sterbro-1deae3.jpg",
   "from": "https://genbrugguide.dk/wp-content/uploads/2025/01/AF1QipNDfPf1mBtLZwpcJsLvOsh9ouCdloTzc_ZAlGmZw520-h240-k-no.jpeg",
@@ -192,16 +306,40 @@
   "from": "http://static1.squarespace.com/static/5e6f7788fdb07a59fb7cd29d/t/5e6f7a29d1964a08652d8471/1584364076588/lille_logotype_final_sun.png?format=1500w",
   "src": "website"
  },
+ "Lille Petra": {
+  "file": "img/places/lille-petra-dabc63.jpg",
+  "from": "https://wp.andtradition.com/wp-content/uploads/2024/09/ANDTRADITION_FRONTPAGE-1200x1200.jpg",
+  "page": "https://www.andtradition.com/lille-petra",
+  "src": "search"
+ },
  "Locale 21": {
   "file": "img/places/locale-21-a85730.jpg",
   "from": "https://intravel.net/images/places/large/2025/05/20/42975-332238-locale-21-copenhagen.webp",
   "page": "https://intravel.net/copenhagen/restaurants-cafes/locale-21",
   "src": "search"
  },
+ "Lokal ApS.": {
+  "file": "img/places/lokal-aps-262082.jpg",
+  "from": "http://static1.squarespace.com/static/6926e0963ba1681a0f0deb7a/t/692ef29de9329d1d2c5b7b74/1764684445134/lokal_metaimg.jpg?format=1500w",
+  "page": "https://www.lokalcph.dk/",
+  "src": "search"
+ },
+ "Louis Poulsen": {
+  "file": "img/places/louis-poulsen-a5d5c8.jpg",
+  "from": "https://cdn.prod.website-files.com/6195025159d3bccd9b338ebb/6981ba81f6ca066a61851ca5_website-16x9.jpeg",
+  "page": "https://www.3daysofdesign.dk/exhibition/louis-poulsen",
+  "src": "search"
+ },
  "MUJI København": {
   "file": "img/places/muji-k-benhavn-811222.jpg",
   "from": "https://illum.dk/wp-content/uploads/2023/10/220721_MUJI_ND_26_2998.jpg",
   "page": "https://illum.dk/stories/muji-ultimativ-universalitet/",
+  "src": "search"
+ },
+ "Massimo Dutti": {
+  "file": "img/places/massimo-dutti-1bc52a.jpg",
+  "from": "http://massimo.dk/cdn/shop/files/MASSIMO_CPH_63_horizontal_e8be1764-3ef3-4abe-87b0-1d1cf60a6d3a.jpg?v=1748012641&width=2048",
+  "page": "https://massimo.dk/apps/where-to-buy/cities/copenhagen",
   "src": "search"
  },
  "Montana": {
@@ -234,15 +372,33 @@
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Main%20entrance%2C%20Ny%20Carlsberg%20Glyptotek.jpg?width=900",
   "src": "wikidata"
  },
+ "ORSA": {
+  "file": "img/places/orsa-065444.jpg",
+  "from": "https://files.guidedanmark.org/files/382/306834_Orsa_Coffee.jpg",
+  "page": "https://www.visitcopenhagen.com/copenhagen/planning/orsa-coffee-gdk1140270",
+  "src": "search"
+ },
  "Ordrupgaard": {
   "file": "img/places/ordrupgaard-04a12e.jpg",
   "from": "https://upload.wikimedia.org/wikipedia/commons/1/19/Ordupgaard_Copenhagen_Zaha_Hadid_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "src": "wikipedia"
  },
+ "Palazzo Diner": {
+  "file": "img/places/palazzo-diner-5b3a47.jpg",
+  "from": "https://img3.restaurantguru.com/w550/h367/r25c-interior-Palazzo-Diner.jpg",
+  "page": "https://restaurantguru.com/Palazzo-Diner-Copenhagen",
+  "src": "search"
+ },
  "Palmehuset": {
   "file": "img/places/palmehuset-1789f0.jpg",
   "from": "https://files.guidedanmark.org/files/382/184270_Botanisk_have.jpg_beskret_VG.jpg",
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/the-botanical-garden-gdk422317",
+  "src": "search"
+ },
+ "Pinseria C´ho Fame": {
+  "file": "img/places/pinseria-c-ho-fame-6501c4.jpg",
+  "from": "https://img3.restaurantguru.com/w550/h367/rf8b-Pizzeria-C-ho-Fame-interior-2025-08.jpg",
+  "page": "https://restaurantguru.com/Cho-Fame-Copenhagen",
   "src": "search"
  },
  "Pompette": {
@@ -255,6 +411,12 @@
   "file": "img/places/prolog-coffee-bar-papir-en-b03fc4.jpg",
   "from": "https://www.prologcoffee.com/cdn/shop/files/2024_09_03_PROLOG_Risteri__17_1200x1779.jpg?v=1792402587",
   "src": "website"
+ },
+ "Red Cross Op Shop": {
+  "file": "img/places/red-cross-op-shop-383bcf.jpg",
+  "from": "https://itin-dev.wanderlogstatic.com/freeImageSmall/AtBc4DD03d2X2w3GEomQoK4hOP0HODY6",
+  "page": "https://wanderlog.com/place/details/4020552/red-cross-op-shop",
+  "src": "search"
  },
  "Reffen - Copenhagen Street Food": {
   "file": "img/places/reffen-copenhagen-street-food-40f721.jpg",
@@ -334,10 +496,22 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/sonny-gdk1092007",
   "src": "search"
  },
+ "Stoy": {
+  "file": "img/places/stoy-d45b46.jpg",
+  "from": "https://media.cntraveler.com/photos/69fe0dc3126a6ee40b19404e/16:9/w_2560,c_limit/Stoy%20%C2%A9%20Stoy%20_%20MOON.jpeg",
+  "page": "https://www.cntraveler.com/shops/copenhagen/stoy",
+  "src": "search"
+ },
  "Superkilen Park": {
   "file": "img/places/superkilen-park-7e519d.jpg",
   "from": "https://commons.wikimedia.org/wiki/Special:FilePath/Superkilen%20hill-top%20view.jpg?width=900",
   "src": "wikidata"
+ },
+ "The Roe Bar": {
+  "file": "img/places/the-roe-bar-9f0d06.jpg",
+  "from": "http://louise-roe.com/cdn/shop/files/260515_LOUISEROE_2_0263_1_1.png?v=1783589922",
+  "page": "https://louise-roe.com/pages/the-roe-bar-1",
+  "src": "search"
  },
  "Tivoli Gardens": {
   "file": "img/places/tivoli-gardens-164590.jpg",
@@ -350,10 +524,22 @@
   "page": "https://www.visitcopenhagen.com/copenhagen/planning/torvehallerne-gdk545401",
   "src": "search"
  },
+ "Uniqlo Closes soon": {
+  "file": "img/places/uniqlo-closes-soon-639db7.jpg",
+  "from": "https://img.danmarkm.com/yer/uniqlo-54759.jpg",
+  "page": "https://danmarkm.com/uniqlo-i54759.html",
+  "src": "search"
+ },
  "Vipp": {
   "file": "img/places/vipp-1b70a5.jpg",
   "from": "https://media.umbraco.io/vipp-com-2/ivppj1o4/vipp-home-outside-01.jpg",
   "page": "https://vipp.com/en/world-of-vipp/inspiration/spaces/vipp-home",
+  "src": "search"
+ },
+ "Vipp Home | Store & Showroom Closed": {
+  "file": "img/places/vipp-home-store-showroom-closed-4f1f13.jpg",
+  "from": "https://media.umbraco.io/vipp-com-2/uhjn3y22/vipp-mallorca-richard-gaston-8.jpg",
+  "page": "https://vipp.com/",
   "src": "search"
  },
  "Wild horses": {
@@ -454,6 +640,12 @@
   "file": "img/places/noerreport-291ac2.jpg",
   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/N%C3%B8rreport_Station_at_night_03.jpg/960px-N%C3%B8rreport_Station_at_night_03.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
   "src": "manual"
+ },
+ "norange coffee roasters": {
+  "file": "img/places/norange-coffee-roasters-f93769.jpg",
+  "from": "http://norange.dk/cdn/shop/files/norange-icon-shopify_0a595303-946c-4c8c-935d-60defff37077.png?v=1768668306",
+  "page": "https://norange.dk/",
+  "src": "search"
  },
  "nyhavn": {
   "file": "img/places/nyhavn-6cd2e1.jpg",
