@@ -10,7 +10,8 @@ const app = document.getElementById("app");
 const savedName = n => n.replace(/\s*(\|\s*)?(Store & Showroom )?(Closes soon|Closed)$/i, "").trim();
 SAVED.forEach((s, i) => {
   const same = PLACES.find(p => p.id === SAVED_SAME_AS[s.name]);
-  if (same) { Object.assign(same, { url: s.url, note: s.note || same.note }); return; }
+  // the Google Maps pin is more exact than the hand-typed coordinates in data.js
+  if (same) { Object.assign(same, { url: s.url, note: s.note || same.note, lat: s.lat, lng: s.lng }); return; }
   PLACES.push({ id: "s" + i, he: savedName(s.name), en: "", type: SAVED_TYPES[s.name] || TAG_TYPES[s.tags[0]] || "other",
     lat: s.lat, lng: s.lng, url: s.url, note: s.note, saved: true, wiki: WIKI[s.name], key: s.name });
 });
@@ -36,18 +37,18 @@ const savePlan = () => { try { localStorage.setItem(PLAN_KEY, JSON.stringify(pla
 
 // place id -> days it appears on
 const PLACE_DAYS = {};
-// Where an added place goes: into the day's closest stop (a stop of the same kind counts as closer),
-// or, if nothing is within walking distance, as its own stop right after the closest one.
+// Where an added place goes: the day's original stops are anchors, and the place joins the closest one
+// (measured to its own places, never to places we added), or, if none is within walking distance,
+// gets its own stop right after the closest one.
 const metres = (a, b) => Math.hypot((a.lat - b.lat) * 111000, (a.lng - b.lng) * 63000);
 const NEAR = 900;
 function nearestStop(stops, p){
   let best = null;
   stops.forEach((s, i) => {
-    const ps = stopAll(s).filter(id => id !== HOME).map(id => PLACE[id]);
-    if (!ps.length) return;
+    const ps = stopPlaces(s).filter(id => id !== HOME).map(id => PLACE[id]);
+    if (s.added || !ps.length) return;
     const dist = Math.min(...ps.map(q => metres(p, q)));
-    const score = ps.some(q => q.type === p.type) ? dist * 0.6 : dist;
-    if (!best || score < best.score) best = { i, dist, score };
+    if (!best || dist < best.dist) best = { i, dist };
   });
   if (best && best.dist <= NEAR) return { i: best.i, near: true };
   if (best) return { i: best.i + 1 };
