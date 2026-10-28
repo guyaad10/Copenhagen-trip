@@ -186,6 +186,17 @@ function dayFilter(){
     .map(([id,label,c]) => `<button class="fchip" aria-pressed="${id==="all" ? !homeDays.size : homeDays.has(id)}" data-homeday="${id}" ${c?`style="--c:var(${c})"`:""}>${c?'<i class="dot"></i>':""}${label}</button>`).join("")}</div>`;
 }
 
+// A recommendation: the place's type icon, in its day's color when it's on the itinerary, and a chip per day it's on.
+function recItem([b, text, id]){
+  if (!id) return `<div class="item"><b>${esc(b)}</b><p>${esc(text)}</p></div>`;
+  const p = PLACE[id], days = PLACE_DAYS[id] || [];
+  const chips = days.map(d => `<button class="daychip" style="--c:var(${d.c})" data-go="${d.id}"><i class="dot"></i>יום ${d.name}</button>`).join("");
+  return `<div class="item rec">
+    <span class="ricon${days.length ? "" : " off"}" ${days.length ? `style="--c:var(${days[0].c})"` : ""}>${icon(p.type)}</span>
+    <div><div class="rhead"><b><button class="linkish" data-place="${id}">${esc(b)}</button></b>${chips}</div><p>${esc(text)}</p></div>
+  </div>`;
+}
+
 function home(){
   const cards = homeCards();
   const tips = TIPS.map((t,i) => `
@@ -194,7 +205,7 @@ function home(){
     </div></details>`).join("");
   const recs = RECS.map(r => `
     <details><summary>${esc(r.h)}</summary><div class="dbody">
-      ${r.items.map(([b,p,id]) => `<div class="item">${id?`<b><button class="linkish" data-place="${id}">${esc(b)}</button></b>`:`<b>${esc(b)}</b>`}<p>${esc(p)}</p></div>`).join("")}
+      ${r.items.map(recItem).join("")}
     </div></details>`).join("");
 
   app.innerHTML = header("days") + `
