@@ -295,3 +295,5 @@ svg.flow{position:absolute;left:0;top:0;overflow:visible;pointer-events:none;fil
 .rhead b{display:inline}
 .daychip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;border:1px solid var(--c);border-radius:999px;padding:1px 10px;white-space:nowrap}
 .daychip:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+/* Leaflet's own SVG (route lines on the big map) sizes itself; keep the 18px icon size above off it */
+.leaflet-overlay-pane svg{width:auto;height:auto}

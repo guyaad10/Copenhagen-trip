@@ -292,10 +292,10 @@ const FlowLayer = typeof L !== "undefined" ? L.Layer.extend({
     this._svg = L.SVG.create("svg");
     this._svg.setAttribute("class", "flow leaflet-zoom-hide");
     map.getPanes().overlayPane.appendChild(this._svg);
-    map.on("zoomend viewreset", this._draw, this);
+    map.on("zoom zoomend viewreset", this._draw, this); // a pinch fires "zoom" on every frame
     this._draw();
   },
-  onRemove(map){ this._svg.remove(); map.off("zoomend viewreset", this._draw, this); },
+  onRemove(map){ this._svg.remove(); map.off("zoom zoomend viewreset", this._draw, this); },
   _draw(){
     const map = this._map, pts = this._pts.map(ll => map.latLngToLayerPoint(ll));
     const pad = 80, xs = pts.map(p => p.x), ys = pts.map(p => p.y);
